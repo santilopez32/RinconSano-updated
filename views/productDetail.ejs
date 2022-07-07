@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+            <main class="container">
+                <!-- Left Column / Product Image -->
+                <div class="left-column">
+                    <img src="images/aceiteCoco.jpg" alt="">
+                    
+                </div>
+                 
+                 
+                <!-- Right Column -->
+                <div class="right-column">
+                 
+                    <!-- Product Description -->
+                    <div class="product-description">
+                      <span>Orgánico</span>
+                      <h1>Aceite de Coco Virgen (Orgánico/Sin TAAC) CHIA GRAAL -180 ml</h1>
+                      <p>Prensado en frío</p>
+                    </div>
+
+                    <!-- Product Pricing -->
+                    <div class="product-price">
+                        <span>1.100$</span>
+                    </div>
+                    <div>
+                        <label for="cantidad" class="labelCantidad" >Cantidad</label>
+                        <input type="number" class="cantidad" name="cantidad" min="1" max="99">
+                    </div>
+                    <div>
+                        <a href="/productCart" class="cart-botton">Agregar al carrito</a>
+                    </div>
+                </div>
+            </main>                 
+    <%- include('./partials/footer') %>
+</body>
+</html>

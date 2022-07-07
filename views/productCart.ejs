@@ -1,0 +1,37 @@
+<html>
+<%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+    <main>
+        <section class="#">
+            <h3>Carrito de compras</h3>
+            <main class="container"> <!--productos--> 
+                <div class="left-column">
+                    <img src="images/aceiteCoco.jpg" alt="">
+                    
+                </div>
+                <article>
+                    
+                    <p>Aceite de coco</p>
+                    <p>Stock: disponible/noDisponible</p>
+                    <p>Descuento disponible</p>
+                    <form action="/" method="POST">
+                        <br>
+                        </br>
+                        <label>Cantidad</label>
+                        <input type="number" class="cantidad" name="cantidad" min="1" max="99">
+                        <br>
+                        </br>
+                        <button type="button">Eliminar del carrito</button>
+                        <p>$9999</p>
+                        <button type="sumbit">Finalizar compra</button>
+                    </form> 
+                    
+                </article>
+            </main>
+            
+        </section>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

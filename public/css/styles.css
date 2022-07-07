@@ -1,0 +1,464 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+  }
+
+/*--------------------------------------------------Header-----------------------------------------------------*/
+
+.imagen-logo { 
+    width: 50%;
+  }
+.logo{
+    text-align: center;
+  }
+  div.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    justify-content: auto;
+  }
+  div.burger-menu{
+    text-align: center;
+  }
+  
+  div.burger-menu i{
+    background-color: #00aa47;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+  }
+  
+  div.burger-menu i:hover{
+    cursor: pointer;
+    background-color: #179227;
+  }
+  
+  header nav{
+    display: none;
+    font-size: 12px;
+  }
+  header {
+    background-color: #32ac65;
+    margin-bottom: 15px; 
+  }
+  
+  header div.logo,
+  header form{
+      width: 100%;
+      
+  }
+  
+  header div.logo{
+    padding: 10px;
+  }
+  
+  header form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    position: relative;
+  }
+  
+  header form input[type='search']{
+    border: 0px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  header form button{
+    background-color: #FFF;
+    border: 0px;
+    outline: none;
+    position: absolute;
+    right: 5px;
+    color: #666;
+  }
+  
+  header ul li{
+    list-style-type: none;
+  }
+  
+  header ul li a{
+    text-decoration: none;
+    color: #000;
+  }
+
+/*------------------------------------------------Fin-Header--------------------------------------------------*/
+
+/*---------------------------------------------------Footer---------------------------------------------------*/
+
+footer{
+    background-color: rgb(214, 188, 148);
+    color: #666;
+    padding: 20px 5%;
+  }
+  
+  footer article{
+    margin: 20px 0px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer i{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+  }
+  
+  footer div .footer-article-container{
+    display: flex;
+    align-items: center;
+  }
+/*------------------------------------------------Fin-Footer--------------------------------------------------*/
+
+/*---------------------------------------------------Home-Html------------------------------------------------*/
+/*-------------------Section-Banner----------------*/
+
+section.banner img{
+    width: 100%;
+    display: block;
+    }
+    
+  /*----------------Fin-Section-Banner---------------*/
+  
+  /*-------------------Main-Home---------------------*/
+  
+  div.last-visit,
+  div.offers{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  article div.main-article{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  border-top: 1px solid #ebebeb;
+  position: relative;
+  padding: 20px;
+  }
+  
+  .price{
+  font-size: 18px;
+  width: 30%;
+  }
+  
+  .discount,
+  .description{
+  font-size: 16px;
+  font-weight: normal;
+  }
+  
+  .discount{
+  width: 70%;
+  }
+  
+  .description{
+  margin-top: 20px;
+  display: none;
+  }
+  
+  h3,
+  .description{
+  color: #666;
+  }
+  
+  
+  
+  main{
+  width: 90%;
+  margin: 0 auto;
+  }
+  
+  main section h3{
+  margin: 20px 0px;
+  }
+  
+  main section article{
+  background-color: #fff;
+  margin: 10px 0px;
+  }
+  
+  main section article:hover{
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  
+  main section article:hover .description{
+  display: block;
+  }
+  
+  main section article img{
+  display: block;
+  width: 100%;
+  }
+  
+  main section article i,
+  .discount{
+  color: #39b54a;
+  }
+  
+  main section article i{
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+  }
+  
+  main section div.products article i{
+  transition: transform 1s;
+  }
+  
+  main section div.products article:hover i{
+  transform: rotate(-90deg);
+  }
+  /*----------------Fin-Main-Home----------------*/
+  /*----------------------------------------------Fin-Home-Html-------------------------------------------------*/
+  
+  /*----------------------------------------------Register-Html-------------------------------------------------*/
+  /*-----------------Main-Register---------------*/
+  .control-formulario{
+    margin-bottom: 15px;
+  }
+  .control-formulario label{
+    margin-bottom: 5px;
+    font-style: italic;
+    display: block;
+  }
+  .control{
+    width: 100%;
+    padding: 8px;
+  }
+  .boton-formulario{
+    background-color: rgb(4, 100, 68);
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .boton-formulario:hover{
+    background-color: rgb(130, 223, 240);
+    color: black;
+  }
+  .product{
+    padding: 0 15px;
+    position: relative;
+    margin: 30px 15px;
+  }
+  
+  /*---------------Fin-Main-Register---------------*/
+  /*------------------------------------------------Fin-Register-Html---------------------------------------------*/
+  
+  
+  /*------------------------------------------------ProductDetail-Html--------------------------------------------*/
+  /*---------------Main-ProductDetail--------------*/
+  
+  /* Estilo de Product detail */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px;
+    display: flex;
+    }
+    
+    /* Columns */
+    .left-column {
+      width: 40%;
+      position: relative;
+    }
+     
+    .right-column {
+      width: 60%;
+      margin-top: 0px;
+      display: flex;
+      flex-direction: column;
+    
+    }
+    
+    /* Left Column */
+    .left-column img {
+      width: 80%;
+    }
+    
+    /* Product Description */
+    .product-description {
+      border-bottom: 1px solid #E1E8EE;
+      margin-bottom: 20px;
+    }
+    
+    .product-description span {
+      font-size: 14px;
+      font-weight: 1000;
+      color: #1d20d1;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    
+    .product-description h1 {
+      font-weight: 600;
+      font-size: 35px;
+      color: #43484D;
+      letter-spacing: 0px;
+      padding: 15px 15px 15px 15px;
+    }
+    
+    .product-description p {
+      font-size: 20px;
+      font-weight: 450;
+      color: #3c4247;
+      line-height: 24px;
+    }
+    
+    /* Product Price */
+    .product-price {
+      display: flex;
+      align-items: center;
+    }
+    
+    .product-price span {
+      font-size: 30px;
+      font-weight: 600;
+      color: #282a2e;
+      margin-right: 20px;
+      padding: 10px 10px 10px 10px;
+    }
+    
+    .labelCantidad {
+      font-weight: 300;
+    }
+    
+    .cantidad {
+      margin: 10px 10px 10px 10px;
+      padding: 3px 3px 3px 3px;
+    }
+    
+    
+    .cart-botton {
+      display: inline-block;
+      background-color: #7DC855;
+      border-radius: 6px;
+      font-size: 16px;
+      color: #FFFFFF;
+      text-decoration: none;
+      margin-top: 10px;
+      padding: 12px 30px;
+      transition: all .5s;
+    }
+    
+    .cart-botton:hover {
+      background-color: #3c6825;
+    }
+  
+  /*-----------Fin-Main-ProductoDetail-------------*/
+  
+  /*------------------------------------------------Media---------------------------------------------------------*/
+  /*Se recomienda 0-480 smaller phones, 481-768 Tablets y big phones, 769-1279 Laptops and larger tablets, 1280 larger desktops and monitors */
+  /*---------------Tablets (Dispositivo móvil es la config original)---------------*/
+
+  @media (min-width: 481px){
+
+  } 
+
+  /*---------------Laptops y tablets grandes---------------*/
+
+  @media (min-width: 769px){
+    .login,
+    .register{
+      max-width: 500px;
+      margin: 0 auto;
+  }
+
+  /* -------Header------- */
+
+  header div.top-header{
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0% 2%;
+  }
+
+  header div.top-header div.logo{
+      flex-grow: 2;
+      width: auto ;
+  }
+
+  header div.top-header form{
+      flex-grow: 5;
+      width: auto ;
+  }
+
+  header div.top-header p{
+      flex-grow: 1;
+      width: auto;
+  }
+
+
+    div.burger-menu{
+        display: none;
+    }
+    header nav{
+        padding: 2%;
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+    }
+    header nav ul li{
+        margin: 0px 10px;
+    }
+
+  /* -------Header------- */
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 70vh;
+    }
+    
+    main section div.products article{
+        width: 22%;
+    }
+    
+    .price,
+    .discount{
+        width: 50%;
+    }
+  }
+  footer div.footer-article-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+  /*---------------Computadoras de escritorio---------------*/
+
+  @media (min-width: 1280px){
+
+    
+  }
+
+  

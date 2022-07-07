@@ -1,0 +1,166 @@
+<html>
+    <%- include('./partials/head') %>
+    <body>
+        <%- include('./partials/header') %>
+        <main class="register">
+            <form action="/register" method="POST" class="create-form" enctype="multipart/form-data">
+                <div class="control-formulario">
+                    <label>Nombre y apellido:</label>
+                    <input 
+                    type="text" 
+                    name="name" 
+                    class="control <%= locals.errors && errors.name ? 'is-invalid' : null %>" 
+                    value="<%= locals.oldData ? oldData.name : null%>" >
+                    <% if (locals.errors && errors.name) { %>
+                    <div style= "color: red">
+                        <%= errors.name.msg %>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="control-formulario">
+                    <label>Nombre de usuario:</label>
+                    <input 
+                    type="text" 
+                    name="user" 
+                    class="control <%= locals.errors && errors.user ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.user : null%>">
+                    <% if (locals.errors && errors.user) { %>
+                        <div style= "color: red">
+                            <%= errors.user.msg %>
+                        </div>
+                        <% } %>
+                </div>
+                <div class="control-formulario">
+                    <label>E-mail:</label>
+                    <input 
+                    type="text" 
+                    name="email" 
+                    class="control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.email : null%>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div style= "color: red">
+                            <%= errors.email.msg %>
+                        </div>
+                        <% } %>
+                </div>
+                <div class="control-formulario">
+                    <label>Teléfono</label>
+                    <input 
+                    type="number" 
+                    name="phone" 
+                    class="control <%= locals.errors && errors.phone ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.phone : null%>">
+                    <% if (locals.errors && errors.phone) { %>
+                        <div style= "color: red">
+                            <%= errors.phone.msg %>
+                        </div>
+                        <% } %>
+                </div>
+                <div class="control-formulario">
+                <label for="birth_date" class="control"><b>Fecha de nacimiento</b></label>
+                <input 
+                type="date" 
+                name="birth_date" 
+                id="birth_date <%= locals.errors && errors.birth_date ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.birth_date : null%>">
+                <% if (locals.errors && errors.birth_date) { %>
+                    <div style= "color: red">
+                        <%= errors.birth_date.msg %>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="control-formulario">
+                    <label>Domicilio:</label>
+                    <input 
+                    type="text" 
+                    name="adress" 
+                    class="control <%= locals.errors && errors.adress ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.adress : null%>">
+                    <% if (locals.errors && errors.adress) { %>
+                        <div style= "color: red">
+                            <%= errors.adress.msg %>
+                        </div>
+                        <% } %>
+                </div>
+                <div class="control-formulario">
+                    <h4>Perfil del usuario</h4>
+                    <br>
+                    <label for="buy">Mayorista</label>
+                    <input type="radio" name="profile" value="mayorista" id="mayorista">
+                    <label for="sell">Minorista</label>
+                    <input type="radio" name="profile" value="minorista" id="minorista">
+                    <% if (locals.errors && errors.profile) { %>
+                        <div style= "color: red">
+                            <%= errors.profile.msg %>
+                        </div>
+                        <% } %>
+                </div>
+                <div class="control-formulario">
+                    <label>Ciudad:</label>
+                    <select name="ciudad" class="control">
+                    <option value="">Elegí una ciudad</option>
+                    <%
+                        let provincias = ["Salta", "Buenos Aires", "Rosario", "Córdoba", "Mendoza", "Misiones"]
+                    %>
+                    <% for ( const oneProvincias of provincias) {%>
+                        <option
+                         value="<%= oneProvincias %>"
+                         <%= locals.oldData && (oneProvincias === oldData.ciudad) ? "selected" : null %>
+                         ><%= oneProvincias %></option>
+                    <% } %>
+                    </select>
+                   <% if (locals.errors && errors.ciudad) { %>
+                    <div style= "color: red">
+                        <%= errors.ciudad.msg %>
+                    </div>
+                    <% } %>
+                </div>
+                
+                <div class="control-formulario">
+                    <label>Descripción:</label>
+                    <textarea 
+                    name="descripcion" 
+                    class="control"></textarea>
+                    <% if (locals.errors && errors.descripcion) { %>
+                        <div style= "color: red">
+                            <%= errors.descripcion.msg %>
+                        </div>
+                        <% } %>
+                </div>
+                <h4>Elegí tu foto de usuario</h4>
+                <br>
+                <input type="file" name="avatar">
+                <% if (locals.errors && errors.avatar) { %>
+                    <div style= "color: red">
+                        <%= errors.avatar.msg %>
+                    </div>
+                    <% } %>
+                <br>
+                <br>
+                <input type="password" name="pass" placeholder="Elegí tu contraseña">
+                <% if (locals.errors && errors.pass) { %>
+                    <div style= "color: red">
+                        <%= errors.pass.msg %>
+                    </div>
+                    <% } %>
+                <br>
+                <br>
+                <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+                <% if (locals.errors && errors.pass_confirm) { %>
+                    <div style= "color: red">
+                        <%= errors.pass_confirm.msg %>
+                    </div>
+                    <% } %>
+                <br>
+                <br>
+        
+                <button type="reset" class="boton-formulario">Borrar</button>
+                <button type="submit" class="boton-formulario">Guardar</button>
+                <br>
+                <br>
+                <br>
+            </form>
+    </body>
+    </main>
+    <%- include('./partials/footer') %>
+</html>

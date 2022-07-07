@@ -1,0 +1,40 @@
+<html>
+<%- include('./partials/head') %>
+<body>
+<%- include('./partials/header') %>
+<main class="login">
+    <form action="/login" method="POST" >
+        <div class="control-formulario">
+            <label>Nombre de usuario:</label>
+            <input 
+            type="text" 
+            name="email" 
+            class="control" 
+            value="<%= locals.oldData ? oldData.email : null%>">
+            <% if (locals.errors && errors.email) { %>
+                <div style= "color: red">
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
+        </div>
+        <br>
+        <br>
+        <div class="control-formulario">
+            <label>Contraseña:</label>
+            <input type="password" name="pass" class="control" placeholder="Contraseña">
+            <% if (locals.errors && errors.pass) { %>
+                <div style= "color: red">
+                    <%= errors.pass.msg %>
+                </div>
+            <% } %>
+        </div>
+        <br>
+        <br>
+        <input type="submit" class="boton-formulario" value="Iniciar Sesión">
+        <br>
+        <br>
+    </form>
+</main>
+<%- include('./partials/footer') %>
+</body>
+</html>
