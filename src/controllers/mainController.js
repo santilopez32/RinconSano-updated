@@ -1,12 +1,13 @@
 const { validationResult } = require("express-validator")
 const fs = require("fs")
+const path = require("path")
 
 const mainController = {
 	home: (req, res) => {
-		return res.render('home');
+		return res.render(path.resolve(__dirname, '../views/web/home'));
 	},
     login: (req, res) => {
-		return res.render('login');
+		return res.render(path.resolve(__dirname, '../views/users/login'));
 	},
 	processLogin: (req, res) => {
 		let errors = validationResult(req)
@@ -28,19 +29,19 @@ const mainController = {
 				}
 			}
 			if(usuarioALoguearse == undefined){
-				return res.render("login", {errors: [{msg: "Credenciales inválidas"}]} )
+				return res.render((path.resolve(__dirname, '../views/users/login')), {errors: [{msg: "Credenciales inválidas"}]} )
 			}
 			req.session.usuarioLogueado = usuarioALoguearse;
 			res.render("Success")
 		} else {
-			return res.render("login", {
+			return res.render((path.resolve(__dirname, '../views/users/login')), {
 				errors: errors.mapped(),
 				oldData: req.body
 			} )
 		}
 	},
     register: (req, res) => {
-		return res.render('register');
+		return res.render(path.resolve(__dirname, '../views/users/register'));
 	},
 	store: (req, res) => {
 		let errors = validationResult(req);
@@ -55,18 +56,18 @@ const mainController = {
 				users = JSON.parse(usersJSON)
 			}
 		}
-		return res.render('register');
+		return res.render(path.resolve(__dirname, '../views/users/register'));
 	},
     productDetail: (req, res) => {
-		return res.render('productDetail');
+		return res.render(path.resolve(__dirname, '../views/products/productDetail'))
 	},
     productCart: (req, res) => {
-		return res.render('productCart');
+		return res.render(path.resolve(__dirname, '../views/products/productCart'));
 	},
 	processRegister: (req, res) => {
 		const resultValidation = validationResult(req)
 		if(resultValidation.errors.length > 0){
-			return res.render("register", { 
+			return res.render((path.resolve(__dirname, '../views/users/register')), { 
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			})

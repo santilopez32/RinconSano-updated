@@ -5,7 +5,7 @@ const session = require('express-session');
 
 app.use(session( {secret: "Nuestro mensaje secreto"}));
 app.use(express.urlencoded({ extended: false }))
-app.use(express.static("./public"))
+app.use(express.static(path.resolve(__dirname, '..', 'public')))
 app.listen(process.env.PORT || 3000, () => {
     console.log('Servidor corriendo puerto 3000');
 })
