@@ -2,7 +2,12 @@ const express = require("express")
 const app = express()
 const path = require("path")
 const session = require('express-session');
+const recordameMiddleware = require("./middlewares/recordameMiddleware")
+const cookieParser = require('cookie-parser');
 
+
+app.use(recordameMiddleware)
+app.use(cookieParser())
 app.use(session( {secret: "Nuestro mensaje secreto"}));
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.resolve(__dirname, '..', 'public')))

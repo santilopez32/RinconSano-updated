@@ -32,6 +32,9 @@ const mainController = {
 				return res.render((path.resolve(__dirname, '../views/users/login')), {errors: [{msg: "Credenciales inválidas"}]} )
 			}
 			req.session.usuarioLogueado = usuarioALoguearse;
+			if(req.body.recordame != undefined){
+				res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000})
+			}
 			res.render("Success")
 		} else {
 			return res.render((path.resolve(__dirname, '../views/users/login')), {
