@@ -70,6 +70,7 @@ router.get('/register', guestMiddleware, mainController.register)
 router.post('/register', uploadFile.single("avatar"), validations, mainController.processRegister)
 router.get('/productDetail', mainController.productDetail)
 router.get('/productCart', mainController.productCart)
+router.get('/preguntasFrecuentes', mainController.preguntasFrecuentes)
 //Rutas traidas
 
 

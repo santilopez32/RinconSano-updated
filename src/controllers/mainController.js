@@ -67,6 +67,9 @@ const mainController = {
     productCart: (req, res) => {
 		return res.render(path.resolve(__dirname, '../views/products/productCart'));
 	},
+	preguntasFrecuentes: (req, res) => {
+		return res.render(path.resolve(__dirname, '../views/web/preguntasFrecuentes'));
+	},
 	processRegister: (req, res) => {
 		const resultValidation = validationResult(req)
 		if(resultValidation.errors.length > 0){
