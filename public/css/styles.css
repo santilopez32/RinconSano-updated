@@ -371,7 +371,33 @@ section.banner img{
     }
   
   /*-----------Fin-Main-ProductoDetail-------------*/
+
+  /* ---------------Contact page---------------------- */
+
+  .contactBox{
+    display: flex;
+    justify-content: space-between;
+
+  }
   
+  .contactTitle{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+    
+  
+  .sendMail{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+    .contactFormulario{
+      display: flex;
+      flex-direction: column;
+    }
+
   /*------------------------------------------------Media---------------------------------------------------------*/
   /*Se recomienda 0-480 smaller phones, 481-768 Tablets y big phones, 769-1279 Laptops and larger tablets, 1280 larger desktops and monitors */
   /*---------------Tablets (Dispositivo móvil es la config original)---------------*/
