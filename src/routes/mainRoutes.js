@@ -71,6 +71,7 @@ router.post('/register', uploadFile.single("avatar"), validations, mainControlle
 router.get('/productDetail', mainController.productDetail)
 router.get('/productCart', mainController.productCart)
 router.get('/preguntasFrecuentes', mainController.preguntasFrecuentes)
+router.get('/quienesSomos', mainController.quienesSomos)
 //Rutas traidas
 
 
