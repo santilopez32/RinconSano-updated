@@ -278,6 +278,16 @@ section.banner img{
   
 
   /*------------------------------------------------ProductDetail-Html--------------------------------------------*/
+  /*---------------Preguntas-frecuentes--------------*/
+  main.preguntas-frecuentes{
+    text-align: center;
+    background: rgb(170, 229, 130);
+  } 
+  
+  div.pregunta{
+    text-align: left;
+  }
+   
   /*---------------Main-ProductDetail--------------*/
   
   /* Estilo de Product detail */
