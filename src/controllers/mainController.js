@@ -73,6 +73,13 @@ const mainController = {
 	contact: (req, res) => {
 		return res.render(path.resolve(__dirname, '../views/web/contact'));
 	},
+	products: (req, res) => {
+		return res.render(path.resolve(__dirname, '../views/products/products'));
+	},
+
+	quienesSomos: (req, res) => {
+		return res.render(path.resolve(__dirname, '../views/web/quienesSomos'));
+	},
 	processRegister: (req, res) => {
 		const resultValidation = validationResult(req)
 		if(resultValidation.errors.length > 0){
