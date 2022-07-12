@@ -70,6 +70,9 @@ const mainController = {
 	preguntasFrecuentes: (req, res) => {
 		return res.render(path.resolve(__dirname, '../views/web/preguntasFrecuentes'));
 	},
+	contact: (req, res) => {
+		return res.render(path.resolve(__dirname, '../views/web/contact'));
+	},
 	processRegister: (req, res) => {
 		const resultValidation = validationResult(req)
 		if(resultValidation.errors.length > 0){
