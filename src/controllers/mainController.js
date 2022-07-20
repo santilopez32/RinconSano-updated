@@ -80,6 +80,9 @@ const mainController = {
 	quienesSomos: (req, res) => {
 		return res.render(path.resolve(__dirname, '../views/web/quienesSomos'));
 	},
+	addProduct: (req, res) => {
+		return res.render(path.resolve(__dirname, '../views/admin/addProduct'));
+	},
 	processRegister: (req, res) => {
 		const resultValidation = validationResult(req)
 		if(resultValidation.errors.length > 0){

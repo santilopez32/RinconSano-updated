@@ -75,6 +75,7 @@ router.get('/contact', mainController.contact)
 
 router.get('/products', mainController.products)
 router.get('/quienesSomos', mainController.quienesSomos)
+router.get('/addProduct', mainController.addProduct)
 //Rutas traidas
 
 
