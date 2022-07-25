@@ -3,6 +3,27 @@
         <body>
             <%- include('../partials/header') %>
                 <main>
+                    <!--Producto-->
+                    <br><br>
+                    <section class="row">
+                            <article class="col-12 col-md-6 mx-auto mt-5 producto">
+                                <figure class="imagenProducto">
+                                <img  src="/images/motos/<%= miProducto.imagen%>" class="card-img-top w-100 d-block" alt="Moto">
+                                </figure> 
+                                <% if (miProducto.descuento == 30) { %>
+                                <img class="descuento" src="/img/promo30.png" alt="Descuento 30%">
+                                <% } else if(miProducto.descuento == 15){%>
+                                <img class="descuento" src="/img/promo15.png" alt="Descuento 15%">
+                                <%}%>
+                                <div class="card-body">
+                                <h5 class="card-title"><%= miProducto.nombre%></h5>
+                                <h5 class="card-title">$ <%= miProducto.precio %></h5>
+                                <p class="card-text"><%= miProducto.descripcion %></p>
+                                
+                                </div>
+                                <a href="/administrar" class="btn btn-danger">Volver</a>
+                            </article>
+                    </section>
                 
                 </main>
             
