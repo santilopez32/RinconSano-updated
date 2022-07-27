@@ -25,5 +25,44 @@
     "avatar": "avatar-1658884031473.pdf",
     "password": "$2a$10$o5V1Eth6rFj45VX2Rs6jKOgib/qGNzX4xsFHezgvkhwE/1SK9MLZ6",
     "role": 1
+  },
+  {
+    "name": "Santiago",
+    "user": "santilopez32@gmail.com",
+    "email": "santilopez32@gmail.com",
+    "nacimiento": "1996-10-10",
+    "domicilio": "sa",
+    "perfilUser": "mayorista",
+    "ciuidad": "Salta",
+    "descripcion": "sant",
+    "avatar": "avatar-1658884502495.pdf",
+    "password": "$2a$10$WpARNItBZ/5XZrnosnbp.OGE3UJwJq.eTO5hXUTyYZTxGDM6ICAuy",
+    "role": 1
+  },
+  {
+    "name": "Santiago",
+    "user": "santilopez32@gmail.com",
+    "email": "santilopez32@gmail.com",
+    "nacimiento": "1996-10-10",
+    "domicilio": "sa",
+    "perfilUser": "mayorista",
+    "ciuidad": "Salta",
+    "descripcion": "san",
+    "avatar": "avatar-1658884636253.pdf",
+    "password": "$2a$10$1xJBATo3pwmNUxMGb3tNOuuroIDVIk/YQr9HRlsjVAJuyxgJVsery",
+    "role": 1
+  },
+  {
+    "name": "marcelo",
+    "user": "santilopez32@gmail.com",
+    "email": "santilopez32@gmail.com",
+    "nacimiento": "1996-10-10",
+    "domicilio": "sa",
+    "perfilUser": "mayorista",
+    "ciuidad": "Salta",
+    "descripcion": "san",
+    "avatar": "avatar-1658884689015.pdf",
+    "password": "$2a$10$GmNLz8rer0Meh/I2S/I2V.ju68TRUImyQaJmiUqPr/69PgFaPLuuO",
+    "role": 1
   }
 ]
