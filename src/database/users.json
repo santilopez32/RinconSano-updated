@@ -1,2 +1,29 @@
-[{"name":"santi","user":"santilopez32","email":"santilopez32@gmail.com","phone":"3875407420","birth_date":"11/10/1996","adress":"Lugo 2318","profile":"minorista","ciudad":"Buenos Aires","descripcion":"Hola!","avatar":"Buenos Aires","pass":"123456789","pass_confirm":"123456789"}]
-
+[
+  {
+    "name": "santi",
+    "user": "santilopez32",
+    "email": "santilopez32@gmail.com",
+    "phone": "3875407420",
+    "birth_date": "11/10/1996",
+    "adress": "Lugo 2318",
+    "profile": "minorista",
+    "ciudad": "Buenos Aires",
+    "descripcion": "Hola!",
+    "avatar": "Buenos Aires",
+    "pass": "123456789",
+    "pass_confirm": "123456789"
+  },
+  {
+    "name": "santi",
+    "user": "santilopez32@gmail.com",
+    "email": "santilopez32@gmail.com",
+    "nacimiento": "1996-10-10",
+    "domicilio": "santi 123",
+    "perfilUser": "mayorista",
+    "ciuidad": "Salta",
+    "descripcion": "san",
+    "avatar": "avatar-1658884031473.pdf",
+    "password": "$2a$10$o5V1Eth6rFj45VX2Rs6jKOgib/qGNzX4xsFHezgvkhwE/1SK9MLZ6",
+    "role": 1
+  }
+]

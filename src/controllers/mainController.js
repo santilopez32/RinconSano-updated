@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator")
 const fs = require("fs")
 const path = require("path")
+const bcrypt = require('bcryptjs');
 
 const mainController = {
 	home: (req, res) => {
@@ -90,9 +91,38 @@ const mainController = {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			})
+		} else { 
+			let user = {
+				name: req.body.name,
+				user: req.body.user,
+				email: req.body.email,
+				telefono: req.body.number,
+				nacimiento: req.body.birth_date,
+				domicilio: req.body.adress,
+				perfilUser: req.body.profile,
+				ciuidad: req.body.ciudad,
+				descripcion: req.body.descripcion,				
+				avatar:  req.file ? req.file.filename : '',
+				password: bcrypt.hashSync(req.body.pass, 10),
+				role: 1
+			}
+			let archivoUsers = fs.readFileSync(path.resolve(__dirname, '../database/users.json'), {
+				encoding: 'utf-8'
+			  });
+			  let users;
+			  //
+			  if (archivoUsers == "") {
+				users = [];
+			  } else {
+				users = JSON.parse(archivoUsers);
+			  };
+			  users.push(user);
+			  usersJSON = JSON.stringify(users, null, 2);
+			  fs.writeFileSync(path.resolve(__dirname, '../database/users.json'), usersJSON);
+			  res.redirect('/login');
+      		  } 
 		}
-		return res.send("Las validaciones se superaron con creces!")
 	}
-}
+
 
 module.exports = mainController;
