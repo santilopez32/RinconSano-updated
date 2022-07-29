@@ -4,16 +4,39 @@
             <%- include('../partials/header') %>
                 <main>
                     <form action="/" method="POST">
-                        <label>Producto</label>
-                        <input type="text" name="product" class="product">
-                        <label>Producto</label>
-                        <input type="text" name="product" class="product">
-                        <label>Producto</label>
-                        <input type="text" name="product" class="product">
-                        <label>Producto</label>
-                        <input type="text" name="product" class="product">
-                        <label>Producto</label>
-                        <input type="text" name="product" class="product">
+                        <div>
+                            <label>Producto</label>
+                            <input type="text" name="product" class="product">
+                        </div>
+                        <div>
+                            <label>Descripción</label>
+                            <input type="text" name="descripcion" class="descripcion">
+                        </div>
+                        <br>
+                        <div>
+                            <label>Imagen</label>
+                            <input type="file" name="imagen" class="imagen">
+                        </div>
+                        <br>
+                        <div>
+                            <label>Categoría</label>
+                            <input type="text" name="categoria" class="categoria">
+                        </div>
+                        <br>
+                        <div>
+                            <label>Precio</label>
+                            <input type="text" name="precio" class="precio">
+                        </div>
+                        <br>
+                        <div>
+                            <button type="reset" class="boton-formulario">Borrar</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button type="submit" class="boton-formulario">Guardar</button>
+                        </div>
+                        <br>
+                        
                     </form>
                 </main>
             
