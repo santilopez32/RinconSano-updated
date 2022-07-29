@@ -94,7 +94,10 @@
     text-decoration: none;
     color: #000;
   }
-
+/*header para administradores*/
+  .adminName{
+    font-weight: bold;
+  }
 /*------------------------------------------------Fin-Header--------------------------------------------------*/
 
 /*---------------------------------------------------Footer---------------------------------------------------*/
@@ -414,6 +417,8 @@ section.banner img{
       display: flex;
       flex-direction: column;
     }
+/*------------------------------------Vistas de administrador---------------------*/
+
 
   /*------------------------------------------------Media---------------------------------------------------------*/
   /*Se recomienda 0-480 smaller phones, 481-768 Tablets y big phones, 769-1279 Laptops and larger tablets, 1280 larger desktops and monitors */
