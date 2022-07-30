@@ -64,5 +64,57 @@
     "avatar": "avatar-1658884689015.pdf",
     "password": "$2a$10$GmNLz8rer0Meh/I2S/I2V.ju68TRUImyQaJmiUqPr/69PgFaPLuuO",
     "role": 1
+  },
+  {
+    "name": "Luciano Lui",
+    "user": "lucho-7",
+    "email": "lucho@gmail.com",
+    "nacimiento": "2022-07-05",
+    "domicilio": "Salta 123",
+    "perfilUser": "mayorista",
+    "ciuidad": "Rosario",
+    "descripcion": "jaja",
+    "avatar": "avatar-1659182981043.jpg",
+    "password": "$2a$10$gmSYlKGkQAwOG1tBeGGDGO61YADkJtmUaswbe6OFgRitYqhtBa6rS",
+    "role": 1
+  },
+  {
+    "name": "Luciano Lui",
+    "user": "lucho-7",
+    "email": "lucho@gmail.com",
+    "nacimiento": "2022-07-05",
+    "domicilio": "Salta 123",
+    "perfilUser": "mayorista",
+    "ciuidad": "Rosario",
+    "descripcion": "jaja",
+    "avatar": "avatar-1659182993429.jpg",
+    "password": "$2a$10$E5iUy2R60PqEG9T4CuClYegDv9sGSU0AtLZo4cT28g.ll2Xx4zzYi",
+    "role": 1
+  },
+  {
+    "name": "Luciano Lui",
+    "user": "lucho-7",
+    "email": "lucho@gmail.com",
+    "nacimiento": "2022-07-05",
+    "domicilio": "Salta 123",
+    "perfilUser": "mayorista",
+    "ciuidad": "Rosario",
+    "descripcion": "jaja",
+    "avatar": "avatar-1659183036316.jpg",
+    "password": "$2a$10$u4QJ9RVgkgoz/sBBKr2dUehcqDKUGRS9hjBNB.rNzr4x1iUMaO3L6",
+    "role": 1
+  },
+  {
+    "name": "Luciano Lui",
+    "user": "lucho-7",
+    "email": "lucho@gmail.com",
+    "nacimiento": "2022-07-05",
+    "domicilio": "Salta 123",
+    "perfilUser": "mayorista",
+    "ciuidad": "Rosario",
+    "descripcion": "jaja",
+    "avatar": "avatar-1659183188281.jpg",
+    "password": "$2a$10$nKKOwcYoG.Nr2wcdDGyqpOSuEfzK0ngCRaVAqbDR2vnJ2TJOAE8Y6",
+    "role": 1
   }
 ]
