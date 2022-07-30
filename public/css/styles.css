@@ -10,12 +10,17 @@
   }
 
 /*--------------------------------------------------Header-----------------------------------------------------*/
-
+.barraBusqueda{
+  border: #000;
+}
 .imagen-logo { 
-    width: 50%;
+    width: 60%;
   }
-.logo{
-    text-align: center;
+.logo  {
+    font-family: 'Whisper', cursive;
+    text-align: left;
+    color: rgb(126, 126, 126);
+    font-size: 200%;
   }
   div.top-header{
     display: flex;
@@ -28,13 +33,13 @@
   }
   
   div.burger-menu i{
-    background-color: #00aa47;
+    background-color: #6b1f04;
     border-radius: 5px;
     color: #FFF;
     font-size: 20px;
     height: 40px;
     margin: 10px 0px 20px 0px;
-    padding: 10px;
+    padding: 30px;
     width: 40px;
   }
   
@@ -48,8 +53,9 @@
     font-size: 12px;
   }
   header {
-    background-color: #32ac65;
-    margin-bottom: 15px; 
+    background-color: #ffffff;
+    margin-bottom: 50px; 
+    box-shadow: 0px 0px 10px rgb(133, 133, 133)
   }
   
   header div.logo,
@@ -70,7 +76,7 @@
   }
   
   header form input[type='search']{
-    border: 0px;
+    border: 0px ;
     border-radius: 5px;
     outline: none;
     width: 100%;
@@ -132,6 +138,7 @@ footer{
 section.banner img{
     width: 100%;
     display: block;
+    margin-bottom: 50px;
     }
     
   /*----------------Fin-Section-Banner---------------*/
