@@ -116,5 +116,18 @@
     "avatar": "avatar-1659183188281.jpg",
     "password": "$2a$10$nKKOwcYoG.Nr2wcdDGyqpOSuEfzK0ngCRaVAqbDR2vnJ2TJOAE8Y6",
     "role": 1
+  },
+  {
+    "name": "Santiago",
+    "user": "santilopez32@gmail.com",
+    "email": "santilopez32@gmail.com",
+    "nacimiento": "1996-10-10",
+    "domicilio": "Salta 123",
+    "perfilUser": "mayorista",
+    "ciuidad": "Buenos Aires",
+    "descripcion": "jaja",
+    "avatar": "avatar-1659190129507.jpg",
+    "password": "$2a$10$S8B3MQcJnb2haey9G0SGleaNHyCGorzQzmf4l37/TdEuNXGLP3iLa",
+    "role": 1
   }
 ]
