@@ -3,43 +3,45 @@ const fs = require("fs")
 const path = require("path")
 const bcrypt = require('bcryptjs');
 
+const User = require('../models/User');
+
 const controllersUser = {
 	login: (req, res) => {
-		return res.render(path.resolve(__dirname, '../views/users/login'));
+		return res.render(path.resolve(__dirname, '../views/users/login'))
 	},
 	processLogin: (req, res) => {
-		let errors = validationResult(req)
-		if(errors.isEmpty()){
-			let usersJSON = fs.readFileSync(path.resolve(__dirname, '../database/users.json'), { encoding : utf-8 }  )
-			let users;
-			if ( usersJSON == ""){
-				users = [];
-			} else {
-				users = JSON.parse(usersJSON)
-			}
+		let userToLogin = User.findByField('email', req.body.email);
+		
+		if(userToLogin) {
+			let isOkThePassword = bcrypt.compareSync(req.body.pass, userToLogin.password);
+			console.log(isOkThePassword)
+			if (isOkThePassword) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
 
-			for( let i = 0; i < users.length; i++){
-				if(users[i].email == req.body.email){
-					if(bcrypt.compareSync(req.body.pass, users[i].pass)){
-						let usuarioALoguearse = users[i];
-						break;
+				if(req.body.recordame) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+				//Ver como carajo hacer para que te redirija a home
+				return res.send("Estas logueado!");
+			}
+			return res.render(path.resolve(__dirname, '../views/users/login'), {
+				errors: {
+					email: {
+						msg: 'Las credenciales son inválidas'
 					}
 				}
-			}
-			if(usuarioALoguearse == undefined){
-				return res.render((path.resolve(__dirname, '../views/users/login')), {errors: [{msg: "Credenciales inválidas"}]} )
-			}
-			req.session.usuarioLogueado = usuarioALoguearse;
-			if(req.body.recordame != undefined){
-				res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000})
-			}
-			res.render("Success")
-		} else {
-			return res.render((path.resolve(__dirname, '../views/users/login')), {
-				errors: errors.mapped(),
-				oldData: req.body
-			} )
+			});
 		}
+
+		return res.render(path.resolve(__dirname, '../views/users/login'), {
+			errors: {
+				email: {
+					msg: 'No se encuentra este email en nuestra base de datos'
+				}
+			}
+		});
+		
 	},
     register: (req, res) => {
 		return res.render(path.resolve(__dirname, '../views/users/register'));
@@ -51,7 +53,7 @@ const controllersUser = {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			})
-		} else { 
+		}  else { 
 			let user = {
 				name: req.body.name,
 				user: req.body.user,

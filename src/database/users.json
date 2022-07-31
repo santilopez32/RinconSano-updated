@@ -129,5 +129,57 @@
     "avatar": "avatar-1659190129507.jpg",
     "password": "$2a$10$S8B3MQcJnb2haey9G0SGleaNHyCGorzQzmf4l37/TdEuNXGLP3iLa",
     "role": 1
+  },
+  {
+    "name": "Santiago",
+    "user": "santilopez32@gmail.com",
+    "email": "santilopez32@gmail.com",
+    "nacimiento": "2022-07-25",
+    "domicilio": "Lugones 1516",
+    "perfilUser": "mayorista",
+    "ciuidad": "Buenos Aires",
+    "descripcion": "saantia",
+    "avatar": "avatar-1659299900871.jpg",
+    "password": "$2a$10$MkpJV2fCb3CG1esN3uLbYOY11cwZd7Y5tp7Xef1rVYlbcUm.VUZWK",
+    "role": 1
+  },
+  {
+    "name": "Santiago",
+    "user": "santilopez32@gmail.com",
+    "email": "cedavilu@gmail.com",
+    "nacimiento": "2022-08-02",
+    "domicilio": "Lugones 1516",
+    "perfilUser": "mayorista",
+    "ciuidad": "Salta",
+    "descripcion": "A",
+    "avatar": "avatar-1659299928312.jpeg",
+    "password": "$2a$10$JUERu40J9LRcLzciq95Vjuwzr1C7gGkH3TSDZv/LbmJ7RercHQ/jC",
+    "role": 1
+  },
+  {
+    "name": "Marco",
+    "user": "Fay",
+    "email": "marcofay@gmail.com",
+    "nacimiento": "1994-10-10",
+    "domicilio": "santiago del estero 222",
+    "perfilUser": "mayorista",
+    "ciuidad": "Buenos Aires",
+    "descripcion": "Joyita",
+    "avatar": "avatar-1659304962006.jpeg",
+    "password": "$2a$10$FB4zz3BawOQNr/GuDZ.xxehx/dI5541FYyqA4TvrIpKtUOUyrgMGG",
+    "role": 1
+  },
+  {
+    "name": "Carlos Maslaton",
+    "user": "Carlitos",
+    "email": "carlos@gmail.com",
+    "nacimiento": "1940-10-10",
+    "domicilio": "jaja",
+    "perfilUser": "mayorista",
+    "ciuidad": "Salta",
+    "descripcion": "jaja",
+    "avatar": "avatar-1659305326244.jpeg",
+    "password": "$2a$10$qfT4.Jj1wyYcctGXmhqa.O.HdDxFB.1d2FKBPVi4RwQFYpBxC/26S",
+    "role": 1
   }
 ]
