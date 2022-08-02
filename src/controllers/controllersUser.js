@@ -23,7 +23,7 @@ const controllersUser = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 				//Ver como carajo hacer para que te redirija a home
-				return res.send("Estas logueado!");
+				return res.redirect('/home');
 			}
 			return res.render(path.resolve(__dirname, '../views/users/login'), {
 				errors: {
@@ -100,7 +100,7 @@ const controllersUser = {
 		return res.render(path.resolve(__dirname, '../views/users/register'));
 	},
 	profile: (req, res) => {
-		return res.render('userProfile', {
+		return res.render(path.resolve(__dirname, '../views/users/profile'), {
 			user: req.session.userLogged
 		});
 	},

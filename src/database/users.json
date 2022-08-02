@@ -181,5 +181,18 @@
     "avatar": "avatar-1659305326244.jpeg",
     "password": "$2a$10$qfT4.Jj1wyYcctGXmhqa.O.HdDxFB.1d2FKBPVi4RwQFYpBxC/26S",
     "role": 1
+  },
+  {
+    "name": "Nacho Flores",
+    "user": "nachoflores@gmail.com",
+    "email": "nachoflores@gmail.com",
+    "nacimiento": "1996-10-10",
+    "domicilio": "Persas 1234",
+    "perfilUser": "minorista",
+    "ciuidad": "Buenos Aires",
+    "descripcion": "Le gusta la joda",
+    "avatar": "avatar-1659481109834.jpg",
+    "password": "$2a$10$0hnOcKSzaioLm9S.LOdBeufgPGdnVkYSOVZdWxI1zOBtxSIMvsbzu",
+    "role": 1
   }
 ]
