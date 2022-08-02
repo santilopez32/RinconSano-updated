@@ -533,4 +533,117 @@ section.banner img{
     
   }
 
-  
+   /* --------------------------Css de toda la view de products.ejs-------------------------- */
+
+  main h1{
+    margin: 40px;
+    text-align: center;
+  }
+
+
+   .contenedorSecciones{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 95%;
+    margin: 0 auto;
+    /* background-color: red; */
+  }
+  .secciónX{
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    width: 99%;
+    margin: 35px 15px;
+    padding: 5px;
+    border-bottom: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgb(186, 177, 177);   
+
+
+  }
+  .nombreSección{
+    display: flex;
+  }
+
+  .contenedorProductos{
+    /* background-color: green; */
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    margin: 10px 10px;
+    padding: 0px;
+    /* border: solid;
+    border-color: #000; */
+  }
+ 
+  .productImg{
+  width: 100%;
+  height: 100%;
+  }
+
+  .productoX{
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellow; */
+    width: 320px;
+    margin: 10px;
+    padding: 10px;
+    /* border: solid;
+    border-color: #000; */
+  }
+      .productoX:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        }
+      /* .productoX:hover .description{
+          display: block;
+          } */
+      
+      .nombreProducto {
+        font-size: 16px;
+        font-weight: normal;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+
+      .productoImagen{
+        background-color: orange;
+        display: block;
+        width: 100%;
+        /* height: 65%; */
+        
+
+      }
+      .productoInformación {
+        background-color: rgb(255, 255, 255);
+        height: 35%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        border-top: 1px solid #ebebeb;
+        position: relative;
+        padding: 20px;
+        
+      }
+      main div div.contenedorProductos div.productoInformación i {
+        color: #39b54a;
+
+        display: block;
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #39b54a;
+        background-color: #FFF;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        top: -15px;
+        
+        transition: transform 1s; 
+      }
+      main div div.contenedorProductos div.productoX:hover i {
+        transform: rotate(-90deg);
+      }
