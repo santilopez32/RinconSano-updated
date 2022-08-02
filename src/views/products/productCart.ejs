@@ -3,35 +3,111 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        <section class="#">
-            <h3>Carrito de compras</h3>
-            <main class="container"> <!--productos--> 
-                <div class="left-column">
-                    <img src="images/aceiteCoco.jpg" alt="">
-                    
+        <section class="seccionPrueba">
+  
+            <div class="div1Prueba">
+                
+                    <h3 class="titulo">Shopping Cart</h3>
+                    <p class="parrafo1">
+                        <i class="text-info font-weight-bold">3</i> items in your cart</p>
+                    <table id="shoppingCart" class="tabla1">
+                        <thead>
+                            <tr>
+                                <th class="productRow">Product</th>
+                                <th class="priceRow">Price</th>
+                                <th class="quantityRow">Quantity</th>
+                                 <th class="buttonsRow"><!--buttons--></th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="mainProductRow">
+                                <td data-th="Product">
+                                    <div class="row">
+                                        <div class="divImage">
+                                            <img src="images/aceiteCoco.jpg" class="cartImage">
+                                        </div>
+                                        <div class="palabrerio">
+                                            <h4>Product Name</h4>
+                                            <p class="fontProductName">Brand &amp; Name</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-th="Price" class="priceText">$49.00</td>
+                                <td data-th="Quantity" class="quantityTd">
+                                    <input type="number" class="buttonQuantity" value="1">
+                                </td>
+                                <td class="actions" data-th="">
+                                    <div class="trashIcon">                              
+                                        <button class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="mainProductRow">
+                                <td data-th="Product">
+                                    <div class="row">
+                                        <div class="divImage">
+                                            <img src="images/aceiteCoco.jpg" class="cartImage">
+                                        </div>
+                                        <div class="palabrerio">
+                                            <h4>Product Name</h4>
+                                            <p class="fontProductName">Brand &amp; Name</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-th="Price" class="priceText">$49.00</td>
+                                <td data-th="Quantity" class="quantityTd">
+                                    <input type="number" class="buttonQuantity" value="1">
+                                </td>
+                                <td class="actions" data-th="">
+                                    <div class="trashIcon">                              
+                                        <button class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="mainProductRow">
+                                <td data-th="Product">
+                                    <div class="row">
+                                        <div class="divImage">
+                                            <img src="images/aceiteCoco.jpg" class="cartImage">
+                                        </div>
+                                        <div class="palabrerio">
+                                            <h4>Product Name</h4>
+                                            <p class="fontProductName">Brand &amp; Name</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-th="Price" class="priceText">$49.00</td>
+                                <td data-th="Quantity" class="quantityTd">
+                                    <input type="number" class="buttonQuantity" value="1">
+                                </td>
+                                <td class="actions" data-th="">
+                                    <div class="trashIcon">                              
+                                        <button class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                            
+                        </div>
+                    </section>
+                </main>
+            </body>
+            <!-- <div class="#">
+                <div class="#t">
+                    <a href="catalog.html" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Checkout</a>
                 </div>
-                <article>
-                    
-                    <p>Aceite de coco</p>
-                    <p>Stock: disponible/noDisponible</p>
-                    <p>Descuento disponible</p>
-                    <form action="/" method="POST">
-                        <br>
-                        </br>
-                        <label>Cantidad</label>
-                        <input type="number" class="cantidad" name="cantidad" min="1" max="99">
-                        <br>
-                        </br>
-                        <button type="button">Eliminar del carrito</button>
-                        <p>$9999</p>
-                        <button type="sumbit">Finalizar compra</button>
-                    </form> 
-                    
-                </article>
-            </main>
-            
-        </section>
-    </main>
-    <%- include('../partials/footer') %>
-</body>
+                <div class="#">
+                    <a href="catalog.html">
+                        <i class="#"></i> Continue Shopping</a>
+                    </div>
+                </div> -->
+        <!-- <%- include('../partials/footer') %> -->
 </html>

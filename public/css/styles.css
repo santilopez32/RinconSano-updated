@@ -391,6 +391,104 @@ section.banner img{
     }
   
   /*-----------Fin-Main-ProductoDetail-------------*/
+  /* -------------------productCart------------------------ */
+
+  /* ---------------------carrito------------------ */
+.seccionPrueba{
+  /* background-color: orange ; */
+}
+
+.div1Prueba{
+  /* background-color: lightseagreen; */
+  /* padding: 0% 0% 0% 7%; */
+}
+
+.titulo{
+  /* background-color: lightcoral; */
+  padding: 0% 0% 0% 4%;
+}
+
+.parrafo1{
+  /* background-color: rgb(133, 70, 161); */
+}
+
+.tabla1{
+  background-color: rgb(165, 165, 165);
+}
+
+.row{
+  background-color: lightsalmon;
+  display: flex;
+}
+.palabrerio{
+  background-color: lightgrey;
+}
+.tabla1{
+  width: 100%;
+}
+
+.productRow{
+  width: 60%;
+  background-color: lightgrey;
+
+}
+.priceRow{
+  width: 12%;
+  background-color: white;
+  
+}
+.quantityRow{
+  width: 10%;
+  background-color: lightgrey;
+  
+}
+.buttonsRow{
+  width: 16%;
+  background-color: white;
+  
+}
+.mainProductRow{
+  /* height: 50%; */
+}
+
+.columnProduct{  
+  /* display: flex; */
+}
+.divImage{
+  width: 50%;
+
+}
+
+.cartImage{
+  width: 100%;
+  height: 100%;
+}
+.palabrerio{
+  width: 50%;
+  padding: 2% 0% 0% 3% ;
+}
+
+  .palabrerio h4{
+    padding: 0% 0% 4% 0%;
+  }
+
+.priceText{
+  padding: 2% 2% 2% 2%;
+  background-color: white;
+  
+}
+.quantityTd{
+  background-color: lightgrey;
+  
+}
+
+.actions{
+  padding: 2% 2% 2% 5%;
+  background-color: white;
+}
+.trashIcon{
+  width: 100%;
+}
 
   /* ---------------Contact page---------------------- */
 
