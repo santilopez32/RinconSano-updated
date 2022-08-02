@@ -7,15 +7,21 @@
   body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
+    margin-top: 0%;
   }
 
 /*--------------------------------------------------Header-----------------------------------------------------*/
-
+.barraBusqueda{
+  border: #000;
+}
 .imagen-logo { 
-    width: 50%;
+    width: 60%;
   }
-.logo{
-    text-align: center;
+.logo  {
+    font-family: 'Whisper', cursive;
+    text-align: left;
+    color: rgb(90, 90, 90);
+    font-size: 200%;
   }
   div.top-header{
     display: flex;
@@ -28,13 +34,13 @@
   }
   
   div.burger-menu i{
-    background-color: #00aa47;
+    background-color: #6b1f04;
     border-radius: 5px;
     color: #FFF;
     font-size: 20px;
     height: 40px;
     margin: 10px 0px 20px 0px;
-    padding: 10px;
+    padding: 30px;
     width: 40px;
   }
   
@@ -48,8 +54,8 @@
     font-size: 12px;
   }
   header {
-    background-color: #32ac65;
-    margin-bottom: 15px; 
+    background-color: #ffffff;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0)
   }
   
   header div.logo,
@@ -70,8 +76,9 @@
   }
   
   header form input[type='search']{
-    border: 0px;
-    border-radius: 5px;
+    border: none;
+    background-color: rgb(234, 234, 234);
+    border-radius: 30px;
     outline: none;
     width: 100%;
     padding: 10px;
@@ -132,6 +139,9 @@ footer{
 section.banner img{
     width: 100%;
     display: block;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    opacity: 70%;
     }
     
   /*----------------Fin-Section-Banner---------------*/
@@ -564,15 +574,29 @@ section.banner img{
         display: none;
     }
     header nav{
-        padding: 2%;
+        padding: 2% 2% 0% 2%;
         display: flex;
         justify-content: space-between;
     }
     header nav ul{
         display: flex;
+
     }
     header nav ul li{
-        margin: 0px 10px;
+        padding: 0.8rem 1.3rem;
+        cursor: pointer;
+        font-size: 0.8rem;
+        margin: 0px;
+        /* background-color: #1259c3; */
+        background-image: linear-gradient(to right, rgb(200, 200, 200) 50%, transparent 50%);
+        background-size: 200%;
+        background-repeat: no-repeat;
+        background-position: right;
+        transition:background-position .3s ease;
+    }
+    header nav ul li:hover{
+      background-position: left;
+      color: white;
     }
 
   /* -------Header------- */
@@ -607,4 +631,117 @@ section.banner img{
     
   }
 
-  
+   /* --------------------------Css de toda la view de products.ejs-------------------------- */
+
+  main h1{
+    margin: 40px;
+    text-align: center;
+  }
+
+
+   .contenedorSecciones{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 95%;
+    margin: 0 auto;
+    /* background-color: red; */
+  }
+  .secciónX{
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    width: 99%;
+    margin: 35px 15px;
+    padding: 5px;
+    border-bottom: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgb(186, 177, 177);   
+
+
+  }
+  .nombreSección{
+    display: flex;
+  }
+
+  .contenedorProductos{
+    /* background-color: green; */
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    margin: 10px 10px;
+    padding: 0px;
+    /* border: solid;
+    border-color: #000; */
+  }
+ 
+  .productImg{
+  width: 100%;
+  height: 100%;
+  }
+
+  .productoX{
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellow; */
+    width: 320px;
+    margin: 10px;
+    padding: 10px;
+    /* border: solid;
+    border-color: #000; */
+  }
+      .productoX:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        }
+      /* .productoX:hover .description{
+          display: block;
+          } */
+      
+      .nombreProducto {
+        font-size: 16px;
+        font-weight: normal;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+
+      .productoImagen{
+        background-color: orange;
+        display: block;
+        width: 100%;
+        /* height: 65%; */
+        
+
+      }
+      .productoInformación {
+        background-color: rgb(255, 255, 255);
+        height: 35%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        border-top: 1px solid #ebebeb;
+        position: relative;
+        padding: 20px;
+        
+      }
+      main div div.contenedorProductos div.productoInformación i {
+        color: #39b54a;
+
+        display: block;
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #39b54a;
+        background-color: #FFF;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        top: -15px;
+        
+        transition: transform 1s; 
+      }
+      main div div.contenedorProductos div.productoX:hover i {
+        transform: rotate(-90deg);
+      }
