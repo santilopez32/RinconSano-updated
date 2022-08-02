@@ -58,6 +58,8 @@ router.get('/login', controllersUser.login)
 router.post('/login', validations, controllersUser.processLogin)
 router.get('/register', guestMiddleware, controllersUser.register)
 router.post('/register', uploadFile.single("avatar"), validations, controllersUser.processRegister)
+router.get('/profile', authMiddleware, controllersUser.profile);
+router.get('/logout', controllersUser.logout);
 
 router.get('/check', function(req,res){
     if (req.session.usuarioLogueado == undefined){

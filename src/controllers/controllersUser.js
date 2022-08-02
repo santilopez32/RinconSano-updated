@@ -99,6 +99,17 @@ const controllersUser = {
 		}
 		return res.render(path.resolve(__dirname, '../views/users/register'));
 	},
+	profile: (req, res) => {
+		return res.render('userProfile', {
+			user: req.session.userLogged
+		});
+	},
+
+	logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
     
 }
 
