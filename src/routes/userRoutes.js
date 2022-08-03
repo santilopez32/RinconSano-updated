@@ -54,7 +54,7 @@ const { BADFAMILY } = require('dns');
 
 const controllersUser = require('../controllers/controllersUser');
 
-router.get('/login', controllersUser.login)
+router.get('/login', guestMiddleware, controllersUser.login)
 router.post('/login', validations, controllersUser.processLogin)
 router.get('/register', guestMiddleware, controllersUser.register)
 router.post('/register', uploadFile.single("avatar"), validations, controllersUser.processRegister)

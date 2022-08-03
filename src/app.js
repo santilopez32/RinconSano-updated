@@ -8,7 +8,12 @@ const cookieParser = require('cookie-parser');
 
 app.use(recordameMiddleware)
 app.use(cookieParser())
-app.use(session( {secret: "Nuestro mensaje secreto"}));
+app.use(session( {
+    secret: "Nuestro mensaje secreto",
+    resave: false,
+    saveUninitialized: false,
+}));
+
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.resolve(__dirname, '..', 'public')))
 app.listen(process.env.PORT || 3000, () => {
