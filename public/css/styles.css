@@ -745,3 +745,31 @@ section.banner img{
       main div div.contenedorProductos div.productoX:hover i {
         transform: rotate(-90deg);
       }
+
+      /* ---------------------------------------------------------vista profile.ejs------------------------------------------------------------------ */
+  
+  .imagenPerfil{
+    height: 300px;
+    width: 300px;
+    border: solid;
+    border-color: grey;
+    margin: 20px;
+  }
+  .card {
+    margin: 40px;
+    padding: 20px;
+    border: solid ;
+    border-color: rgba(128, 128, 128, 0.53) ;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .cardName {
+    font-size: 25px ;
+    margin: 15px;
+    
+  }
+  .cardText{
+    font-size: 20px;
+    margin: 10px;
+  }
