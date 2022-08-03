@@ -5,13 +5,13 @@
 	
 	
 <div class="card">
-	<img src="/images/chocolate80.jpg" alt="Chocolate 80%" class="imagenPerfil">
-	<h1>Nombre de Usuario</h1>
-	<h3 class="cardName">Nombre</h3>
-	<p class="cardText">Perfil de Usuario</p>
-	<p class="cardText">Descrpcion</p>
-	<p class="cardText">E-mail</p>
-	<p class="cardText">Domicilio</p>
+	<img src="/images/avatar/<%=locals.userLogged.avatar%>" alt="Chocolate 80%" class="imagenPerfil">
+	<h1><%=locals.userLogged.name %></h1>
+	
+	<p class="cardText">Perfil de Usuario: <%=locals.userLogged.user %></p>
+	<p class="cardText">Descrpcion: <%=locals.userLogged.descripcion %></p>
+	<p class="cardText">E-mail: <%=locals.userLogged.email %></p>
+	<p class="cardText">Domicilio: <%=locals.userLogged.domicilio %></p>
 	
 	
 	

@@ -180,7 +180,7 @@
     "descripcion": "jaja",
     "avatar": "avatar-1659305326244.jpeg",
     "password": "$2a$10$qfT4.Jj1wyYcctGXmhqa.O.HdDxFB.1d2FKBPVi4RwQFYpBxC/26S",
-    "role": 1
+    "role": 9
   },
   {
     "name": "Nacho Flores",
@@ -193,6 +193,19 @@
     "descripcion": "Le gusta la joda",
     "avatar": "avatar-1659481109834.jpg",
     "password": "$2a$10$0hnOcKSzaioLm9S.LOdBeufgPGdnVkYSOVZdWxI1zOBtxSIMvsbzu",
+    "role": 1
+  },
+  {
+    "name": "Justin Bieber",
+    "user": "José Biberón",
+    "email": "jb@gmail.com",
+    "nacimiento": "1994-10-10",
+    "domicilio": "San remo 316",
+    "perfilUser": "minorista",
+    "ciuidad": "Salta",
+    "descripcion": "Me gusta cantar, cumbia preferentemente",
+    "avatar": "avatar-1659489406288.jpg",
+    "password": "$2a$10$TEXat/f7kfCSK5MTpBcLleSHgPCX7oHXts73r/jZf.B67mWt6C6PC",
     "role": 1
   }
 ]

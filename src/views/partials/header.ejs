@@ -30,7 +30,21 @@
             <% if(!locals.isLogged){%>
             <li><a href="/user/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
             <li><a href="/user/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-            <% } else {%>
+            <% } else if (locals.isLogged && locals.userLogged.role === 9) {%>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/user/profile" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Hi <%= locals.userLogged.name %>
+                    </a>
+                </li>        
+                        
+                <li>
+                    <a class="dropdown-item" href="/user/logout">Logout</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="/administrar">Administrar</a>
+                </li>
+
+            <% } else { %>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/user/profile" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Hi <%= locals.userLogged.name %>
