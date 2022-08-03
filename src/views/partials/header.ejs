@@ -27,8 +27,21 @@
             <li><a href="/preguntasFrecuentes">Preguntas frecuentes</a></li>
             <li><a href="/contact">Contactos</a></li>
             <li><a href="/product/Cart">Carrito</a></li>
+            <% if(!locals.isLogged){%>
             <li><a href="/user/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
             <li><a href="/user/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+            <% } else {%>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/user/profile" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Hi <%= locals.userLogged.name %>
+                    </a>
+                </li>        
+                        
+                <li>
+                    <a class="dropdown-item" href="/user/logout">Logout</a>
+                </li>                
+            <% } %>
+
         </ul>
         
     </nav>
