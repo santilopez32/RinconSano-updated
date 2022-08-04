@@ -21,6 +21,7 @@ const controllersAdmin = {
             descripcion: req.body.descripcion,
             categoria: req.body.categoria,
             precio: req.body.precio,
+            descuento: req.body.descuento,
             imagen: req.file.filename
         }
         productos.push(nuevoProducto);

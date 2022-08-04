@@ -53,5 +53,14 @@
     "categoria": "Premium",
     "precio": "100.000,00",
     "imagen": "imagen-1659619267821.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Yerba",
+    "descripcion": "Yerba mate ideal para gorditos. Calma ansiedad.",
+    "categoria": "Especiales",
+    "precio": "15.000",
+    "descuento": "0%",
+    "imagen": "imagen-1659619606389.jpg"
   }
 ]
