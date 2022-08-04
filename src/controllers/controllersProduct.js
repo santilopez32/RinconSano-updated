@@ -11,7 +11,8 @@ const controllersProduct = {
 		return res.render(path.resolve(__dirname, '../views/products/productCart'));
 	},
     products: (req, res) => {
-		return res.render(path.resolve(__dirname, '../views/products/products'));
+		let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+		return res.render(path.resolve(__dirname, '../views/products/products'), {productos});
 	},
     addProduct: (req, res) => {
 		return res.render(path.resolve(__dirname, '../views/admin/addProduct'));

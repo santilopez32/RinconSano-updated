@@ -14,7 +14,22 @@
     <div class="secciónX">
         <h3>Granolas Rincon Sano</h3>
         <div class="contenedorProductos">
-            
+           
+            <% productos.forEach(productos => { %>
+
+                <div class="productoX">
+                    <div class="productoImagen">
+                        <a href="/product/Detail"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                    </div>
+                    <div class="productoInformación">
+                        <i class="fas fa-truck"></i>
+                        <p class="price"><%= productos.precio%></p>
+                        <p class="discount"><%= productos.descuento%></p>
+                        <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                    </div>
+                </div>
+            <% }); %>    
+          
             <div class="productoX">
                 <div class="productoImagen">
                     <a href="/product/Detail"><img src="/images/granolatentacion.jpeg" alt="Granola" class="productImg"></a>

@@ -1,51 +1,65 @@
 [
   {
-    "nombre": "Moto honda",
-    "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    "precio": "150.000",
-    "descuento": "30",
+    "nombre": "Aceite de Coco Orgánica",
+    "descripcion": "Aceite orgánico",
+    "precio": "1100",
+    "descuento": "15",
     "oldImagen": "color-rojo-wave.jpg",
     "id": "1",
-    "imagen": "color-rojo-wave.jpg"
+    "imagen": "imagen-1659623480042.jpg"
   },
   {
-    "id": 2,
-    "nombre": "Moto honda xr150",
-    "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    "precio": "250.000",
-    "descuento": "30",
-    "imagen": "roja-xr150-color.jpg"
-  },
-  {
-    "id": 3,
-    "nombre": "Moto honda cgtitan190",
-    "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    "precio": "345.000",
+    "nombre": "Miel Orgánica",
+    "descripcion": "Miel Orgánica especial",
+    "precio": "800",
     "descuento": "15",
-    "imagen": "cgtitan-color-negro.jpg"
+    "oldImagen": "roja-xr150-color.jpg",
+    "id": "2",
+    "imagen": "imagen-1659623546106.jpg"
   },
   {
-    "id": 4,
-    "nombre": "Moto honda repsol cb190",
-    "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    "precio": "286.000",
+    "nombre": "Mermelada de Arándanos Orgánica",
+    "descripcion": "Mermelada de Arándanos Orgánica",
+    "precio": "790",
     "descuento": "15",
-    "imagen": "cb190r-repsol.jpg"
+    "oldImagen": "cgtitan-color-negro.jpg",
+    "id": "3",
+    "imagen": "imagen-1659623577051.jpg"
   },
   {
-    "id": 5,
-    "nombre": "Moto honda cgtitan190",
-    "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    "precio": "345.000",
-    "descuento": "30",
-    "imagen": "cgtitan-color-negro.jpg"
+    "nombre": "Aceite de Lino Orgánico",
+    "descripcion": "Aceite de Lino Orgánico",
+    "precio": "800",
+    "descuento": "15",
+    "oldImagen": "cb190r-repsol.jpg",
+    "id": "4",
+    "imagen": "imagen-1659623602346.jpg"
   },
   {
-    "id": 6,
-    "nombre": "Moto honda repsol cb190",
-    "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    "precio": "286.000",
-    "descuento": "30",
-    "imagen": "cb190r-repsol.jpg"
+    "nombre": "Aceite de Oliva Premium Orgánico",
+    "descripcion": "Aceite de Oliva Premium Orgánico",
+    "precio": "2600",
+    "descuento": "15",
+    "oldImagen": "cgtitan-color-negro.jpg",
+    "id": "5",
+    "imagen": "imagen-1659623699459.jpg"
+  },
+  {
+    "nombre": "Porotos Colorados Orgánicos",
+    "descripcion": "Porotos Colorados Orgánicos",
+    "precio": "390",
+    "descuento": "15",
+    "oldImagen": "cb190r-repsol.jpg",
+    "id": "6",
+    "imagen": "imagen-1659623672204.jpg"
+  },
+  {
+    "nombre": "Granola tentación",
+    "descripcion": "Una espectacular granolita",
+    "precio": "550",
+    "descuento": "0",
+    "oldImagen": "imagen-1659623121214.jpeg",
+    "id": "7",
+    "imagen": "imagen-1659623681425.jpeg"
   }
 ]
