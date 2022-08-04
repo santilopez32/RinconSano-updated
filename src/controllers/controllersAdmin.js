@@ -11,6 +11,23 @@ const controllersAdmin = {
         let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
 		return res.render(path.resolve(__dirname, '../views/admin/create'), {productos});
 	},
+    save: (req, res) => {
+        let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+        let ultimoProd = productos.pop();
+        productos.push(ultimoProd);
+        let nuevoProducto = {
+            id: ultimoProd.id +1,
+            nombre : req.body.nombre,
+            descripcion: req.body.descripcion,
+            categoria: req.body.categoria,
+            precio: req.body.precio,
+            imagen: req.file.filename
+        }
+        productos.push(nuevoProducto);
+        let nuevoProductoGuardar = JSON.stringify(productos,null,2);
+        fs.writeFileSync(path.resolve(__dirname,'../database/productos.json'), nuevoProductoGuardar);
+        res.redirect('/administrar');
+	},
     edit: (req, res) => {
         let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
         const prodId = req.params.id;

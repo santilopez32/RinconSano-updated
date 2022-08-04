@@ -3,10 +3,10 @@
         <body>
             <%- include('../partials/header') %>
                 <main>
-                    <form action="/" method="POST">
+                    <form action="/administrar/create" method="POST" enctype="multipart/form-data">
                         <div>
                             <label>Producto</label>
-                            <input type="text" name="product" class="product">
+                            <input type="text" name="nombre" class="product">
                         </div>
                         <div>
                             <label>Descripción</label>
