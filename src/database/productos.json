@@ -1,10 +1,11 @@
 [
   {
-    "id": "1",
-    "nombre": "Moto honda c125c",
+    "nombre": "Moto honda",
     "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
     "precio": "150.000",
     "descuento": "30",
+    "oldImagen": "color-rojo-wave.jpg",
+    "id": "1",
     "imagen": "color-rojo-wave.jpg"
   },
   {
@@ -46,21 +47,5 @@
     "precio": "286.000",
     "descuento": "30",
     "imagen": "cb190r-repsol.jpg"
-  },
-  {
-    "id": 7,
-    "descripcion": "Granola perfecta para millonarios, adquiri la tuya!",
-    "categoria": "Premium",
-    "precio": "100.000,00",
-    "imagen": "imagen-1659619267821.jpg"
-  },
-  {
-    "id": 8,
-    "nombre": "Yerba",
-    "descripcion": "Yerba mate ideal para gorditos. Calma ansiedad.",
-    "categoria": "Especiales",
-    "precio": "15.000",
-    "descuento": "0%",
-    "imagen": "imagen-1659619606389.jpg"
   }
 ]

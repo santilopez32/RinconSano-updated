@@ -24,6 +24,7 @@ router.get('/create', accesoAdmin, controllersAdmin.create);
 router.post('/create', uploadFile.single('imagen'), controllersAdmin.save); //agregamos uploadFile con storage arriba
 router.get('/detail/:id', accesoAdmin, controllersAdmin.show);
 router.get('/edit/:id', accesoAdmin, controllersAdmin.edit);
+router.post('/edit/:id', uploadFile.single('imagen'), controllersAdmin.update); //agregamos edit
 router.get('/delete/:id', accesoAdmin, controllersAdmin.destroy);
 
 
