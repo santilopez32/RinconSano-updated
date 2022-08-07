@@ -8,7 +8,6 @@ const controllersProduct = require('../controllers/controllersProduct');
 
 router.get('/Detail/:id', controllersProduct.productDetail)
 router.get('/Cart', controllersProduct.productCart)
-router.get('/add', controllersProduct.addProduct)
 router.get('/products', controllersProduct.products)
 
 
