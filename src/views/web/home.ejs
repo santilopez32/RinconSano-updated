@@ -15,109 +15,21 @@
         <h3></h3>
         <div class="contenedorProductos">
             
-            <div class="productoX">
-                <div class="productoImagen">
-                    <a href="/product/Detail"><img src="/images/granolatentacioncoco.jpeg" alt="Granola" class="productImg"></a>
-                </div>
-                <div class="productoInformación">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$1.000</p>
-                    <p class="discount">5% off</p>
-                    <h4 class="nombreProducto">Tentación Coco</h4>
-                </div>
-            </div>
+            <% productos.forEach(productos => { %>
 
-
-            <div class="productoX">
-                <div class="productoImagen">
-                    <a href="/product/Detail"><img src="/images/aceiteCoco.jpg" alt="Producto org." class="productImg"></a>
+                <div class="productoX">
+                    <div class="productoImagen">
+                        <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                    </div>
+                    <div class="productoInformación">
+                        <i class="fas fa-truck"></i>
+                        <p class="price"><%= productos.precio%></p>
+                        <p class="discount"><%= productos.descuento%></p>
+                        <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                    </div>
                 </div>
-                <div class="productoInformación">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$1.100</p>
-                    <p class="discount">15% off</p>
-                    <h4 class="nombreProducto">Aceite de Coco Orgánica</h4>
-                </div>
-            </div>
-
-
-            <div class="productoX">
-                <div class="productoImagen">
-                    <a href="/product/Detail"><img src="/images/mielOrg.jpg" alt="Producto org." class="productImg"></a>
-                </div>
-                <div class="productoInformación">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$800</p>
-                    <p class="discount">15% off</p>
-                    <h4 class="nombreProducto">Miel Orgánica</h4>
-                </div>
-            </div>
-
-            <div class="productoX">
-                <div class="productoImagen">
-                    <a href="/product/Detail"><img src="/images/chocolate80.jpg" alt="Chocolate 80%" class="productImg"></a>
-                </div>
-                <div class="productoInformación">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$700</p>
-                    <p class="discount">5% off</p>
-                    <h4 class="nombreProducto">Chocolate 80%</h4>
-                </div>
-            </div>
-            
-            <div class="productoX">
-                <div class="productoImagen">
-                    <a href="/product/Detail"><img src="/images/aceiteCocoCosmetica.jpg" alt="aceiteCocoCosmetica" class="productImg"></a>
-                </div>
-                <div class="productoInformación">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$590</p>
-                    <p class="discount">10% off</p>
-                    <h4 class="nombreProducto">Aceite de Coco "God Bless You"</h4>
-                </div>
-            </div>
-
-
-            <div class="productoX">
-                <div class="productoImagen">
-                    <a href="/product/Detail"><img src="/images/lecheDeCocoYAlmendras.jpg" alt="lecheDeCocoYAlmendras" class="productImg"></a>
-                </div>
-                <div class="productoInformación">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$590</p>
-                    <p class="discount">10% off</p>
-                    <h4 class="nombreProducto">Leche de Coco y Almendras</h4>
-                </div>
-            </div>
-
-
-            <div class="productoX">
-                <div class="productoImagen">
-                   <a href="/product/Detail"><img src="/images/trigoSarraceno.jpg" alt="Trigo Sarraceno" class="productImg"></a>
-               </div>
-               <div class="productoInformación">
-                   <i class="fas fa-truck"></i>
-                   <p class="price">$390</p>
-                   <p class="discount">5% off</p>
-                   <h4 class="nombreProducto">Trigo Sarraceno</h4>
-               </div>
-           </div>
-
-            <div class="productoX">
-                <div class="productoImagen">
-                    <a href="/product/Detail"><img src="/images/granolatentacion.jpeg" alt="Granola" class="productImg"></a>
-                </div>
-                <div class="productoInformación">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$1.000</p>
-                    <p class="discount">5% off</p>
-                    <h4 class="nombreProducto">Tentación</h4>
-                </div>
-            </div>
-            
-            
-            </div>
-        </div>
+            <% }); %>
+        </div>    
     </div>
 
     <!-- ---------------------------------Producción de Rincon Sano ----------------------------------->

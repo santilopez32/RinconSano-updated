@@ -5,7 +5,14 @@ const bcrypt = require('bcryptjs');
 
 const controllersProduct = {
 	productDetail: (req, res) => {
-		return res.render(path.resolve(__dirname, '../views/products/productDetail'))
+		let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+        let miProd;
+        productos.forEach(producto => {
+            if(producto.id == req.params.id){
+                miProd = producto;
+            }
+        });
+        res.render(path.resolve(__dirname, '../views/products/productDetail'), {miProd})
 	},
     productCart: (req, res) => {
 		return res.render(path.resolve(__dirname, '../views/products/productCart'));

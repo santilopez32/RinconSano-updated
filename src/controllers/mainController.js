@@ -5,7 +5,8 @@ const bcrypt = require('bcryptjs');
 
 const mainController = {
 	home: (req, res) => {
-		return res.render(path.resolve(__dirname, '../views/web/home'));
+		let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+		return res.render(path.resolve(__dirname, '../views/web/home'), {productos});
 	},
 	preguntasFrecuentes: (req, res) => {
 		return res.render(path.resolve(__dirname, '../views/web/preguntasFrecuentes'));

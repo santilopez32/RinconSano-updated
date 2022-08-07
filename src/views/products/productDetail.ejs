@@ -6,7 +6,7 @@
             <main class="container">
                 <!-- Left Column / Product Image -->
                 <div class="left-column">
-                    <img src="/images/aceiteCoco.jpg" alt="">
+                    <img src="/images/<%=miProd.imagen%>" alt="">
                     
                 </div>
                  
@@ -16,14 +16,14 @@
                  
                     <!-- Product Description -->
                     <div class="product-description">
-                      <span>Orgánico</span>
-                      <h1>Aceite de Coco Virgen (Orgánico/Sin TAAC) CHIA GRAAL -180 ml</h1>
-                      <p>Prensado en frío</p>
+                      <span><%=miProd.nombre%></span>
+                      <h1><%=miProd.nombre%></h1>
+                      <p><%=miProd.descripcion%></p>
                     </div>
 
                     <!-- Product Pricing -->
                     <div class="product-price">
-                        <span>1.100$</span>
+                        <span><%=miProd.precio%></span>
                     </div>
                     <div>
                         <label for="cantidad" class="labelCantidad" >Cantidad</label>
