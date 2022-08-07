@@ -2,9 +2,9 @@
   {
     "nombre": "Aceite de Coco Orgánica",
     "descripcion": "Aceite orgánico",
-    "precio": "1100",
+    "precio": "50000",
     "descuento": "15",
-    "oldImagen": "color-rojo-wave.jpg",
+    "oldImagen": "imagen-1659623480042.jpg",
     "id": "1",
     "imagen": "imagen-1659623480042.jpg"
   },
@@ -54,12 +54,12 @@
     "imagen": "imagen-1659623672204.jpg"
   },
   {
-    "nombre": "Granola tentación",
-    "descripcion": "Una espectacular granolita",
-    "precio": "550",
-    "descuento": "0",
-    "oldImagen": "imagen-1659623121214.jpeg",
-    "id": "7",
-    "imagen": "imagen-1659623681425.jpeg"
+    "id": "61",
+    "nombre": "Galletitas Nina",
+    "descripcion": "Galletitas saludables, sin TACC",
+    "categoria": "Para celíacos",
+    "precio": "950",
+    "descuento": "15%",
+    "imagen": "imagen-1659884264256.jpg"
   }
 ]
