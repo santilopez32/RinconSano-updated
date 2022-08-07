@@ -61,9 +61,7 @@ const controllersUser = {
 				telefono: req.body.number,
 				nacimiento: req.body.birth_date,
 				domicilio: req.body.adress,
-				perfilUser: req.body.profile,
-				ciuidad: req.body.ciudad,
-				descripcion: req.body.descripcion,				
+				ciuidad: req.body.ciudad,				
 				avatar:  req.file ? req.file.filename : '',
 				password: bcrypt.hashSync(req.body.pass, 10),
 				role: 1

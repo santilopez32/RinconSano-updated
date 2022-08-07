@@ -85,19 +85,6 @@
                         <% } %>
                 </div>
                 <div class="control-formulario">
-                    <h4>Perfil del usuario</h4>
-                    <br>
-                    <label for="buy">Mayorista</label>
-                    <input type="radio" name="profile" value="mayorista" id="mayorista">
-                    <label for="sell">Minorista</label>
-                    <input type="radio" name="profile" value="minorista" id="minorista">
-                    <% if (locals.errors && errors.profile) { %>
-                        <div style= "color: red">
-                            <%= errors.profile.msg %>
-                        </div>
-                        <% } %>
-                </div>
-                <div class="control-formulario">
                     <label>Ciudad:</label>
                     <select name="ciudad" class="control">
                     <option value="">Elegí una ciudad</option>
@@ -116,18 +103,6 @@
                         <%= errors.ciudad.msg %>
                     </div>
                     <% } %>
-                </div>
-                
-                <div class="control-formulario">
-                    <label>Descripción:</label>
-                    <textarea 
-                    name="descripcion" 
-                    class="control"></textarea>
-                    <% if (locals.errors && errors.descripcion) { %>
-                        <div style= "color: red">
-                            <%= errors.descripcion.msg %>
-                        </div>
-                        <% } %>
                 </div>
                 <h4>Elegí tu foto de usuario</h4>
                 <br>

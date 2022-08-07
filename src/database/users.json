@@ -207,5 +207,27 @@
     "avatar": "avatar-1659489406288.jpg",
     "password": "$2a$10$TEXat/f7kfCSK5MTpBcLleSHgPCX7oHXts73r/jZf.B67mWt6C6PC",
     "role": 1
+  },
+  {
+    "name": "Agustin Martinez",
+    "user": "agusmartinez@gmail.com",
+    "email": "agusmartinez@gmail.com",
+    "nacimiento": "1996-10-10",
+    "domicilio": "Sacarias 254",
+    "ciuidad": "Salta",
+    "avatar": "avatar-1659879531352.jpg",
+    "password": "$2a$10$gd/S9vof9ZeZT1u9RIfXGOTvDUGBE8gYizSjk8HzUUdPtk5jNYyD.",
+    "role": 1
+  },
+  {
+    "name": "Papa Francisco",
+    "user": "papa_francis",
+    "email": "papafrancisco@gmail.com",
+    "nacimiento": "1996-10-10",
+    "domicilio": "Sacachispas 266",
+    "ciuidad": "Buenos Aires",
+    "avatar": "avatar-1659879660798.jpg",
+    "password": "$2a$10$v3e9Q0PWCyfimqVp2dtGTOzEMNNncKbab.S1JBV.G21akwQIQ5N3e",
+    "role": 1
   }
 ]

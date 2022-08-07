@@ -27,9 +27,7 @@ const validations = [
     body("phone").notEmpty().withMessage("Debes ingresar tu teléfono"),
     body("birth_date").notEmpty().withMessage("¿No quieres decirnos tu cumpleaños?"),
     body("adress").notEmpty().withMessage("¿Dónde vives?"),
-    body("profile").notEmpty().withMessage("Recuerda elegir un perfil"),
     body("ciudad").notEmpty().withMessage("¿Y, eso en que provincia es?"),
-    body("descripcion").notEmpty().withMessage("Vamos, cuentanos un poco.."),
     body("pass")
         .notEmpty().withMessage("Elige una contraseña").bail()
         .isLength({min: 8}).withMessage("La contraseña debe tener al menos 8 caracteres"),
