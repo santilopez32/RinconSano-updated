@@ -15,6 +15,7 @@ const controllersAdmin = {
         let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
         let ultimoProd = productos.pop();
         productos.push(ultimoProd);
+        console.log(ultimoProd.id +1)
         let nuevoProducto = {
             id: ultimoProd.id +1,
             nombre : req.body.nombre,

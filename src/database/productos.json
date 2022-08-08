@@ -54,12 +54,21 @@
     "imagen": "imagen-1659623672204.jpg"
   },
   {
-    "id": "7",
-    "nombre": "Galletitas Nina",
-    "descripcion": "Galletitas saludables, sin TACC",
-    "categoria": "Para celíacos",
-    "precio": "950",
+    "id": 7,
+    "nombre": "Shampoo Ayurvedico",
+    "descripcion": "Shampoo espectacular",
+    "categoria": "Limpieza personal",
+    "precio": "780",
     "descuento": "15%",
-    "imagen": "imagen-1659884264256.jpg"
+    "imagen": "imagen-1659997495265.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Pasta dental",
+    "descripcion": "Pasta dental vegana",
+    "categoria": "Verganos",
+    "precio": "670",
+    "descuento": "15%",
+    "imagen": "imagen-1659997788146.jpg"
   }
 ]
