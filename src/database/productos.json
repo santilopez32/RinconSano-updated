@@ -2,6 +2,7 @@
   {
     "nombre": "Aceite de Coco Orgánica",
     "descripcion": "Aceite orgánico",
+    "categoria": "Orgánico",
     "precio": "50000",
     "descuento": "15",
     "oldImagen": "imagen-1659623480042.jpg",
@@ -11,64 +12,107 @@
   {
     "nombre": "Miel Orgánica",
     "descripcion": "Miel Orgánica especial",
+    "categoria": "Orgánico",
     "precio": "800",
     "descuento": "15",
-    "oldImagen": "roja-xr150-color.jpg",
+    "oldImagen": "imagen-1659623546106.jpg",
     "id": "2",
     "imagen": "imagen-1659623546106.jpg"
   },
   {
     "nombre": "Mermelada de Arándanos Orgánica",
     "descripcion": "Mermelada de Arándanos Orgánica",
+    "categoria": "Orgánico",
     "precio": "790",
     "descuento": "15",
-    "oldImagen": "cgtitan-color-negro.jpg",
+    "oldImagen": "imagen-1659623577051.jpg",
     "id": "3",
     "imagen": "imagen-1659623577051.jpg"
   },
   {
     "nombre": "Aceite de Lino Orgánico",
     "descripcion": "Aceite de Lino Orgánico",
+    "categoria": "Orgánico",
     "precio": "800",
     "descuento": "15",
-    "oldImagen": "cb190r-repsol.jpg",
+    "oldImagen": "imagen-1659623602346.jpg",
     "id": "4",
     "imagen": "imagen-1659623602346.jpg"
   },
   {
     "nombre": "Aceite de Oliva Premium Orgánico",
     "descripcion": "Aceite de Oliva Premium Orgánico",
+    "categoria": "Orgánico",
     "precio": "2600",
     "descuento": "15",
-    "oldImagen": "cgtitan-color-negro.jpg",
+    "oldImagen": "imagen-1659623699459.jpg",
     "id": "5",
     "imagen": "imagen-1659623699459.jpg"
   },
   {
     "nombre": "Porotos Colorados Orgánicos",
     "descripcion": "Porotos Colorados Orgánicos",
+    "categoria": "Orgánico",
     "precio": "390",
     "descuento": "15",
-    "oldImagen": "cb190r-repsol.jpg",
+    "oldImagen": "imagen-1659623672204.jpg",
     "id": "6",
     "imagen": "imagen-1659623672204.jpg"
   },
   {
-    "id": 7,
     "nombre": "Shampoo Ayurvedico",
     "descripcion": "Shampoo espectacular",
-    "categoria": "Limpieza personal",
+    "categoria": "Cosmética Natural",
     "precio": "780",
-    "descuento": "15%",
+    "descuento": "0",
+    "oldImagen": "imagen-1659997495265.jpg",
+    "id": "7",
     "imagen": "imagen-1659997495265.jpg"
   },
   {
-    "id": 8,
     "nombre": "Pasta dental",
     "descripcion": "Pasta dental vegana",
-    "categoria": "Verganos",
+    "categoria": "Cosmética Natural",
     "precio": "670",
-    "descuento": "15%",
+    "descuento": "0",
+    "oldImagen": "imagen-1659997788146.jpg",
+    "id": "8",
     "imagen": "imagen-1659997788146.jpg"
+  },
+  {
+    "id": "9",
+    "nombre": "Granola Clásica",
+    "descripcion": "Avena, almendras, maní, avellanas, miel.",
+    "categoria": "Granola",
+    "precio": "1000",
+    "descuento": "5%",
+    "imagen": "imagen-1660005606861.jpeg"
+  },
+  {
+    "id": "10",
+    "nombre": "Granola Tentación",
+    "descripcion": "Avena, almendras, maní, avellanas, miel, chips de chocolate.",
+    "categoria": "Granola",
+    "precio": "1000",
+    "descuento": "5%",
+    "imagen": "imagen-1660005821890.jpeg"
+  },
+  {
+    "id": "11",
+    "nombre": "Leche de Coco y Almendras",
+    "descripcion": "Leche a base de Coco y Almendras",
+    "categoria": "Libre de Gluten",
+    "precio": "700",
+    "descuento": "10",
+    "imagen": "imagen-1660005940546.jpg"
+  },
+  {
+    "id": "12",
+    "nombre": "Galletitas Nina",
+    "descripcion": "Galletas dulces libres de gluten",
+    "categoria": "Libre de Gluten",
+    "precio": "300",
+    "descuento": "10",
+    "imagen": "imagen-1660006037687.jpg"
   }
 ]

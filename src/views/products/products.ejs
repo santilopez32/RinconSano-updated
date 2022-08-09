@@ -16,21 +16,87 @@
         <div class="contenedorProductos">
            
             <% productos.forEach(productos => { %>
-
-                <div class="productoX">
-                    <div class="productoImagen">
-                        <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                <% if (productos.categoria == "Granola"){ %>
+                    <div class="productoX">
+                        <div class="productoImagen">
+                            <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                        </div>
+                        <div class="productoInformación">
+                            <i class="fas fa-truck"></i>
+                            <p class="price"><%= productos.precio%></p>
+                            <p class="discount"><%= productos.descuento%></p>
+                            <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                        </div>
                     </div>
-                    <div class="productoInformación">
-                        <i class="fas fa-truck"></i>
-                        <p class="price"><%= productos.precio%></p>
-                        <p class="discount"><%= productos.descuento%></p>
-                        <h4 class="nombreProducto"><%= productos.nombre%></h4>
-                    </div>
-                </div>
+                <% } %>
             <% }); %>  
         </div>       
     </div>
+    <div class="secciónX">
+        <h3>Orgánico</h3>
+        <div class="contenedorProductos">
+           
+            <% productos.forEach(productos => { %>
+                <% if (productos.categoria == "Orgánico"){ %>
+                    <div class="productoX">
+                        <div class="productoImagen">
+                            <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                        </div>
+                        <div class="productoInformación">
+                            <i class="fas fa-truck"></i>
+                            <p class="price"><%= productos.precio%></p>
+                            <p class="discount"><%= productos.descuento%></p>
+                            <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                        </div>
+                    </div>
+                <% } %>
+            <% }); %>  
+        </div>       
+    </div>
+    <div class="secciónX">
+        <h3>Libre de Gluten</h3>
+        <div class="contenedorProductos">
+           
+            <% productos.forEach(productos => { %>
+                <% if (productos.categoria == "Libre de Gluten"){ %>
+                    <div class="productoX">
+                        <div class="productoImagen">
+                            <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                        </div>
+                        <div class="productoInformación">
+                            <i class="fas fa-truck"></i>
+                            <p class="price"><%= productos.precio%></p>
+                            <p class="discount"><%= productos.descuento%></p>
+                            <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                        </div>
+                    </div>
+                <% } %>
+            <% }); %>  
+        </div>       
+    </div>
+    <div class="secciónX">
+        <h3>Cosmética Natural</h3>
+        <div class="contenedorProductos">
+           
+            <% productos.forEach(productos => { %>
+                <% if (productos.categoria == "Cosmética Natural"){ %>
+                    <div class="productoX">
+                        <div class="productoImagen">
+                            <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                        </div>
+                        <div class="productoInformación">
+                            <i class="fas fa-truck"></i>
+                            <p class="price"><%= productos.precio%></p>
+                            <p class="discount"><%= productos.descuento%></p>
+                            <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                        </div>
+                    </div>
+                <% } %>
+            <% }); %>  
+        </div>       
+    </div>
+
+
 </main>>
 <%- include('../partials/footer') %>
 

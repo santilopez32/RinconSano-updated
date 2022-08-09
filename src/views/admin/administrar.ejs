@@ -1,42 +1,43 @@
 <html>
     <%- include('../partials/head') %>  
-        <body>
-            <%- include('../partials/header') %>
-                <main class="admin-form">
-                    <h1>Administrador de Productos</h2>
-                    <br>
-                    <section    >
-                        <article class="col-12">
-                        <a href="/administrar/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
-                        </article>
-                        <article class="col-12" >
-                        <table class=" table">
-                            <thead class="table-primary">
-                            <tr>  
-                                <th scope="col">Id</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Ver</th>
-                                <th scope="col">Editar</th>
-                                <th scope="col">Borrar</th>
-                            </tr>
+    <body>
+        <%- include('../partials/header') %>
+        <main class="admin-form">
+            <h1>Administrador de Productos</h1>
+                <br>
+                <section>
+                    <article class="addBlock">
+                        <a class="agregarText" href="/administrar/create"><ion-icon class="addButton" name="add-circle-outline"></ion-icon>Agregar</a>
+                    </article>
+                    <article class="#" >
+                        <table class="tablaAdmin">
+                            <thead>
+                                <tr>
+                                    <th class="idColumn">id</th>
+                                    <th class="nombreColumn">Nombre</th>
+                                    <th class="verColumn">Ver</th>
+                                    <th class="editarColumn">Editar</th> 
+                                    <th class="borrarColumn">Borrar</th> 
+                                </tr>
                             </thead>
                             <tbody>
-                            <% productos.forEach(productos => { %>
+                                <% productos.forEach(productos => { %>
                             <tr>
-                                <td><%= productos.id%> </td>
-                                <td><%= productos.nombre%> </td>
-                                <td><a href="/administrar/detail/<%= productos.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                                <td><a href="/administrar/edit/<%= productos.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                                <td><a href="/administrar/delete/<%= productos.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                                    <td class="tdNumero"><%= productos.id%> </td>
+                                    <td class="tdNombre"><%= productos.nombre%> </td>
+                                    <td class="tdVer"><a href="/administrar/detail/<%= productos.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                                    <td class="tdEditar"><a href="/administrar/edit/<%= productos.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                                    <td class="tdBorrar"><a href="/administrar/delete/<%= productos.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
                             </tr>
                             <% }); %>
                             </tbody>
-                        </table> 
-                        </article>       
-                    </section>
+                        </table>
+                        
+                    </article>       
+                </section>
                     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>                
-                </main>
+        </main>
+                <%- include('../partials/footer') %>
             
-    <%- include('../partials/footer') %>
-        </body>
+            </body>
 </html>

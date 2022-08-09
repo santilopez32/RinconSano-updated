@@ -110,7 +110,7 @@
 /*---------------------------------------------------Footer---------------------------------------------------*/
 
 footer{
-    background-color: rgb(214, 188, 148);
+    background-color: rgb(191, 191, 191);
     color: #666;
     padding: 20px 5%;
   }
@@ -534,6 +534,89 @@ section.banner img{
 .admin-form{
   text-align: center;
 }
+.addBlock{
+  background-color: rgb(44, 44, 44);
+  border-radius: 5px;
+  
+}
+.addButton{
+  color: white;
+  
+}
+.agregarText{
+  color: white;
+
+}
+
+
+.tablaAdmin{
+  width: 100%;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.idColumn{
+  width: 15%;
+  text-align: center;
+  background-color: rgb(160, 160, 160);
+}
+
+.nombreColumn{
+  width: 55%;
+  background-color: rgb(160, 160, 160);
+
+  
+}
+
+.verColumn{
+  width: 10%;
+  background-color: rgb(160, 160, 160);
+
+}
+
+.editarColumn{
+  width: 10%;
+  background-color: rgb(160, 160, 160);
+
+}
+
+.borrarColumn{
+  width:5%;
+  background-color: rgb(160, 160, 160);
+
+}
+
+.tdNumero{
+  text-align: center;
+  background-color: lightgrey;
+  padding: 3px 0px 3px 4px;
+
+}
+
+.tdNombre{
+  background-color: lightgrey;
+  padding: 3px 0px 3px 4px;
+
+}
+.tdVer{
+  text-align: center;
+  background-color: lightgrey;
+  padding: 3px 0px 3px 4px;
+  
+}
+.tdEditar{
+  text-align: center; 
+  background-color: lightgrey;
+  padding: 3px 0px 3px 4px;
+
+}
+.tdBorrar{
+  text-align: center;
+  background-color: lightgrey;
+  padding: 3px 0px 3px 4px;
+
+}
+
 
   /*------------------------------------------------Media---------------------------------------------------------*/
   /*Se recomienda 0-480 smaller phones, 481-768 Tablets y big phones, 769-1279 Laptops and larger tablets, 1280 larger desktops and monitors */
