@@ -98,16 +98,7 @@
     "imagen": "imagen-1660005821890.jpeg"
   },
   {
-    "id": "11",
-    "nombre": "Leche de Coco y Almendras",
-    "descripcion": "Leche a base de Coco y Almendras",
-    "categoria": "Libre de Gluten",
-    "precio": "700",
-    "descuento": "10",
-    "imagen": "imagen-1660005940546.jpg"
-  },
-  {
-    "id": "12",
+    "id": 12,
     "nombre": "Galletitas Nina",
     "descripcion": "Galletas dulces libres de gluten",
     "categoria": "Libre de Gluten",
