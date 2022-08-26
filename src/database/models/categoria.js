@@ -6,11 +6,10 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        Nombre: {
+        NombreCategoria: {
             type: dataTypes.STRING(100),
             allowNull: false
-        },
-        
+        }
     };
     let config = {
         tableName: 'Categoria',
@@ -30,4 +29,4 @@ module.exports = (sequelize, dataTypes) => {
 
     }
 
-    return Productos
+    return Categoria
