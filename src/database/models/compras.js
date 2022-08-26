@@ -1,41 +1,30 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Productos';
+    let alias = 'Compras';
     let cols = {
-        idProducto: {
+        idCompras: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        Nombre: {
-            type: dataTypes.STRING(100),
+        idCompra: {
+            type: dataTypes.INTEGER,
             allowNull: false
         },
-        Descripción: {
-            type: dataTypes.TEXT,
+        idProducto: {
+            type: dataTypes.INTEGER,
             allowNull: false
         },
-        idCategoría: {
-            type: dataTypes.DECIMAL(3, 1),
+        Cantidad: {
+            type: dataTypes.INTEGER,
             allowNull: false
         },
-        Precio: {
-            type: dataTypes.DECIMAL(3, 1),
-            allowNull: false
-        },
-        Descuento: {
-            type: dataTypes.DECIMAL(3, 1),
-            allowNull: false
-        },
-        favorite_movie_id: dataTypes.BIGINT(10).UNSIGNED,
-        image: {
-            type: dataTypes.STRING(255)
-        }
+        
     };
     let config = {
-        tableName: 'Productos',
+        tableName: 'Compras',
         timestamps: false
     };
-    const Productos = sequelize.define(alias, cols, config);
+    const Compras = sequelize.define(alias, cols, config);
 
     /*Actor.associate = function(models) {
 
