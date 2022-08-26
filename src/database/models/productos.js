@@ -1,26 +1,28 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Productos';
     let cols = {
-        id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+        idProducto: {
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        created_at: {
-            type: dataTypes.DATE
-        },
-        updated_at: {
-            type: dataTypes.DATE
-        },
-        first_name: {
+        Nombre: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        last_name: {
-            type: dataTypes.STRING(100),
+        Descripción: {
+            type: dataTypes.TEXT,
             allowNull: false
         },
-        rating: {
+        idCategoría: {
+            type: dataTypes.DECIMAL(3, 1),
+            allowNull: false
+        },
+        Precio: {
+            type: dataTypes.DECIMAL(3, 1),
+            allowNull: false
+        },
+        Descuento: {
             type: dataTypes.DECIMAL(3, 1),
             allowNull: false
         },
@@ -30,12 +32,12 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
-        tableName: 'actors',
+        tableName: 'Productos',
         timestamps: false
     };
-    const Actor = sequelize.define(alias, cols, config);
+    const Productos = sequelize.define(alias, cols, config);
 
-    Actor.associate = function(models) {
+    /*Actor.associate = function(models) {
 
         Actor.belongsToMany(models.Movie, {
             as: "movies",
@@ -43,9 +45,8 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "actor_id", /// Es el FK del modelo en el que estas (en la tabla intermedia de la bd)
             otherKey: "movie_id", /// Es el FK del otro modelo (en la tabla intermedia de la bd)
             timestamps: false
-        })
+        })*/
 
     }
 
-    return Actor
-}
+    return Productos
