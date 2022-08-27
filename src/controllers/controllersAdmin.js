@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator")
 const fs = require("fs")
 const path = require("path")
+let db = require("../database/models")
 
 const controllersAdmin = {
 	home: (req, res) => {
@@ -12,7 +13,16 @@ const controllersAdmin = {
 		return res.render(path.resolve(__dirname, '../views/admin/create'), {productos});
 	},
     save: (req, res) => {
-        let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+        db.Productos.create({            
+            nombre : req.body.nombre,
+            descripcion: req.body.descripcion,
+            categoria: req.body.categoria,
+            precio: req.body.precio,
+            descuento: req.body.descuento,
+            imagen: req.file.filename
+        })
+
+        /*let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
         let ultimoProd = productos.pop();
         productos.push(ultimoProd);
         console.log(ultimoProd)
@@ -27,7 +37,7 @@ const controllersAdmin = {
         }
         productos.push(nuevoProducto);
         let nuevoProductoGuardar = JSON.stringify(productos,null,2);
-        fs.writeFileSync(path.resolve(__dirname,'../database/productos.json'), nuevoProductoGuardar);
+        fs.writeFileSync(path.resolve(__dirname,'../database/productos.json'), nuevoProductoGuardar);*/
         res.redirect('/administrar');
 	},
     edit: (req, res) => {
