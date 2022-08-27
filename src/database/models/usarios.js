@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Productos';
+    let alias = 'Usiarios';
     let cols = {
         idProducto: {
             type: dataTypes.INTEGER,
@@ -10,32 +10,46 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        Descripción: {
-            type: dataTypes.TEXT,
+        User: {
+            type: dataTypes.STRING(100),
             allowNull: false
         },
-        idCategoría: {
-            type: dataTypes.DECIMAL(3, 1),
+        Email: {
+            type: dataTypes.STRING(100),
             allowNull: false
         },
-        Precio: {
-            type: dataTypes.DECIMAL(3, 1),
+        Birthday: {
+            type: dataTypes.DATE,
             allowNull: false
         },
-        Descuento: {
-            type: dataTypes.DECIMAL(3, 1),
-            allowNull: false
-        },
-        favorite_movie_id: dataTypes.BIGINT(10).UNSIGNED,
-        image: {
+       
+        Avatar: {
             type: dataTypes.STRING(255)
-        }
+        },
+        Password: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        Domicilio: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        idRol: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        Ciudad: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        
+        
     };
     let config = {
-        tableName: 'Productos',
+        tableName: 'Usuarios',
         timestamps: false
     };
-    const Productos = sequelize.define(alias, cols, config);
+    const Usuarios = sequelize.define(alias, cols, config);
 
     /*Actor.associate = function(models) {
 
