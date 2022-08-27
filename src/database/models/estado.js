@@ -22,9 +22,6 @@ module.exports = (sequelize, dataTypes) => {
             as: "Productos",
             foreignKey:"idCategoria"
         })
-    }
-
-    Estado.associate = function(models){
         Estado.hasMany(models.Compras,{
             as: "Compras",
             foreignKey:"idEstado"
@@ -40,7 +37,6 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: "movie_id", /// Es el FK del otro modelo (en la tabla intermedia de la bd)
             timestamps: false
         })*/
-
+        
+        return Estado
     }
-
-    return Estado

@@ -37,6 +37,5 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false
         })*/
 
+        return Rol
     }
-
-    return Rol

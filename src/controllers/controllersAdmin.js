@@ -14,12 +14,12 @@ const controllersAdmin = {
 	},
     save: (req, res) => {
         db.Productos.create({            
-            nombre : req.body.nombre,
-            descripcion: req.body.descripcion,
-            categoria: req.body.categoria,
-            precio: req.body.precio,
-            descuento: req.body.descuento,
-            imagen: req.file.filename
+            Nombre : req.body.nombre,
+            Descripcion: req.body.descripcion,
+            idCategoria: req.body.categoria,
+            Precio: req.body.precio,
+            Descuento: req.body.descuento,
+            Imagen: req.file.filename
         })
 
         /*let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));

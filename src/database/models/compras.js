@@ -30,24 +30,18 @@ module.exports = (sequelize, dataTypes) => {
     Compras.associate = function(models){
         Compras.belongsToMany(models.Productos,{
             as: "Productos",
-            through: "ComprasPeliculas",
-            foreignKey: "idCompras",
-            otherKey: "idProductos",
+            through: "CompraProducto",
+            foreignKey: "idCompra",
+            otherKey: "idProducto",
             timestamps: false,
         })
-    }
-
-    Compras.associate = function(models){
         Compras.belongsTo(models.Estado,{
             as: "Estado",
-            foreignKey:"idCompras"
-        })
-    }
-
-    Compras.associate = function(models){
+            foreignKey:"idEstado"
+        })    
         Compras.belongsTo(models.Usuarios,{
             as: "Usuarios",
-            foreignKey:"idCompras"
+            foreignKey:"idUsuario"
         })
     }
 
@@ -60,7 +54,7 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: "movie_id", /// Es el FK del otro modelo (en la tabla intermedia de la bd)
             timestamps: false
         })*/
-
+    return Compras
     }
 
-    return Compras
+    

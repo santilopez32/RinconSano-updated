@@ -41,16 +41,14 @@ module.exports = (sequelize, dataTypes) => {
     Productos.associate = function(models){
         Productos.belongsTo(models.Categoria,{
             as: "Categoria",
-            foreignKey:"idProductos"
+            foreignKey:"idCategoria"
         })
-    }
-
-    Productos.associate = function(models){
+    
         Productos.belongsToMany(models.Compras,{
             as: "Compras",
-            through: "ComprasPeliculas",
-            foreignKey: "idProductos",
-            otherKey: "idCompras",
+            through: "CompraProducto",
+            foreignKey: "idProducto",
+            otherKey: "idCompra",
             timestamps: false,
         })
     }    
@@ -64,6 +62,6 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false
         })*/
 
+        return Productos
     }
 
-    return Productos

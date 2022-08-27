@@ -34,7 +34,8 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: "movie_id", /// Es el FK del otro modelo (en la tabla intermedia de la bd)
             timestamps: false
         })*/
+    return CompraProducto    
+    
+}
 
-    }
-
-    return CompraProducto
+    

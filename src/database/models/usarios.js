@@ -57,12 +57,10 @@ module.exports = (sequelize, dataTypes) => {
             as: "Compras",
             foreignKey:"idUsuario"
         })
-    }
 
-    Usuarios.associate = function(models){
         Usuarios.belongsTo(models.Rol,{
             as: "Rol",
-            foreignKey:"idUsuario"
+            foreignKey:"idRol"
         })
     }
     /*Actor.associate = function(models) {
@@ -75,6 +73,5 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false
         })*/
 
-    }
-
     return Usuarios
+}
