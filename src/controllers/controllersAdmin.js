@@ -9,8 +9,12 @@ const controllersAdmin = {
 		return res.render(path.resolve(__dirname, '../views/admin/administrar'), {productos});
 	},
     create: (req, res) => {
-        let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
-		return res.render(path.resolve(__dirname, '../views/admin/create'), {productos});
+        db.Categoria.findAll()
+            .then(Categorias => {
+                res.render(path.resolve(__dirname, '../views/admin/create'), {Categorias: Categorias})
+            })
+        /*let productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/productos.json')));
+		return res.render(path.resolve(__dirname, '../views/admin/create'), {productos});*/
 	},
     save: (req, res) => {
         db.Productos.create({            

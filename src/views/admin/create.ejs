@@ -20,8 +20,13 @@
                         </div>
                         <br>
                         <div>
-                            <label>Categoría</label>
-                            <input type="text" name="categoria" class="categoria">
+                            <label>Categorías</label>
+                        <select name="categoria">
+                            <option value="" disabled selected>Selecciona tu categoria</option>
+                            <% Categorias.forEach(categoria => { %>
+                                <option value="<%= categoria.idCategoria %>"><%= categoria.NombreCategoria %></option>
+                            <% }); %>
+                        </select>
                         </div>
                         <br>
                         <div>
