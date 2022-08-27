@@ -20,7 +20,13 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const Rol = sequelize.define(alias, cols, config);
-
+    
+    Rol.associate = function(models){
+        Rol.hasMany(models.Usuarios,{
+            as: "Usuarios",
+            foreignKey:"idRol"
+        })
+    }
     /*Actor.associate = function(models) {
 
         Actor.belongsToMany(models.Movie, {

@@ -1,3 +1,5 @@
+const categoria = require("./categoria");
+
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Productos';
     let cols = {
@@ -36,6 +38,22 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Productos = sequelize.define(alias, cols, config);
 
+    Productos.associate = function(models){
+        Productos.belongsTo(models.Categoria,{
+            as: "Categoria",
+            foreignKey:"idProductos"
+        })
+    }
+
+    Productos.associate = function(models){
+        Productos.belongsToMany(models.Compras,{
+            as: "Compras",
+            through: "ComprasPeliculas",
+            foreignKey: "idProductos",
+            otherKey: "idCompras",
+            timestamps: false,
+        })
+    }    
     /*Actor.associate = function(models) {
 
         Actor.belongsToMany(models.Movie, {
