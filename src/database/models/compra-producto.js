@@ -7,15 +7,15 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         idCompra: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         idProducto: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         Cantidad: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
     };

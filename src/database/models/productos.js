@@ -10,23 +10,23 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        Descripción: {
+        Descripcion: {
             type: dataTypes.TEXT,
             allowNull: false
         },
-        idCategoría: {
-            type: dataTypes.DECIMAL(3, 1),
+        idCategoria: {
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         Precio: {
-            type: dataTypes.DECIMAL(3, 1),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         Descuento: {
-            type: dataTypes.DECIMAL(3, 1),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
-        image: {
+        Imagen: {
             type: dataTypes.STRING(255)
         }
     };

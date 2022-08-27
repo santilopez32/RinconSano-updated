@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Usiarios';
+    let alias = 'Usuarios';
     let cols = {
-        idProducto: {
+        idUsuario: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -30,11 +30,11 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        Domicilio: {
+        idRol: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        idRol: {
+        Domicilio: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
@@ -42,6 +42,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
+        
         
         
     };
@@ -63,4 +64,4 @@ module.exports = (sequelize, dataTypes) => {
 
     }
 
-    return Productos
+    return Usuarios

@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'Categoria',
         timestamps: false
     };
-    const Productos = sequelize.define(alias, cols, config);
+    const Categoria = sequelize.define(alias, cols, config);
 
     /*Actor.associate = function(models) {
 

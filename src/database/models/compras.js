@@ -6,15 +6,15 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        idCompra: {
+        Fecha: {
+            type: dataTypes.DATE,
+            allowNull: false
+        },
+        idUsuario: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        idProducto: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
-        Cantidad: {
+        idEstado: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
@@ -38,4 +38,4 @@ module.exports = (sequelize, dataTypes) => {
 
     }
 
-    return Productos
+    return Compras
