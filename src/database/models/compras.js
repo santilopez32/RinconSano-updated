@@ -26,6 +26,31 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Compras = sequelize.define(alias, cols, config);
 
+
+    Compras.associate = function(models){
+        Compras.belongsToMany(models.Productos,{
+            as: "Productos",
+            through: "ComprasPeliculas",
+            foreignKey: "idCompras",
+            otherKey: "idProductos",
+            timestamps: false,
+        })
+    }
+
+    Compras.associate = function(models){
+        Compras.belongsTo(models.Estado,{
+            as: "Estado",
+            foreignKey:"idCompras"
+        })
+    }
+
+    Compras.associate = function(models){
+        Compras.belongsTo(models.Usuarios,{
+            as: "Usuarios",
+            foreignKey:"idCompras"
+        })
+    }
+
     /*Actor.associate = function(models) {
 
         Actor.belongsToMany(models.Movie, {

@@ -17,6 +17,20 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Estado = sequelize.define(alias, cols, config);
 
+    Estado.associate = function(models){
+        Estado.belongsTo(models.Productos,{
+            as: "Productos",
+            foreignKey:"idCategoria"
+        })
+    }
+
+    Estado.associate = function(models){
+        Estado.hasMany(models.Compras,{
+            as: "Compras",
+            foreignKey:"idEstado"
+        })
+    }
+
     /*Actor.associate = function(models) {
 
         Actor.belongsToMany(models.Movie, {
