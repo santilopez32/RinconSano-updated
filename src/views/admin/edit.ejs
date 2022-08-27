@@ -5,40 +5,46 @@
                 <main class="admin-form">
                     <br>
                     <br>
-                        <form action="/administrar/edit/<%= prodEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data" >
+                        <form action="/administrar/edit/<%= Productos.idProducto%>?_method=PUT" method="POST" enctype="multipart/form-data" >
                             <div class="control-formulario">
                                 <label>Nombre del producto:</label>
-                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required" value="<%= prodEditar.nombre%>">
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required" value="<%= Productos.Nombre%>">
                             </div>	
                             <div class="control-formulario">
                                 <label>Descripción:</label>
-                                <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="<%= prodEditar.descripcion%>">
+                                <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="<%= Productos.Descripcion%>">
+                            </div>                            
+                            <div>
+                            <label>Categorías</label><br>
+                                <select name="categoria">
+                                    <option value="" disabled selected>Selecciona tu categoria</option>
+                                    <% Categoria.forEach(categoria => { %>
+                                    <option value="<%= categoria.idCategoria %>"><%= categoria.NombreCategoria %></option>
+                                    <% }); %>
+                                </select>
                             </div>
-                            <div class="control-formulario">
-                                <label>Categoria:</label>
-                                <input type="text" class="form-control" name="categoria" placeholder="Categoria" required="required" value="<%= prodEditar.categoria%>">
-                            </div>
+                            <br>                        
                             <div class="control-formulario">
                                 <label>Precio:</label>
-                                <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%= prodEditar.precio%>">
+                                <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%= Productos.Precio%>">
                             </div>
                             <div class="control-formulario">
                                 <label>Descuento:</label>
                                 <select  name="descuento" class="custom-select" id="validationCustom04" required>
                                 <option disabled value="#">Seleccione un descuento"</option>
-                                <option value="0" <%= prodEditar.descuento == 0 ? "selected" : null %>
+                                <option value="0" <%= Productos.Descuento == 0 ? "selected" : null %>
                                     >Sin descuento</option>
-                                <option value="15" <%= prodEditar.descuento == 15 ? "selected" : null %>>15%</option>
-                                <option value="30" <%= prodEditar.descuento == 30 ? "selected" : null %>>30%</option>
+                                <option value="15" <%= Productos.Descuento == 15 ? "selected" : null %>>15%</option>
+                                <option value="30" <%= Productos.Descuento == 30 ? "selected" : null %>>30%</option>
                                 </select>
                             </div>
                             <div class="control-formulario">
                                 <figure class="form-group">
-                                    <img  class="edit-img" src="/images/<%= prodEditar.imagen%>" alt="<%= prodEditar.nombre%>">
+                                    <img  class="edit-img" src="/images/<%= Productos.Imagen%>" alt="<%= Productos.Nombre%>">
                                 </figure>
                                 <br>
                                 <label>Modificar imagen:</label>
-                                <input type="hidden"  name="oldImagen"  value="<%= prodEditar.imagen%>">
+                                <input type="hidden"  name="oldImagen"  value="<%= Productos.Imagen%>">
                                 <input type="file" name="imagen" >
                             </div>
                             <div class="form-group">

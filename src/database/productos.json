@@ -1,13 +1,12 @@
 [
   {
-    "nombre": "Aceite de Coco Orgánica",
-    "descripcion": "Aceite orgánico",
-    "categoria": "Orgánico",
-    "precio": "50000",
-    "descuento": "15",
-    "oldImagen": "imagen-1659623480042.jpg",
+    "nombre": "Mermelada de Arándanos",
+    "descripcion": "Mermelada de Arándanos Orgánica",
+    "precio": "854",
+    "descuento": "0",
+    "oldImagen": "imagen-1661632154512.jpg",
     "id": "1",
-    "imagen": "imagen-1659623480042.jpg"
+    "imagen": "imagen-1661632154512.jpg"
   },
   {
     "nombre": "Miel Orgánica",
