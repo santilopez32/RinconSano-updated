@@ -19,7 +19,7 @@
                                 <select name="categoria">
                                     <option value="" disabled selected>Selecciona tu categoria</option>
                                     <% Categoria.forEach(categoria => { %>
-                                    <option value="<%= categoria.idCategoria %>"><%= categoria.NombreCategoria %></option>
+                                    <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
                                     <% }); %>
                                 </select>
                             </div>

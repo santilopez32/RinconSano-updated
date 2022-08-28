@@ -16,10 +16,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT,
             allowNull: false
         },
-        idCategoria: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
         Precio: {
             type: dataTypes.INTEGER,
             allowNull: false
@@ -41,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
     Productos.associate = function(models){
         Productos.belongsTo(models.Categoria,{
             as: "Categoria",
-            foreignKey:"idCategoria"
+            foreignKey:"id_categoria"
         })
     
         Productos.belongsToMany(models.Compras,{

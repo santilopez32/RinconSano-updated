@@ -12,15 +12,15 @@ const controllersAdmin = {
 	},
     create: (req, res) => {
         db.Categoria.findAll()
-            .then(Categorias => {
-                res.render(path.resolve(__dirname, '../views/admin/create'), {Categorias: Categorias})
+            .then(Categoria => {
+                res.render(path.resolve(__dirname, '../views/admin/create'), {Categoria: Categoria})
             })
 	},
     save: (req, res) => {
         db.Productos.create({            
             Nombre : req.body.nombre,
             Descripcion: req.body.descripcion,
-            idCategoria: req.body.categoria,
+            id_categoria: req.body.categoria,
             Precio: req.body.precio,
             Descuento: req.body.descuento,
             Imagen: req.file.filename
@@ -54,11 +54,12 @@ const controllersAdmin = {
         })      
     },
     show: (req, res) => {
-        let Productos = db.Productos.findByPk(req.params.id, {include: [{association: 'Categoria'}]});
-        let Categoria = db.Categoria.findByPk(req.params.id);
-        Promise.all([Productos, Categoria])
-            .then(([Productos, Categoria]) => {
-                return res.render(path.resolve(__dirname, '../views/admin/detail'), {Productos: Productos, Categoria:Categoria})
+        let productoEncontrado = db.Productos.findByPk(req.params.id, {include: [{association: 'Categoria'}]});
+        let categorias = db.Categoria.findAll();
+        Promise.all([productoEncontrado, categorias])
+            .then(([producto, categorias]) => {
+                producto.categoria = categorias.find(cat => cat.id == producto.id_categoria)
+                return res.render(path.resolve(__dirname, '../views/admin/detail'), {producto})
             })
             .catch(error => res.send(error));
 	},
