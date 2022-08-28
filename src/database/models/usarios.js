@@ -31,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         idRol: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         Domicilio: {

@@ -2,6 +2,7 @@ const { validationResult } = require("express-validator")
 const fs = require("fs")
 const path = require("path")
 const bcrypt = require('bcryptjs');
+let db = require("../database/models")
 
 const User = require('../models/User');
 
@@ -47,7 +48,23 @@ const controllersUser = {
 		return res.render(path.resolve(__dirname, '../views/users/register'));
 	},
     processRegister: (req, res) => {
-		const resultValidation = validationResult(req)
+		db.Usuarios.create({            
+            Nombre: req.body.name,
+			User: req.body.user,
+			Email: req.body.email,
+			telefono: req.body.number,
+			Birthday: req.body.birth_date,
+			Domicilio: req.body.adress,
+			Ciudad: req.body.ciudad,				
+			Avatar:  req.file ? req.file.filename : '',
+			Password: bcrypt.hashSync(req.body.pass, 10),
+			idRol: 1
+        })
+        .then(Usuarios => {
+            res.redirect('/user/login');
+        })
+
+		/*const resultValidation = validationResult(req)
 		if(resultValidation.errors.length > 0){
 			return res.render((path.resolve(__dirname, '../views/users/register')), { 
 				errors: resultValidation.mapped(),
@@ -80,7 +97,7 @@ const controllersUser = {
 			  usersJSON = JSON.stringify(users, null, 2);
 			  fs.writeFileSync(path.resolve(__dirname, '../database/users.json'), usersJSON);
 			  res.redirect('/user/login');
-      		  } 
+      		  } */
 		},
 	store: (req, res) => {
 		let errors = validationResult(req);
