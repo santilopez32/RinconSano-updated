@@ -15,17 +15,17 @@
         <h3>Granolas Rincon Sano</h3>
         <div class="contenedorProductos">
            
-            <% productos.forEach(productos => { %>
-                <% if (productos.categoria == "Granola"){ %>
+            <% Productos.forEach(productos => { %>
+                <% if (productos.idCategoria === 1){ %>
                     <div class="productoX">
                         <div class="productoImagen">
-                            <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                            <a href="/product/Detail/<%= productos.idProducto%>"><img src="/images/<%= productos.Imagen %>" alt="Granola" class="productImg"></a>
                         </div>
                         <div class="productoInformación">
                             <i class="fas fa-truck"></i>
-                            <p class="price"><%= productos.precio%></p>
-                            <p class="discount"><%= productos.descuento%></p>
-                            <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                            <p class="price"><%= productos.Precio%></p>
+                            <p class="discount"><%= productos.Descuento%></p>
+                            <h4 class="nombreProducto"><%= productos.Nombre%></h4>
                         </div>
                     </div>
                 <% } %>
@@ -36,17 +36,17 @@
         <h3>Orgánico</h3>
         <div class="contenedorProductos">
            
-            <% productos.forEach(productos => { %>
-                <% if (productos.categoria == "Orgánico"){ %>
+            <% Productos.forEach(productos => { %>
+                <% if (productos.idCategoria === 2){ %>
                     <div class="productoX">
                         <div class="productoImagen">
-                            <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                            <a href="/product/Detail/<%= productos.idProducto%>"><img src="/images/<%= productos.Imagen %>" alt="Granola" class="productImg"></a>
                         </div>
                         <div class="productoInformación">
                             <i class="fas fa-truck"></i>
-                            <p class="price"><%= productos.precio%></p>
-                            <p class="discount"><%= productos.descuento%></p>
-                            <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                            <p class="price"><%= productos.Precio%></p>
+                            <p class="discount"><%= productos.Descuento%></p>
+                            <h4 class="nombreProducto"><%= productos.Nombre%></h4>
                         </div>
                     </div>
                 <% } %>
@@ -57,17 +57,17 @@
         <h3>Libre de Gluten</h3>
         <div class="contenedorProductos">
            
-            <% productos.forEach(productos => { %>
-                <% if (productos.categoria == "Libre de Gluten"){ %>
+            <% Productos.forEach(productos => { %>
+                <% if (productos.idCategoria === 3){ %>
                     <div class="productoX">
                         <div class="productoImagen">
-                            <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                            <a href="/product/Detail/<%= productos.idProducto%>"><img src="/images/<%= productos.Imagen %>" alt="Granola" class="productImg"></a>
                         </div>
                         <div class="productoInformación">
                             <i class="fas fa-truck"></i>
-                            <p class="price"><%= productos.precio%></p>
-                            <p class="discount"><%= productos.descuento%></p>
-                            <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                            <p class="price"><%= productos.Precio%></p>
+                            <p class="discount"><%= productos.Descuento%></p>
+                            <h4 class="nombreProducto"><%= productos.Nombre%></h4>
                         </div>
                     </div>
                 <% } %>
@@ -78,17 +78,17 @@
         <h3>Cosmética Natural</h3>
         <div class="contenedorProductos">
            
-            <% productos.forEach(productos => { %>
-                <% if (productos.categoria == "Cosmética Natural"){ %>
+            <% Productos.forEach(productos => { %>
+                <% if (productos.idCategoria === 4){ %>
                     <div class="productoX">
                         <div class="productoImagen">
-                            <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
+                            <a href="/product/Detail/<%= productos.idProducto%>"><img src="/images/<%= productos.Imagen %>" alt="Granola" class="productImg"></a>
                         </div>
                         <div class="productoInformación">
                             <i class="fas fa-truck"></i>
-                            <p class="price"><%= productos.precio%></p>
-                            <p class="discount"><%= productos.descuento%></p>
-                            <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                            <p class="price"><%= productos.Precio%></p>
+                            <p class="discount"><%= productos.Descuento%></p>
+                            <h4 class="nombreProducto"><%= productos.Nombre%></h4>
                         </div>
                     </div>
                 <% } %>

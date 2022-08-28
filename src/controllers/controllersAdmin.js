@@ -25,7 +25,10 @@ const controllersAdmin = {
             Descuento: req.body.descuento,
             Imagen: req.file.filename
         })
-        res.redirect('/administrar');
+        .then(Categorias => {
+            res.redirect('/administrar');
+        })
+        
 	},
     edit: (req, res) => {
         let Productos = db.Productos.findByPk(req.params.id, {include: [{association: 'Categoria'}]});
@@ -46,7 +49,9 @@ const controllersAdmin = {
             Imagen: req.body.imagen
         }
         db.Productos.update(Productos, {where:{idProducto: req.params.id}})
-        res.redirect('/administrar')        
+        .then(Categorias => {
+        res.redirect('/administrar')  
+        })      
     },
     show: (req, res) => {
         let Productos = db.Productos.findByPk(req.params.id, {include: [{association: 'Categoria'}]});
