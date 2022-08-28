@@ -6,7 +6,7 @@
             <main class="container">
                 <!-- Left Column / Product Image -->
                 <div class="left-column">
-                    <img src="/images/<%=miProd.imagen%>" alt="">
+                    <img src="/images/<%=Productos.Imagen%>" alt="">
                     
                 </div>
                  
@@ -16,14 +16,14 @@
                  
                     <!-- Product Description -->
                     <div class="product-description">
-                      <span><%=miProd.nombre%></span>
-                      <h1><%=miProd.nombre%></h1>
-                      <p><%=miProd.descripcion%></p>
+                      <span><%=Categoria.NombreCategoria%></span>
+                      <h1><%=Productos.Nombre%></h1>
+                      <p><%=Productos.Descripcion%></p>
                     </div>
 
                     <!-- Product Pricing -->
                     <div class="product-price">
-                        <span><%=miProd.precio%></span>
+                        <span><%=Productos.Precio%></span>
                     </div>
                     <div>
                         <label for="cantidad" class="labelCantidad" >Cantidad</label>
