@@ -8,7 +8,7 @@ const { body } = require("express-validator")
 const mainController = require('../controllers/mainController');
 
 //Rutas traidas
-router.get('/home', mainController.home)
+router.get('/', mainController.home)
 router.get('/preguntasFrecuentes', mainController.preguntasFrecuentes)
 router.get('/contact', mainController.contact)
 router.get('/quienesSomos', mainController.quienesSomos)

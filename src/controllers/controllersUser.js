@@ -24,7 +24,7 @@ const controllersUser = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 				//Ver como carajo hacer para que te redirija a home
-				return res.redirect('/home');
+				return res.redirect('/');
 			}
 			return res.render(path.resolve(__dirname, '../views/users/login'), {
 				errors: {
