@@ -33,24 +33,23 @@ function displayCart() {
     container.innerHTML = ``
     for (let i=0; i<prodsCart.length; i++) { 
         container.innerHTML += `            
-        <div class="col-12 col-sm-6 col-lg-3">	
-            <section class="product-box">
-                <a href="/product/products/${prodsCart[i].id}">
-                    <figure class="product-box_image">
-                        <img src="/images/${prodsCart[i].image}" alt="${prodsCart[i].name}">
-                    </figure>
-                </a>
-                <article class="product-box_data">
-                    <h2>Precio final: $ ${prodsCart[i].subTotal}</h2>
-                    <p>${prodsCart[i].name}</p>
-                    <p>${prodsCart[i].price}</p>
-                    <p>${prodsCart[i].cantidad}</p>
-                    <button onClick="sumar(${prodsCart[i].id})" >Sumar</button> 
-                    <button onClick="restar(${prodsCart[i].id})" >Restar</button> 
-                    <i onClick="borrar(${prodsCart[i].id})" class="fa fa-trash"></i> 
-                </article>
-            </section>
-        </div>
+        <div class="contenedorProductos">
+                    <div class="productoX">
+                        <div class="productoImagen">
+                            
+                            <figure ><img src="/images/${prodsCart[i].image}" alt="${prodsCart[i].name}" class="productImg"></figure>
+                        </div>
+                        <div class="productoInformación">
+                            <i onClick="borrar(${prodsCart[i].id})" class="fa fa-trash"></i> 
+                            <p class="price">${prodsCart[i].price}</p>
+                            <p class="price">${prodsCart[i].cantidad}</p>
+                            <h4 class="nombreProducto">${prodsCart[i].name}</h4>
+                            <h2>Precio final: $ ${prodsCart[i].subTotal}</h2>
+                            <button onClick="sumar(${prodsCart[i].id})" >Sumar</button> 
+                            <button onClick="restar(${prodsCart[i].id})" >Restar</button> 
+                        </div>
+                    </div>
+        </div> 
         `
     }
 }
