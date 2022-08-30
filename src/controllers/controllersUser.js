@@ -11,37 +11,28 @@ const controllersUser = {
 		return res.render(path.resolve(__dirname, '../views/users/login'))
 	},
 	processLogin: (req, res) => {
-		let userToLogin = User.findByField('email', req.body.email);
-		
-		if(userToLogin) {
-			let isOkThePassword = bcrypt.compareSync(req.body.pass, userToLogin.password);
-			console.log(isOkThePassword)
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
+		db.Usuarios.findOne({ where: { email: req.body.email}})
+		.then((usuario) => {
+		if(usuario){
+			let isOkThePassword = bcrypt.compareSync(req.body.pass, usuario.password);
+			if(isOkThePassword){
+				delete usuario.password;
+				req.session.userLogged = usuario;
 
-				if(req.body.recordame) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				if(req.body.recordame){
+					res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60})
 				}
-				//Ver como carajo hacer para que te redirija a home
-				return res.redirect('/');
+				return res.redirect("../")
 			}
-			return res.render(path.resolve(__dirname, '../views/users/login'), {
+			return res.render((path.resolve(__dirname, '../views/users/login')), {
 				errors: {
 					email: {
-						msg: 'Las credenciales son inválidas'
+						msg: "Las credenciales son inválidas"
 					}
 				}
-			});
+			})
 		}
-
-		return res.render(path.resolve(__dirname, '../views/users/login'), {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			}
-		});
+		})
 		
 	},
     register: (req, res) => {
