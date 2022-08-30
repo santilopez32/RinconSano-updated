@@ -23,11 +23,11 @@
                             <tbody>
                                 <% Productos.forEach(productos => { %>
                             <tr>
-                                    <td class="tdNumero"><%= productos.idProducto%> </td>
-                                    <td class="tdNombre"><%= productos.Nombre%> </td>
-                                    <td class="tdVer"><a href="/administrar/detail/<%= productos.idProducto%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                                    <td class="tdEditar"><a href="/administrar/edit/<%= productos.idProducto%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                                    <td class="tdBorrar"><a href="/administrar/delete/<%= productos.idProducto%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                                    <td class="tdNumero"><%= productos.id%> </td>
+                                    <td class="tdNombre"><%= productos.nombre%> </td>
+                                    <td class="tdVer"><a href="/administrar/detail/<%= productos.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                                    <td class="tdEditar"><a href="/administrar/edit/<%= productos.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                                    <td class="tdBorrar"><a href="/administrar/delete/<%= productos.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
                             </tr>
                             <% }); %>
                             </tbody>

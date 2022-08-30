@@ -18,12 +18,12 @@ const controllersAdmin = {
 	},
     save: (req, res) => {
         db.Productos.create({            
-            Nombre : req.body.nombre,
-            Descripcion: req.body.descripcion,
+            nombre : req.body.nombre,
+            descripcion: req.body.descripcion,
             id_categoria: req.body.categoria,
-            Precio: req.body.precio,
-            Descuento: req.body.descuento,
-            Imagen: req.file.filename
+            precio: req.body.precio,
+            descuento: req.body.descuento,
+            imagen: req.file.filename
         })
         .then(Categorias => {
             res.redirect('/administrar');
@@ -41,14 +41,14 @@ const controllersAdmin = {
 	},
     update: (req, res) => {
         let Productos = {
-            Nombre : req.body.nombre,
-            Descripcion: req.body.descripcion,
-            idCategoria: req.body.categoria,
-            Precio: req.body.precio,
-            Descuento: req.body.descuento,
-            Imagen: req.body.imagen
+            nombre : req.body.nombre,
+            descripcion: req.body.descripcion,
+            id_categoria: req.body.categoria,
+            precio: req.body.precio,
+            descuento: req.body.descuento,
+            imagen: req.body.imagen
         }
-        db.Productos.update(Productos, {where:{idProducto: req.params.id}})
+        db.Productos.update(Productos, {where:{id: req.params.id}})
         .then(Categorias => {
         res.redirect('/administrar')  
         })      
@@ -65,7 +65,7 @@ const controllersAdmin = {
 	},
     destroy: (req, res) => {
 
-        db.Productos.destroy({where:{idProducto: req.params.id}})
+        db.Productos.destroy({where:{id: req.params.id}})
         res.redirect('/administrar')
 
         

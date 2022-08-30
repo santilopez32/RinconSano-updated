@@ -1,16 +1,16 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Rol';
     let cols = {
-        idRol: {
+        id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        Nombre: {
+        nombre: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        Descripcion: {
+        descripcion: {
             type: dataTypes.TEXT,
             allowNull: false
         }
@@ -24,7 +24,7 @@ module.exports = (sequelize, dataTypes) => {
     Rol.associate = function(models){
         Rol.hasMany(models.Usuarios,{
             as: "Usuarios",
-            foreignKey:"idRol"
+            foreignKey:"id_rol"
         })
     }
     /*Actor.associate = function(models) {

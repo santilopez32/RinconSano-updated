@@ -49,16 +49,16 @@ const controllersUser = {
 	},
     processRegister: (req, res) => {
 		db.Usuarios.create({            
-            Nombre: req.body.name,
-			User: req.body.user,
-			Email: req.body.email,
+            nombre: req.body.name,
+			user: req.body.user,
+			email: req.body.email,
 			telefono: req.body.number,
-			Birthday: req.body.birth_date,
-			Domicilio: req.body.adress,
-			Ciudad: req.body.ciudad,				
-			Avatar:  req.file ? req.file.filename : '',
-			Password: bcrypt.hashSync(req.body.pass, 10),
-			idRol: 1
+			birthday: req.body.birth_date,
+			domicilio: req.body.adress,
+			ciudad: req.body.ciudad,				
+			avatar:  req.file ? req.file.filename : '',
+			password: bcrypt.hashSync(req.body.pass, 10),
+			id_rol: 1
         })
         .then(Usuarios => {
             res.redirect('/user/login');

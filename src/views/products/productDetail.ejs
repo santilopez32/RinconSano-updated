@@ -3,37 +3,36 @@
 <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header') %>
-            <main class="container">
-                <!-- Left Column / Product Image -->
-                <div class="left-column">
-                    <img src="/images/<%=Productos.Imagen%>" alt="">
-                    
-                </div>
-                 
-                 
-                <!-- Right Column -->
-                <div class="right-column">
-                 
-                    <!-- Product Description -->
-                    <div class="product-description">
-                      <span><%=Categoria.NombreCategoria%></span>
-                      <h1><%=Productos.Nombre%></h1>
-                      <p><%=Productos.Descripcion%></p>
-                    </div>
+    <main class="container">
+        <!-- Left Column / Product Image -->
+        <div class="left-column">
+            <img id="imgProd" src="/images/<%=producto.imagen%>" alt="<%=producto.imagen%>">
+            
+        </div>
+         
+         
+        <!-- Right Column -->
+        <div class="right-column">
+         
+            <!-- Product Description -->
+            <div class="product-description">
+            <h2 id="idProd" class="product-detail-title"><%= producto.id %></h2>
+              <span><%=producto.categoria.nombre%></span>
+              <h1 id="nameProd"><%=producto.nombre%></h1>
+              <p id="descProd"><%=producto.descripcion%></p>
+            </div>
 
-                    <!-- Product Pricing -->
-                    <div class="product-price">
-                        <span><%=Productos.Precio%></span>
-                    </div>
-                    <div>
-                        <label for="cantidad" class="labelCantidad" >Cantidad</label>
-                        <input type="number" class="cantidad" name="cantidad" min="1" max="99">
-                    </div>
-                    <div>
-                        <a href="/product/Cart" class="cart-botton">Agregar al carrito</a>
-                    </div>
-                </div>
-            </main>                 
+            <!-- Product Pricing -->
+            <div class="product-price">
+                <span><%=producto.precio%></span>
+            </div>
+            <br>
+            <br>
+            <div>
+                <button class="cart-botton">Agregar al carrito</button>
+            </div>
+        </div>
+    </main>         
     <%- include('../partials/footer') %>
 </body>
 </html>

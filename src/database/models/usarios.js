@@ -1,44 +1,44 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Usuarios';
     let cols = {
-        idUsuario: {
+        id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        Nombre: {
+        nombre: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        User: {
+        user: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        Email: {
+        email: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        Birthday: {
+        birthday: {
             type: dataTypes.DATE,
             allowNull: false
         },
        
-        Avatar: {
+        avatar: {
             type: dataTypes.STRING(255)
         },
-        Password: {
+        password: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        idRol: {
+        id_rol: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        Domicilio: {
+        domicilio: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        Ciudad: {
+        ciudad: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
@@ -55,12 +55,12 @@ module.exports = (sequelize, dataTypes) => {
     Usuarios.associate = function(models){
         Usuarios.hasMany(models.Compras,{
             as: "Compras",
-            foreignKey:"idUsuario"
+            foreignKey:"id_usuario"
         })
 
         Usuarios.belongsTo(models.Rol,{
             as: "Rol",
-            foreignKey:"idRol"
+            foreignKey:"id_rol"
         })
     }
     /*Actor.associate = function(models) {

@@ -20,13 +20,13 @@
 
     <nav>
         <ul>
-            <li><a href="/home">Inicio</a></li>
+            <li><a href="/">Inicio</a></li>
             <li><a href="/product/products">Productos</a></li>
             <li><a href="#">¿Cómo comprar?</a></li>
             <li><a href="/quienesSomos">¿Quiénes somos?</a></li>
             <li><a href="/preguntasFrecuentes">Preguntas frecuentes</a></li>
             <li><a href="/contact">Contactos</a></li>
-            <li><a href="/product/Cart">Carrito</a></li>
+            <li><a href="/product/Cart">Carrito <i class="fa-solid fa-cart-arrow-down"></i><span class="cartNmb"></span></a></li>
             <% if(!locals.isLogged){%>
             <li><a href="/user/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
             <li><a href="/user/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>

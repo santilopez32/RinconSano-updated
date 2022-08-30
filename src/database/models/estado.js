@@ -1,12 +1,12 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Estado';
     let cols = {
-        idEstado: {
+        id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        Nombre: {
+        nombre: {
             type: dataTypes.STRING(100),
             allowNull: false
         }
@@ -20,11 +20,11 @@ module.exports = (sequelize, dataTypes) => {
     Estado.associate = function(models){
         Estado.belongsTo(models.Productos,{
             as: "Productos",
-            foreignKey:"idCategoria"
+            foreignKey:"id_categoria"
         })
         Estado.hasMany(models.Compras,{
             as: "Compras",
-            foreignKey:"idEstado"
+            foreignKey:"id_estado"
         })
     }
 

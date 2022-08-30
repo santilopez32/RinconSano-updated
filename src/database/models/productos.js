@@ -3,28 +3,28 @@ const categoria = require("./categoria");
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Productos';
     let cols = {
-        idProducto: {
+        id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        Nombre: {
+        nombre: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        Descripcion: {
+        descripcion: {
             type: dataTypes.TEXT,
             allowNull: false
         },
-        Precio: {
+        precio: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        Descuento: {
+        descuento: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        Imagen: {
+        imagen: {
             type: dataTypes.STRING(255)
         }
     };
@@ -43,8 +43,8 @@ module.exports = (sequelize, dataTypes) => {
         Productos.belongsToMany(models.Compras,{
             as: "Compras",
             through: "CompraProducto",
-            foreignKey: "idProducto",
-            otherKey: "idCompra",
+            foreignKey: "id_producto",
+            otherKey: "id_compra",
             timestamps: false,
         })
     }    

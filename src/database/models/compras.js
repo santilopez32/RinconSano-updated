@@ -1,23 +1,19 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Compras';
     let cols = {
-        idCompras: {
+        id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        Fecha: {
+        fecha: {
             type: dataTypes.DATE,
             allowNull: false
         },
-        idUsuario: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
-        idEstado: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
+        // idEstado: {
+        //     type: dataTypes.INTEGER,
+        //     allowNull: false
+        // },
         
     };
     let config = {
@@ -31,17 +27,17 @@ module.exports = (sequelize, dataTypes) => {
         Compras.belongsToMany(models.Productos,{
             as: "Productos",
             through: "CompraProducto",
-            foreignKey: "idCompra",
-            otherKey: "idProducto",
+            foreignKey: "id_compra",
+            otherKey: "id_producto",
             timestamps: false,
         })
         Compras.belongsTo(models.Estado,{
             as: "Estado",
-            foreignKey:"idEstado"
+            foreignKey:"id_estado"
         })    
         Compras.belongsTo(models.Usuarios,{
             as: "Usuarios",
-            foreignKey:"idUsuario"
+            foreignKey:"id_usuario"
         })
     }
 

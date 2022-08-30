@@ -5,14 +5,14 @@
                 <main class="admin-form">
                     <br>
                     <br>
-                        <form action="/administrar/edit/<%= Productos.idProducto%>?_method=PUT" method="POST" enctype="multipart/form-data" >
+                        <form action="/administrar/edit/<%= Productos.id%>?_method=PUT" method="POST" enctype="multipart/form-data" >
                             <div class="control-formulario">
                                 <label>Nombre del producto:</label>
-                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required" value="<%= Productos.Nombre%>">
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required" value="<%= Productos.nombre%>">
                             </div>	
                             <div class="control-formulario">
                                 <label>Descripción:</label>
-                                <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="<%= Productos.Descripcion%>">
+                                <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="<%= Productos.descripcion%>">
                             </div>                            
                             <div>
                             <label>Categorías</label><br>
@@ -26,25 +26,25 @@
                             <br>                        
                             <div class="control-formulario">
                                 <label>Precio:</label>
-                                <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%= Productos.Precio%>">
+                                <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%= Productos.precio%>">
                             </div>
                             <div class="control-formulario">
                                 <label>Descuento:</label>
                                 <select  name="descuento" class="custom-select" id="validationCustom04" required>
                                 <option disabled value="#">Seleccione un descuento"</option>
-                                <option value="0" <%= Productos.Descuento == 0 ? "selected" : null %>
+                                <option value="0" <%= Productos.descuento == 0 ? "selected" : null %>
                                     >Sin descuento</option>
-                                <option value="15" <%= Productos.Descuento == 15 ? "selected" : null %>>15%</option>
-                                <option value="30" <%= Productos.Descuento == 30 ? "selected" : null %>>30%</option>
+                                <option value="15" <%= Productos.descuento == 15 ? "selected" : null %>>15%</option>
+                                <option value="30" <%= Productos.descuento == 30 ? "selected" : null %>>30%</option>
                                 </select>
                             </div>
                             <div class="control-formulario">
                                 <figure class="form-group">
-                                    <img  class="edit-img" src="/images/<%= Productos.Imagen%>" alt="<%= Productos.Nombre%>">
+                                    <img  class="edit-img" src="/images/<%= Productos.imagen%>" alt="<%= Productos.nombre%>">
                                 </figure>
                                 <br>
                                 <label>Modificar imagen:</label>
-                                <input type="hidden"  name="oldImagen"  value="<%= Productos.Imagen%>">
+                                <input type="hidden"  name="oldImagen"  value="<%= Productos.imagen%>">
                                 <input type="file" name="imagen" >
                             </div>
                             <div class="form-group">
