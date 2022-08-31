@@ -114,7 +114,7 @@ const controllersUser = {
 	logout: (req, res) => {
 		res.clearCookie('userEmail');
 		req.session.destroy();
-		return res.redirect('/home');
+		return res.redirect('/');
 	}
     
 }
