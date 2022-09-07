@@ -17,8 +17,8 @@ window.onload = function(){
         let descuento = document.querySelector('#descuento-crear')
         
         /// VALIDACION NOMBRE producto
-        if (producto.value == '') {
-            errors.push('Debes ingresar un nombre de producto.')
+        if (producto.value == '' && producto.value.length < 5) {
+            errors.push('Debes ingresar un nombre de producto de al menos 5 caracteres.')
             producto.classList.add('is-invalid')
         }
         else{
@@ -26,8 +26,8 @@ window.onload = function(){
             producto.classList.remove('is-invalid')
         }
         /// VALIDACION descripcion
-        if (descripcion.value == '') {
-            errors.push('No olvides dar una breve descripción de tu producto.')
+        if (descripcion.value == '' && descripcion.value.length < 20) {
+            errors.push('No olvides dar una breve descripción de tu producto, por lo menos 20 caracteres.')
             descripcion.classList.add('is-invalid')
         }
         else{
