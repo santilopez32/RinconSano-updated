@@ -4,39 +4,40 @@
             <%- include('../partials/header') %>
                 <main class="admin-form">
                     <h1>Creación de productos - Administrador</h1>
-                    <form action="/administrar/create" method="POST" enctype="multipart/form-data">
+                    <div class = "errores-admin"></div>
+                    <form action="/administrar/create" id="formcrear" method="POST" enctype="multipart/form-data">
                         <div>
                             <label>Producto</label>
-                            <input type="text" name="nombre" class="product">
+                            <input type="text" name="nombre" class="product" id="product-crear">
                         </div>
                         <div>
                             <label>Descripción</label>
-                            <input type="text" name="descripcion" class="descripcion">
+                            <input type="text" name="descripcion" class="descripcion" id="desc-crear">
                         </div>
                         <br>
                         <div>
                             <label>Imagen</label>
-                            <input type="file" name="imagen" class="imagen">
+                            <input type="file" name="imagen" class="imagen" id="img-crear">
                         </div>
                         <br>
                         <div>
                             <label>Categorías</label>
-                        <select name="categoria">
-                            <option value="" disabled selected>Selecciona tu categoria</option>
+                        <select id="cat-crear" name="categoria">
+                            <option  value="" disabled selected>Selecciona tu categoria</option>
                             <% Categoria.forEach(categoria => { %>
-                                <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                                <option  value="<%= categoria.id %>"><%= categoria.nombre %></option>
                             <% }); %>
                         </select>
                         </div>
                         <br>
                         <div>
                             <label>Precio</label>
-                            <input type="text" name="precio" class="precio">
+                            <input id="precio-crear" type="text" name="precio" class="precio">
                         </div>
                         <br>
                         <div>
                             <label>Descuento</label>
-                            <input type="text" name="descuento" class="descuento">
+                            <input id="descuento-crear" type="text" name="descuento" class="descuento">
                         </div>
                         <br>
                         <div>
@@ -54,7 +55,7 @@
                         
                     </form>
                 </main>
-            
+    <script src="/js/adminCrear.js"></script>        
     <%- include('../partials/footer') %>
         </body>
 </html>

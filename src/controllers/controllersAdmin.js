@@ -23,7 +23,7 @@ const controllersAdmin = {
             id_categoria: req.body.categoria,
             precio: req.body.precio,
             descuento: req.body.descuento,
-            imagen: req.file.filename
+            imagen: req.file ? req.file.filename : ''
         })
         .then(Categorias => {
             res.redirect('/administrar');
