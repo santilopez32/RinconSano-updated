@@ -5,10 +5,12 @@
         <br>
         <br>
         <main class="register">
-            <form action="/user/register" method="POST" class="create-form" enctype="multipart/form-data">
+            <ul class="errores"></ul>
+            <form action="/user/register" method="POST" id = "formulario"class="create-form" enctype="multipart/form-data">
                 <div class="control-formulario">
                     <label>Nombre y apellido:</label>
-                    <input 
+                    <input
+                    id="nya" 
                     type="text" 
                     name="name" 
                     class="control <%= locals.errors && errors.name ? 'is-invalid' : null %>" 
@@ -21,7 +23,8 @@
                 </div>
                 <div class="control-formulario">
                     <label>Nombre de usuario:</label>
-                    <input 
+                    <input
+                    id="nombre" 
                     type="text" 
                     name="user" 
                     class="control <%= locals.errors && errors.user ? 'is-invalid' : null %>"
@@ -34,7 +37,8 @@
                 </div>
                 <div class="control-formulario">
                     <label>E-mail:</label>
-                    <input 
+                    <input
+                    id="email" 
                     type="text" 
                     name="email" 
                     class="control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
@@ -47,7 +51,8 @@
                 </div>
                 <div class="control-formulario">
                     <label>Teléfono</label>
-                    <input 
+                    <input
+                    id="tel" 
                     type="number" 
                     name="phone" 
                     class="control <%= locals.errors && errors.phone ? 'is-invalid' : null %>"
@@ -60,7 +65,8 @@
                 </div>
                 <div class="control-formulario">
                 <label for="birth_date" class="control"><b>Fecha de nacimiento</b></label>
-                <input 
+                <input
+                id="birth_date"  
                 type="date" 
                 name="birth_date" 
                 id="birth_date <%= locals.errors && errors.birth_date ? 'is-invalid' : null %>"
@@ -73,7 +79,8 @@
                 </div>
                 <div class="control-formulario">
                     <label>Domicilio:</label>
-                    <input 
+                    <input
+                    id="domicilio" 
                     type="text" 
                     name="adress" 
                     class="control <%= locals.errors && errors.adress ? 'is-invalid' : null %>"
@@ -85,14 +92,15 @@
                         <% } %>
                 </div>
                 <div class="control-formulario">
-                    <label>Ciudad:</label>
-                    <select name="ciudad" class="control">
-                    <option value="">Elegí una ciudad</option>
+                    <label>Provincia:</label>
+                    <select  name="ciudad" class="control">
+                    <option  value="">Elegí una ciudad</option>
                     <%
                         let provincias = ["Salta", "Buenos Aires", "Rosario", "Córdoba", "Mendoza", "Misiones"]
                     %>
                     <% for ( const oneProvincias of provincias) {%>
                         <option
+                        id = "provincias"
                          value="<%= oneProvincias %>"
                          <%= locals.oldData && (oneProvincias === oldData.ciudad) ? "selected" : null %>
                          ><%= oneProvincias %></option>
@@ -106,7 +114,7 @@
                 </div>
                 <h4>Elegí tu foto de usuario</h4>
                 <br>
-                <input type="file" name="avatar">
+                <input type="file" name="avatar" id="avatar">
                 <% if (locals.errors && errors.avatar) { %>
                     <div style= "color: red">
                         <%= errors.avatar.msg %>
@@ -114,7 +122,7 @@
                     <% } %>
                 <br>
                 <br>
-                <input type="password" name="pass" placeholder="Elegí tu contraseña">
+                <input type="password" id="pass" name="pass" placeholder="Elegí tu contraseña">
                 <% if (locals.errors && errors.pass) { %>
                     <div style= "color: red">
                         <%= errors.pass.msg %>
@@ -122,7 +130,7 @@
                     <% } %>
                 <br>
                 <br>
-                <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+                <input type="password" id="pass_confirm" name="pass_confirm" placeholder="Confirmá tu contraseña">
                 <% if (locals.errors && errors.pass_confirm) { %>
                     <div style= "color: red">
                         <%= errors.pass_confirm.msg %>
