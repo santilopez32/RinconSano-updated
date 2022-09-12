@@ -3,20 +3,21 @@
         <body>
             <%- include('../partials/header') %>
                 <main class="admin-form">
+                    <div class = "errores-admin"></div>
                     <br>
                     <br>
-                        <form action="/administrar/edit/<%= Productos.id%>?_method=PUT" method="POST" enctype="multipart/form-data" >
+                        <form action="/administrar/edit/<%= Productos.id%>?_method=PUT" id="formeditar" method="POST" enctype="multipart/form-data" >
                             <div class="control-formulario">
                                 <label>Nombre del producto:</label>
-                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required" value="<%= Productos.nombre%>">
+                                <input type="text" id="product-editar" class="form-control" name="nombre" placeholder="Nombre" value="<%= Productos.nombre%>">
                             </div>	
                             <div class="control-formulario">
                                 <label>Descripción:</label>
-                                <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="<%= Productos.descripcion%>">
+                                <input type="text" id="desc-editar" class="form-control" name="descripcion" placeholder="Descripción" value="<%= Productos.descripcion%>">
                             </div>                            
                             <div>
                             <label>Categorías</label><br>
-                                <select name="categoria">
+                                <select id="cat-editar" name="categoria">
                                     <option value="" disabled selected>Selecciona tu categoria</option>
                                     <% Categoria.forEach(categoria => { %>
                                     <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
@@ -26,11 +27,11 @@
                             <br>                        
                             <div class="control-formulario">
                                 <label>Precio:</label>
-                                <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%= Productos.precio%>">
+                                <input id="precio-editar" type="number" class="form-control" name="precio" placeholder="Indique el precio" value="<%= Productos.precio%>">
                             </div>
                             <div class="control-formulario">
                                 <label>Descuento:</label>
-                                <select  name="descuento" class="custom-select" id="validationCustom04" required>
+                                <select  name="descuento" class="custom-select" id="descuento-editar">
                                 <option disabled value="#">Seleccione un descuento"</option>
                                 <option value="0" <%= Productos.descuento == 0 ? "selected" : null %>
                                     >Sin descuento</option>
@@ -44,7 +45,7 @@
                                 </figure>
                                 <br>
                                 <label>Modificar imagen:</label>
-                                <input type="hidden"  name="oldImagen"  value="<%= Productos.imagen%>">
+                                <input id="img-editar" type="hidden"  name="oldImagen"  value="<%= Productos.imagen%>">
                                 <input type="file" name="imagen" >
                             </div>
                             <div class="form-group">
@@ -58,7 +59,7 @@
                             
                         </form>                
                 </main>
-            
+    <script src="/js/adminEditar.js"></script>    
     <%- include('../partials/footer') %>
         </body>
 </html>

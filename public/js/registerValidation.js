@@ -31,7 +31,7 @@ window.onload = function(){
         let provincias = document.querySelector('#provincias')
         
         /// VALIDACION NOMBRE y apellido
-        if (nya.value == '' && nya.value.length < 2) {
+        if (nya.value == '' || nya.value.length < 2) {
             errors.push('El campo nombre debe tener más de 2 caracteres!')
             nya.classList.add('is-invalid')
         }
@@ -40,7 +40,7 @@ window.onload = function(){
             nya.classList.remove('is-invalid')
         }
         /// VALIDACION NOMBRE
-        if (nombre.value == '' && nombre.value.length < 2) {
+        if (nombre.value == '' || nombre.value.length < 2) {
             errors.push('El campo nombre debe tener más de 2 caracteres!')
             nombre.classList.add('is-invalid')
         }

@@ -1,6 +1,6 @@
 window.onload = function(){  
 
-    let form = document.querySelector('#formcrear');
+    let form = document.querySelector('#formeditar');
    
 
     form.addEventListener('submit', async (e) => {
@@ -9,12 +9,12 @@ window.onload = function(){
 
         let errors = []
 
-        let producto = document.querySelector('#product-crear')
-        let descripcion = document.querySelector('#desc-crear')
-        let imagen = document.querySelector('#img-crear')
-        let categoria = document.querySelector('#cat-crear')
-        let precio = document.querySelector('#precio-crear')
-        let descuento = document.querySelector('#descuento-crear')
+        let producto = document.querySelector('#product-editar')
+        let descripcion = document.querySelector('#desc-editar')
+        let categoria = document.querySelector('#cat-editar')
+        let precio = document.querySelector('#precio-editar')
+        let descuento = document.querySelector('#descuento-editar')
+        let imagen = document.querySelector('#img-editar')
         
         /// VALIDACION NOMBRE producto
         if (producto.value == '' || producto.value.length < 5) {
