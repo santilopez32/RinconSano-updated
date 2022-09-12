@@ -5,10 +5,12 @@
 <br>
 <br>
 <main class="login">
-    <form action="/user/login" method="POST" >
+    <ul class="errores"></ul>
+    <form action="/user/login" method="POST" id = "login-form">
         <div class="control-formulario">
-            <label>Nombre de usuario:</label>
-            <input 
+            <label>Email:</label>
+            <input
+            id="email" 
             type="text" 
             name="email" 
             class="control" 
@@ -23,7 +25,7 @@
         <br>
         <div class="control-formulario">
             <label>Contraseña:</label>
-            <input type="password" name="pass" class="control" placeholder="Contraseña">
+            <input id="contraseña" type="password" name="pass" class="control" placeholder="Contraseña">
             <% if (locals.errors && errors.pass) { %>
                 <div style= "color: red">
                     <%= errors.pass.msg %>
@@ -41,6 +43,7 @@
         <br>
     </form>
 </main>
+<script src="/js/loginValidation.js"></script>
 <%- include('../partials/footer') %>
 </body>
 </html>
