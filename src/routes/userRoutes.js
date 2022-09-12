@@ -34,14 +34,14 @@ const validations = [
     body("pass_confirm").notEmpty().withMessage("Confirma tu contraseña"),
     body("avatar").custom((value, { req }) => {
         let file = req.file
-        let acceptedExtensions = [ ".jpg", ".pdf", ".png", ".jpeg"]
+        let acceptedExtensions = [ ".jpg", ".gif", ".png", ".jpeg"]
         
         if(!file){
             throw new Error("Tienes que subir una imagen") 
         } else{
             let fileExtension = path.extname(file.originalname)
             if(!acceptedExtensions.includes(fileExtension)){
-                throw new Error("Las extensiones permitidas son jpeg, pdf y png")
+                throw new Error("Las extensiones permitidas son jpeg, jpg, pdf y gif")
             }
         }
         
