@@ -19,10 +19,13 @@ const controllersAdmin = {
     save: (req, res) => {
         const resultValidation = validationResult(req)
 		if(resultValidation.errors.length > 0){
-			return res.render((path.resolve(__dirname, '../views/admin/create')), { 
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			})
+            db.Categoria.findAll()
+            .then(Categoria => {
+                res.render(path.resolve(__dirname, '../views/admin/create'), {Categoria: Categoria, 
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                })
+            })
 		}  else {
         db.Productos.create({            
             nombre : req.body.nombre,
@@ -49,10 +52,16 @@ const controllersAdmin = {
     update: (req, res) => {
         const resultValidation = validationResult(req)
 		if(resultValidation.errors.length > 0){
-			return res.render((path.resolve(__dirname, '../views/admin/edit')), { 
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			})
+
+            let Productos = db.Productos.findByPk(req.params.id, {include: [{association: 'Categoria'}]});
+            let Categoria = db.Categoria.findAll();
+            Promise.all([Productos, Categoria])
+            .then(([Productos, Categoria]) => {
+                return res.render(path.resolve(__dirname, '../views/admin/edit'), {Productos: Productos, 
+                    Categoria:Categoria, 
+                    errors: resultValidation.mapped(),
+                    oldData: req.body})
+            })
 		}  else {
         let Productos = {
             nombre : req.body.nombre,
