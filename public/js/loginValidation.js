@@ -10,7 +10,7 @@ window.onload = function(){
         let email = document.querySelector('#email')
         let contraseña = document.querySelector('#contraseña')
 
-        if (email.value == '') {
+        if (expReg.test(email.value) == false) {
             errors.push('Debes ingresar un e-mail válido!')
             email.classList.add('is-invalid')
         }
