@@ -1,11 +1,12 @@
 window.onload = function(){
 
     let form = document.querySelector('#login-form');
-    const expReg= /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-
+    
     form.addEventListener('submit', async (e) => {
         let errors = []
-    
+        
+        const expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+
         let email = document.querySelector('#email')
         let contraseña = document.querySelector('#contraseña')
 

@@ -20,7 +20,8 @@ window.onload = function(){
         let errors = []
 
         const expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    
+        var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+
         let nya = document.querySelector('#nya')
         let nombre = document.querySelector('#nombre')
         let email = document.querySelector('#email')
@@ -103,8 +104,8 @@ window.onload = function(){
             pass_confirm.classList.add('is-valid')
             pass_confirm.classList.remove('is-invalid')
         }
-        if (avatar.value == "") {
-            errors.push('Debes ingresar una imagen')
+        if (avatar.value == "" || !allowedExtensions.exec(avatar.value) ) {
+            errors.push('Debes ingresar una imagen en formatos jpg, jpeg, png o gif')
             avatar.classList.add('is-invalid')
         }
         else{
