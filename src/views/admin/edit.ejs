@@ -9,11 +9,33 @@
                         <form action="/administrar/edit/<%= Productos.id%>?_method=PUT" id="formeditar" method="POST" enctype="multipart/form-data" >
                             <div class="control-formulario">
                                 <label>Nombre del producto:</label>
-                                <input type="text" id="product-editar" class="form-control" name="nombre" placeholder="Nombre" value="<%= Productos.nombre%>">
+                                <input 
+                                type="text" 
+                                id="product-editar" 
+                                class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" 
+                                name="nombre" 
+                                placeholder="Nombre" 
+                                value="<%= Productos.nombre%>">
+                                <% if (locals.errors && errors.nombre) { %>
+                                    <div style= "color: red">
+                                        <%= errors.nombre.msg %>
+                                    </div>
+                                <% } %>
                             </div>	
                             <div class="control-formulario">
                                 <label>Descripción:</label>
-                                <input type="text" id="desc-editar" class="form-control" name="descripcion" placeholder="Descripción" value="<%= Productos.descripcion%>">
+                                <input 
+                                type="text" 
+                                id="desc-editar" 
+                                class="form-control <%= locals.errors && errors.descripcion ? 'is-invalid' : null %>" 
+                                name="descripcion" 
+                                placeholder="Descripción" 
+                                value="<%= Productos.descripcion%>">
+                                <% if (locals.errors && errors.descripcion) { %>
+                                    <div style= "color: red">
+                                        <%= errors.descripcion.msg %>
+                                    </div>
+                                <% } %>
                             </div>                            
                             <div>
                             <label>Categorías</label><br>
@@ -23,21 +45,42 @@
                                     <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
                                     <% }); %>
                                 </select>
+                                <% if (locals.errors && errors.categoria) { %>
+                                    <div style= "color: red">
+                                        <%= errors.categoria.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <br>                        
                             <div class="control-formulario">
                                 <label>Precio:</label>
-                                <input id="precio-editar" type="number" class="form-control" name="precio" placeholder="Indique el precio" value="<%= Productos.precio%>">
+                                <input 
+                                id="precio-editar" 
+                                type="number" 
+                                class="form-control <%= locals.errors && errors.precio ? 'is-invalid' : null %>" 
+                                name="precio" 
+                                placeholder="Indique el precio" 
+                                value="<%= Productos.precio%>">
+                                <% if (locals.errors && errors.precio) { %>
+                                    <div style= "color: red">
+                                        <%= errors.precio.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="control-formulario">
                                 <label>Descuento:</label>
-                                <select  name="descuento" class="custom-select" id="descuento-editar">
+                                <select  name="descuento" class="custom-select <%= locals.errors && errors.descuento ? 'is-invalid' : null %>" id="descuento-editar">
                                 <option disabled value="#">Seleccione un descuento"</option>
                                 <option value="0" <%= Productos.descuento == 0 ? "selected" : null %>
                                     >Sin descuento</option>
                                 <option value="15" <%= Productos.descuento == 15 ? "selected" : null %>>15%</option>
                                 <option value="30" <%= Productos.descuento == 30 ? "selected" : null %>>30%</option>
                                 </select>
+                                <% if (locals.errors && errors.descuento) { %>
+                                    <div style= "color: red">
+                                        <%= errors.descuento.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="control-formulario">
                                 <figure class="form-group">
@@ -47,6 +90,11 @@
                                 <label>Modificar imagen:</label>
                                 <input id="img-editar" type="hidden"  name="oldImagen"  value="<%= Productos.imagen%>">
                                 <input type="file" name="imagen" >
+                                <% if (locals.errors && errors.imagen) { %>
+                                    <div style= "color: red">
+                                        <%= errors.imagen.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn btn-info">Actualizar</button>

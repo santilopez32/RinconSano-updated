@@ -8,16 +8,45 @@
                     <form action="/administrar/create" id="formcrear" method="POST" enctype="multipart/form-data">
                         <div>
                             <label>Producto</label>
-                            <input type="text" name="nombre" class="product" id="product-crear">
+                            <input 
+                            type="text" 
+                            name="nombre" 
+                            class="product <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.nombre : null%>" 
+                            id="product-crear">
+                            <% if (locals.errors && errors.nombre) { %>
+                                <div style= "color: red">
+                                    <%= errors.nombre.msg %>
+                                </div>
+                            <% } %>
                         </div>
                         <div>
                             <label>Descripción</label>
-                            <input type="text" name="descripcion" class="descripcion" id="desc-crear">
+                            <input 
+                            type="text" 
+                            name="descripcion" 
+                            class="descripcion <%= locals.errors && errors.descripcion ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.descripcion : null%>" 
+                            id="desc-crear">
+                            <% if (locals.errors && errors.descripcion) { %>
+                                <div style= "color: red">
+                                    <%= errors.descripcion.msg %>
+                                </div>
+                            <% } %>
                         </div>
                         <br>
                         <div>
                             <label>Imagen</label>
-                            <input type="file" name="imagen" class="imagen" id="img-crear">
+                            <input 
+                            type="file" 
+                            name="imagen" 
+                            class="imagen" 
+                            id="img-crear">
+                            <% if (locals.errors && errors.imagen) { %>
+                                <div style= "color: red">
+                                    <%= errors.imagen.msg %>
+                                </div>
+                            <% } %>
                         </div>
                         <br>
                         <div>
@@ -28,16 +57,41 @@
                                 <option  value="<%= categoria.id %>"><%= categoria.nombre %></option>
                             <% }); %>
                         </select>
+                        <% if (locals.errors && errors.categoria) { %>
+                            <div style= "color: red">
+                                <%= errors.categoria.msg %>
+                            </div>
+                        <% } %>
                         </div>
                         <br>
                         <div>
                             <label>Precio</label>
-                            <input id="precio-crear" type="text" name="precio" class="precio">
+                            <input 
+                            id="precio-crear" 
+                            type="text" 
+                            name="precio" 
+                            class="precio <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.precio : null%>">
+                            <% if (locals.errors && errors.precio) { %>
+                                <div style= "color: red">
+                                    <%= errors.precio.msg %>
+                                </div>
+                            <% } %>
                         </div>
                         <br>
                         <div>
                             <label>Descuento</label>
-                            <input id="descuento-crear" type="text" name="descuento" class="descuento">
+                            <input 
+                            id="descuento-crear" 
+                            type="text" 
+                            name="descuento" 
+                            class="descuento <%= locals.errors && errors.descuento ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.descuento : null%>">
+                            <% if (locals.errors && errors.descuento) { %>
+                                <div style= "color: red">
+                                    <%= errors.descuento.msg %>
+                                </div>
+                            <% } %>
                         </div>
                         <br>
                         <div>

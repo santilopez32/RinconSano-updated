@@ -17,6 +17,13 @@ const controllersAdmin = {
             })
 	},
     save: (req, res) => {
+        const resultValidation = validationResult(req)
+		if(resultValidation.errors.length > 0){
+			return res.render((path.resolve(__dirname, '../views/admin/create')), { 
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			})
+		}  else {
         db.Productos.create({            
             nombre : req.body.nombre,
             descripcion: req.body.descripcion,
@@ -28,7 +35,7 @@ const controllersAdmin = {
         .then(Categorias => {
             res.redirect('/administrar');
         })
-        
+        }
 	},
     edit: (req, res) => {
         let Productos = db.Productos.findByPk(req.params.id, {include: [{association: 'Categoria'}]});
@@ -40,6 +47,13 @@ const controllersAdmin = {
             .catch(error => res.send(error));
 	},
     update: (req, res) => {
+        const resultValidation = validationResult(req)
+		if(resultValidation.errors.length > 0){
+			return res.render((path.resolve(__dirname, '../views/admin/edit')), { 
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			})
+		}  else {
         let Productos = {
             nombre : req.body.nombre,
             descripcion: req.body.descripcion,
@@ -52,6 +66,7 @@ const controllersAdmin = {
         .then(Categorias => {
         res.redirect('/administrar')  
         })      
+    }
     },
     show: (req, res) => {
         let productoEncontrado = db.Productos.findByPk(req.params.id, {include: [{association: 'Categoria'}]});
