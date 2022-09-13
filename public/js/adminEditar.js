@@ -9,6 +9,8 @@ window.onload = function(){
 
         let errors = []
 
+        var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+
         let producto = document.querySelector('#product-editar')
         let descripcion = document.querySelector('#desc-editar')
         let categoria = document.querySelector('#cat-editar')
