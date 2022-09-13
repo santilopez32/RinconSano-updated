@@ -88,8 +88,8 @@
                                 </figure>
                                 <br>
                                 <label>Modificar imagen:</label>
-                                <input id="img-editar" type="hidden"  name="oldImagen"  value="<%= Productos.imagen%>">
-                                <input type="file" name="imagen" >
+                                <input  type="hidden"  name="oldImagen"  value="<%= Productos.imagen%>">
+                                <input id="img-editar" type="file" name="imagen" >
                                 <% if (locals.errors && errors.imagen) { %>
                                     <div style= "color: red">
                                         <%= errors.imagen.msg %>
