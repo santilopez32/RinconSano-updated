@@ -1,6 +1,7 @@
 window.onload = function(){
 
     let form = document.querySelector('#login-form');
+    const expReg= /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
     form.addEventListener('submit', async (e) => {
         let errors = []
@@ -8,7 +9,7 @@ window.onload = function(){
         let email = document.querySelector('#email')
         let contraseña = document.querySelector('#contraseña')
 
-        if (email.value == '') {
+        if (email.value == '' || expReg.test(email.value) == false) {
             errors.push('Debes ingresar un e-mail válido!')
             email.classList.add('is-invalid')
         }
