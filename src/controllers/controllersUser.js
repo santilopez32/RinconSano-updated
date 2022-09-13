@@ -39,6 +39,13 @@ const controllersUser = {
 		return res.render(path.resolve(__dirname, '../views/users/register'));
 	},
     processRegister: (req, res) => {
+		const resultValidation = validationResult(req)
+		if(resultValidation.errors.length > 0){
+			return res.render((path.resolve(__dirname, '../views/users/register')), { 
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			})
+		}  else {
 		db.Usuarios.create({            
             nombre: req.body.name,
 			user: req.body.user,
@@ -54,6 +61,7 @@ const controllersUser = {
         .then(Usuarios => {
             res.redirect('/user/login');
         })
+	}
 
 		/*const resultValidation = validationResult(req)
 		if(resultValidation.errors.length > 0){
