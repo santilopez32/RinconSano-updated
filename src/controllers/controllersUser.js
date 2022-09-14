@@ -123,8 +123,59 @@ const controllersUser = {
 		res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');
-	}
-    
+	},
+    editUser: (req, res) => {
+        // let Productos = db.Productos.findByPk(req.params.id, {include: [{association: 'Categoria'}]}); GUIA
+		let Usuarios = db.Usuarios.findByPk(req.params.id);
+        // let Categoria = db.Categoria.findAll();
+        // Promise.all([Productos, Categoria])
+		Promise.all([Usuarios])
+            .then(([Usuarios]) => {
+                // return res.render(path.resolve(__dirname, '../views/admin/edit'), {Productos: Productos, Categoria:Categoria})
+				return res.render(path.resolve(__dirname, '../views/users/editUser'), {Usuarios: Usuarios})
+            })
+            .catch(error => res.send(error));
+	},
+    updateUser: (req, res) => {
+        // const resultValidation = validationResult(req)
+	// 	if(resultValidation.errors.length > 0){
+
+    //         let Productos = db.Productos.findByPk(req.params.id, {include: [{association: 'Categoria'}]});
+    //         let Categoria = db.Categoria.findAll();
+    //         Promise.all([Productos, Categoria])
+    //         .then(([Productos, Categoria]) => {
+    //             return res.render(path.resolve(__dirname, '../views/admin/edit'), {Productos: Productos, 
+    //                 Categoria:Categoria, 
+    //                 errors: resultValidation.mapped(),
+    //                 oldData: req.body})
+    //         })
+	// 	}  else {
+    //     let Productos = {
+    //         nombre : req.body.nombre,
+    //         descripcion: req.body.descripcion,
+    //         id_categoria: req.body.categoria,
+    //         precio: req.body.precio,
+    //         descuento: req.body.descuento,
+    //         imagen: req.body.imagen
+    //     }
+    //     db.Productos.update(Productos, {where:{id: req.params.id}})
+    //     .then(Categorias => {
+    //     res.redirect('/administrar')  
+    //     })      
+    // }
+	let Usuarios = {
+		        nombre : req.body.nombre,
+		        user: req.body.user,
+		        birthday: req.body.birthday,
+		        domicilio: req.body.domicilio,
+		        ciudad: req.body.ciudad,
+		        avatar: req.body.avatar
+		    }
+		    db.Usuarios.update(Usuarios, {where:{id: req.params.id}})
+		    .then(Categorias => {
+		    res.redirect('/profile')  
+		    })      
+    },
 }
 
 module.exports = controllersUser;

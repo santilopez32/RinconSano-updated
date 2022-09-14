@@ -59,6 +59,10 @@ router.post('/register', uploadFile.single("avatar"), validations, controllersUs
 router.get('/profile', authMiddleware, controllersUser.profile);
 router.get('/logout', controllersUser.logout);
 
+// router.get('/edit/:id', accesoAdmin, controllersAdmin.edit);
+router.get('/editUser/:id', controllersUser.editUser)
+// router.post('/edit/:id', uploadFile.single('imagen'), validationsAdminCreate, controllersAdmin.update);
+router.post('/editUser/:id', uploadFile.single('imagen'), controllersUser.updateUser)
 router.get('/check', function(req,res){
     if (req.session.usuarioLogueado == undefined){
         res.send("No estás logueado")
