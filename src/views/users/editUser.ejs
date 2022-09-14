@@ -39,11 +39,10 @@
                             </div>                
                             <div class="control-formulario">
                                 <figure class="form-group">
-                                    <img  class="edit-img" src="/images/avatar/<%=locals.userLogged.avatar%>" alt="<%= Usuarios.nombre%>">
+                                    <img  class="edit-img" src="/images/avatar/<%=Usuarios.avatar%>" alt="<%= Usuarios.nombre%>">
                                 </figure>
                                 <br>
-                                <label>Modificar imagen:</label>
-                                <input  type="hidden"  name="oldImagen"  value="<%= Usuarios.avatar%>">
+                                <label>Modificar imagen:</label>        
                                 <input id="img-editar" type="file" name="avatar" >                            
                             </div>
                             <div class="form-group">

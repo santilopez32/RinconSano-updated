@@ -125,9 +125,8 @@ const controllersUser = {
 		return res.redirect('/');
 	},
     editUser: (req, res) => {
-		let Usuarios = db.Usuarios.findByPk(req.params.id);
-		Promise.all([Usuarios])
-            .then(([Usuarios]) => {
+		db.Usuarios.findByPk(req.params.id)	
+            .then((Usuarios) => {
 				return res.render(path.resolve(__dirname, '../views/users/editUser'), {Usuarios: Usuarios})
             })
             .catch(error => res.send(error));
