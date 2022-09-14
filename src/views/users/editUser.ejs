@@ -6,36 +6,26 @@
                     <div class = "errores-admin"></div>
                     <br>
                     <br>
-                        <form action="/users/editUser/<%= Usuarios.id%>?_method=PUT" id="formeditar" method="POST" enctype="multipart/form-data" >
+                        <form action="/user/editUser/<%= Usuarios.id%>?_method=PUT" id="formeditar" method="POST" enctype="multipart/form-data" >
                             <div class="control-formulario">
                                 <label>Nombre y Apellido:</label>
                                 <input 
                                 type="text" 
                                 id=""
-                                class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" 
+                                class="form-control" 
                                 name="nombre" 
                                 placeholder="Nombre" 
                                 value="<%= Usuarios.nombre%>">
-                                <% if (locals.errors && errors.nombre) { %>
-                                    <div style= "color: red">
-                                        <%= errors.nombre.msg %>
-                                    </div>
-                                <% } %>
                             </div>	
                             <div class="control-formulario">
                                 <label>Nombre de Usuario:</label>
                                 <input 
                                 type="text" 
                                 id="" 
-                                class="form-control <%= locals.errors && errors.user ? 'is-invalid' : null %>" 
+                                class="form-control" 
                                 name="user" 
                                 placeholder="User" 
                                 value="<%= Usuarios.user %>">
-                                <% if (locals.errors && errors.user) { %>
-                                    <div style= "color: red">
-                                        <%= errors.user.msg %>
-                                    </div>
-                                <% } %>
                             </div>                            
                             <br>                        
                             <div class="control-formulario">
@@ -43,36 +33,24 @@
                                 <input 
                                 id="" 
                                 type="text" 
-                                class="form-control <%= locals.errors && errors.domicilio ? 'is-invalid' : null %>" 
-                                name="domicilio" 
-                                p 
-                                value="<%= Usuarios.domicilio %>">
-                                <% if (locals.errors && errors.domicilio) { %>
-                                    <div style= "color: red">
-                                        <%= errors.domicilio.msg %>
-                                    </div>
-                                <% } %>
-                            </div>
-                           
+                                class="form-control" 
+                                name="domicilio"                                 
+                                value="<%= Usuarios.domicilio %>">                                
+                            </div>                
                             <div class="control-formulario">
                                 <figure class="form-group">
-                                    <img  class="edit-img" src="/images/<%= Usuarios.avatar%>" alt="<%= Usuarios.nombre%>">
+                                    <img  class="edit-img" src="/images/avatar/<%=locals.userLogged.avatar%>" alt="<%= Usuarios.nombre%>">
                                 </figure>
                                 <br>
                                 <label>Modificar imagen:</label>
                                 <input  type="hidden"  name="oldImagen"  value="<%= Usuarios.avatar%>">
-                                <input id="img-editar" type="file" name="avatar" >
-                                <% if (locals.errors && errors.avatar) { %>
-                                    <div style= "color: red">
-                                        <%= errors.avatar.msg %>
-                                    </div>
-                                <% } %>
+                                <input id="img-editar" type="file" name="avatar" >                            
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn btn-info">Actualizar</button>
                                 <br>
                                 <br>
-                                <a href="/administrar" class="btn btn-danger">Volver</a>
+                                <a href="/user/profile" class="btn btn-danger">Volver</a>
                                 <br>
                                 <br>
                             </div>
