@@ -8,10 +8,14 @@
 	<img src="/images/avatar/<%=locals.userLogged.avatar%>" alt="Chocolate 80%" class="imagenPerfil">
 	<h1><%=locals.userLogged.name %></h1>
 	
-	<p class="cardText">Perfil de Usuario: <%=locals.userLogged.user %></p>
+	<p class="cardText">Nombre y Apellido: <%= Usuarios.nombre %></p>
+	<p class="cardText">Nombre de Usuario: <%= Usuarios.user %></p>
+	<p class="cardText">Domicilio: <%= Usuarios.domicilio %></p>
+	
+	<!-- <p class="cardText">Perfil de Usuario: <%=locals.userLogged.user %></p>
 	<p class="cardText">Descrpcion: <%=locals.userLogged.descripcion %></p>
 	<p class="cardText">E-mail: <%=locals.userLogged.email %></p>
-	<p class="cardText">Domicilio: <%=locals.userLogged.domicilio %></p>
+	<p class="cardText">Domicilio: <%=locals.userLogged.domicilio %></p> -->
 	
 	
 	

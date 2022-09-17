@@ -113,10 +113,18 @@ const controllersUser = {
 		}
 		return res.render(path.resolve(__dirname, '../views/users/register'));
 	},
+	// profile: (req, res) => {
+	// 	return res.render(path.resolve(__dirname, '../views/users/profile'), {
+	// 		user: req.session.userLogged
+	// 	});
+	// },
+
 	profile: (req, res) => {
-		return res.render(path.resolve(__dirname, '../views/users/profile'), {
-			user: req.session.userLogged
-		});
+		db.Usuarios.findByPk(req.params.id)	
+            .then((Usuarios) => {
+				return res.render(path.resolve(__dirname, '../views/users/profile'), {Usuarios: Usuarios})
+            })
+            .catch(error => res.send(error));
 	},
 
 	logout: (req, res) => {
