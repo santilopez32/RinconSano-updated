@@ -24,6 +24,27 @@ const controllersProduct = {
                 res.render(path.resolve(__dirname, '../views/products/products'), {Productos: Productos})
             })
 	},
+    list: (req, res) => {
+		db.Productos.findAll()
+		.then(productos=> {
+			return res.status(200).json({
+				total: productos.length,
+				data: productos,
+				status: 200
+			})
+		})
+				     
+		},
+		show: (req, res) => {
+			db.Productos.findByPk(req.params.id)
+			.then(producto=> {
+				return res.status(200).json({				
+					data: producto,
+					status: 200
+				})
+			})
+						 
+			},
     
     
 }

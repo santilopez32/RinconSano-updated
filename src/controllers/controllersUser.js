@@ -151,6 +151,27 @@ const controllersUser = {
 		    res.redirect('/user/profile')  
 		    })      
     },
+	list: (req, res) => {
+		db.Usuarios.findAll()
+		.then(usuarios=> {
+			return res.status(200).json({
+				total: usuarios.length,
+				data: usuarios,
+				status: 200
+			})
+		})
+				     
+		},
+		show: (req, res) => {
+			db.Usuarios.findByPk(req.params.id)
+			.then(usuario=> {
+				return res.status(200).json({				
+					data: usuario,
+					status: 200
+				})
+			})
+						 
+			},
 }
 
 module.exports = controllersUser;

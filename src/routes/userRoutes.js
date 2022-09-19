@@ -52,6 +52,9 @@ const { BADFAMILY } = require('dns');
 
 const controllersUser = require('../controllers/controllersUser');
 
+router.get('/api/users/', controllersUser.list)
+router.get('/api/users/:id', controllersUser.show)
+
 router.get('/login', guestMiddleware, controllersUser.login)
 router.post('/login', validations, controllersUser.processLogin)
 router.get('/register', guestMiddleware, controllersUser.register)
