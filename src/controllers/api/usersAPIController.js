@@ -7,7 +7,9 @@ const User = require('../../models/User');
 
 const usersAPIController = {
 	list: (req, res) => {
-		db.Usuarios.findAll()
+		db.Usuarios.findAll({
+            attributes: ['id', 'nombre', 'user','email','birthday','avatar','id_rol','domicilio','ciudad']
+        })
 		.then(usuarios=> {
             let respuesta = {
                 meta: {
@@ -21,7 +23,9 @@ const usersAPIController = {
 			})						     
 		},
 		show: (req, res) => {
-			db.Usuarios.findByPk(req.params.id)
+			db.Usuarios.findByPk(req.params.id, {
+                attributes: ['id', 'nombre', 'user','email','birthday','avatar','id_rol','domicilio','ciudad']
+            })
 			.then(usuario=> {
                 let respuesta = {
                     meta: {

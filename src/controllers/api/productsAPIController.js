@@ -12,26 +12,33 @@ const productsAPIController = {
             include : ['Categoria']
         })
 		.then(productos=> {
+            const reducer = (map, val) => {
+                if (map[val] == null) {
+                map[val] = 1;
+                } else {
+                ++map[val];
+                }
+                return map;}
 			let respuesta = {
                 meta: {
-                    status : 200,
-                    count:{ 
-                        total: productos.length,                                        
-                        Granolas: db.Categoria.count(),
-                        Orgánico: productos.length,
-                        Libre_de_Gluten: productos.length,
-                        Cosmética_Natural: productos.length,   
-                    },         
+                    status : 200,                 
+                    total: productos.length,                                                                                                
                     url: 'api/products'
                 },
-                data: productos
+                data:{
+                    countByCategory: productos.map(categ => categ.id_categoria).reduce(reducer, {}),
+                    productos
+                } 
             }
-			res.json(respuesta);				
+			res.json(respuesta);
+            				
 			})	
 				     
 		},
 		show: (req, res) => {
-			db.Productos.findByPk(req.params.id)
+			db.Productos.findByPk(req.params.id, {
+                include : ['Categoria']
+            })
             .then(producto=> {
 			let respuesta = {
                 meta: {
