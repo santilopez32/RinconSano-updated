@@ -1,7 +1,7 @@
 {
   "name": "modelo-proyecto",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nuestro sitio busca concientizar al consumidor de lo importante que es la alimentacion sana en el dia a dia. Tenemos una gama de productos que haran posible conseguir ese objetivo. \r Esta marca esta diseñada para todos aquellos que buscan generar ese cambio en sus vidas.\r Los principales productos ofrecera la marca seran:\r     • Granola clasica\r     • Granola tentacion coco\r     • Granola especial\r     • Granola tentación\r El equipo de trabajo estara conformado por los siguientes integrantes:\r     • Santiago Lopez Gaudelli\r     • Luciano Lui Vegas\r     • Nicolas Lui Vegas\r     • Gian Marco Fayon\r Los sitios de referencia que utilizaremos seran:\r     • https://www.herbalife.com.ar/\r     • https://www.le-fit.com.ar/\r     • https://www.bimbo.com.ar/\r     • https://tienda.beepure.com.ar/\r     • https://www.greenmarket.com.ar/\r     • https://www.naturalcare.com.ar",
   "main": "app.js",
   "scripts": {
     "start": "node src/app.js",
@@ -22,5 +22,13 @@
     "node-fetch": "^3.2.10",
     "nodemon": "^2.0.19",
     "sequelize": "^6.21.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santilopez32/RinconSano-updated.git"
+  },
+  "bugs": {
+    "url": "https://github.com/santilopez32/RinconSano-updated/issues"
+  },
+  "homepage": "https://github.com/santilopez32/RinconSano-updated#readme"
 }

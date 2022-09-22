@@ -9,7 +9,7 @@ const moment = require('moment');
 const productsAPIController = {
     list: (req, res) => {
 		db.Productos.findAll({
-            include : ['Categoria']
+            include : ['Categoria'], attributes: ['id', 'nombre', 'descripcion','id_categoria','precio','descuento','imagen']
         })
 		.then(productos=> {
             const reducer = (map, val) => {
@@ -52,6 +52,24 @@ const productsAPIController = {
         
             })			 
 			},
+            listCateg: (req, res) => {
+                db.Categoria.findAll({include : ['Productos']})
+                .then(categ=> {                    
+                    let respuesta = {
+                        meta: {
+                            status : 200,                 
+                            total: categ.length,                                                                                                
+                            url: 'api/categ'
+                        },
+                        data:{                            
+                            categ
+                        } 
+                    }
+                    res.json(respuesta);
+                                    
+                    })	
+                             
+                },
     
     
 }
