@@ -53,5 +53,18 @@ SPRINT 7
         4.7.  No utilizar como unica fuente de informacion Playground.
     5. Dejar de hacer.
         5.7. No realizar una reunion final antes de presentar los sprints.
+SPRINT 8
+    1. Comenzar a hacer.
+        1.7. Coordinar los horarios de trabajo, para evitar duplicar código en áreas similares.
+    2. Hacer más.
+        2.7. Ordenar y emprolijar el código.
+    3. Continuar haciendo.
+        3.7. Comentar áreas claves del código, para entender que se buscó lograr en ese momento,
+        y que función tiene la linea en cuestión.
+    4. Hacer menos.
+        4.7.  Molestar menos a Herna y Lucas, y resolver las dudas solos!
+    5. Dejar de hacer.
+        5.7. Dejar de terminar las cosas sobre la hora, para tener tiempo de testeo .
+
 
 
