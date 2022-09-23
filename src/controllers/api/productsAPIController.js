@@ -46,7 +46,8 @@ const productsAPIController = {
                     total: producto.length,                    
                     url: '/api/products/:id'
                 },
-                data: producto
+                data: producto,
+                url: 'localhost:3000/public/images/' + producto.imagen
             }
             res.json(respuesta);
         

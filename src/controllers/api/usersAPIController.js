@@ -33,7 +33,8 @@ const usersAPIController = {
                         total: usuario.length,
                         url: '/api/users/:id'
                     },
-                    data: usuario
+                    data: usuario,
+                    url: 'localhost:3000/public/images/avatar/' + usuario.avatar
                 }
 				res.json(respuesta);
 			})
