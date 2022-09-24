@@ -44,7 +44,10 @@ function displayCart() {
                             <p class="price">${prodsCart[i].price}</p>
                             <p class="price">${prodsCart[i].cantidad}</p>
                             <h4 class="nombreProducto">${prodsCart[i].name}</h4>
+                            <br>
                             <h2>Precio final: $ ${prodsCart[i].subTotal}</h2>
+                            <br>
+                            <br>
                             <button onClick="sumar(${prodsCart[i].id})" >Sumar</button> 
                             <button onClick="restar(${prodsCart[i].id})" >Restar</button> 
                         </div>

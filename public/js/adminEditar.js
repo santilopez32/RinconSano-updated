@@ -37,8 +37,8 @@ window.onload = function(){
             descripcion.classList.remove('is-invalid')
         }
         /// VALIDACION imagen
-        if (imagen.value == '' || !allowedExtensions.exec(imagen.value)) {
-            errors.push('No olvides ingresar una imagen! (formatos aceptados jpg, jpeg, png y gif')
+        if (imagen.value !== '' && !allowedExtensions.exec(imagen.value)) {
+            errors.push('Los formatos de imagen aceptados jpg, jpeg, png y gif')
             imagen.classList.add('is-invalid')
         }
         else{

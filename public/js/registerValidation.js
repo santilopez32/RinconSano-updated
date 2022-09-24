@@ -96,8 +96,8 @@ window.onload = function(){
             pass.classList.add('is-valid')
             pass.classList.remove('is-invalid')
         }
-        if (pass_confirm.value.length <= 8) {
-            errors.push('Debes ingresar una contraseña de al menos 9 caracteres!')
+        if (pass_confirm.value !== pass.value ) {
+            errors.push('Las contraseñas ingresadas no coinciden!')
             pass_confirm.classList.add('is-invalid')
         }
         else{

@@ -68,7 +68,7 @@
                             <label>Precio</label>
                             <input 
                             id="precio-crear" 
-                            type="text" 
+                            type="number" 
                             name="precio" 
                             class="precio <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.precio : null%>">
@@ -83,7 +83,7 @@
                             <label>Descuento</label>
                             <input 
                             id="descuento-crear" 
-                            type="text" 
+                            type="number" 
                             name="descuento" 
                             class="descuento <%= locals.errors && errors.descuento ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.descuento : null%>">

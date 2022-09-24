@@ -12,7 +12,7 @@ const controllersUser = {
 	},
 	processLogin: (req, res) => {
 		db.Usuarios.findOne({ where: { email: req.body.email}})
-		.then((usuario) => {
+		.then((usuario) => {		
 		if(usuario){
 			let isOkThePassword = bcrypt.compareSync(req.body.pass, usuario.password);
 			if(isOkThePassword){

@@ -2,24 +2,35 @@
 <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header') %>
-    <main>        
+    <main class="admin-form">
+        <br>
+        <br>        
             <div id="containerCart" class="contenedorProductos">
+                
                     
             </div>
+            <br>
+            <br>
         
-        <div class="col-12">
-            <div class="row product-detail">
-                <div class="col-12 col-md-6">
-                    <label for="name" class="form-label">Cantidad total de productos:</label>
+        <div class="col-12">            
+                <div class="control-formulario">
+                    <label for="name" class="form-label">Cantidad total de productos:</label>                    
                     <input id="cantTotal" disabled type="text" id="name" name="name" class="form-input" value="">
                 </div>
-                <div class="col-12 col-md-6">
+                <br>
+                <div class="control-formulario">
                     <label for="price" class="form-label">Total de la compra:</label>
                     <input id="precioTotal" disabled type="text" id="price" name="price" class="form-input" value="">
-                </div>
-                <div class="col-12">
-                    <button id="vaciar" class="buy-now-button">Vaciar Carrito</button>
-                </div>
+                </div>                
+            <div class="col-12">
+                <br>
+                <br>
+                <button id="vaciar" class="vaciar-carrito">Vaciar Carrito</button>
+                <br>
+                <br>
+                <button id="comprar" class="vaciar-carrito">Finalizar Compra</button>
+                <br>
+                <br>
             </div>
         </div>
     </main>

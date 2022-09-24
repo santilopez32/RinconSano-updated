@@ -39,11 +39,13 @@
                             </div>                            
                             <div>
                             <label>Categorías</label><br>
-                                <select id="cat-editar" name="categoria">
-                                    <option value="" disabled selected>Selecciona tu categoria</option>
+                                <select id="cat-editar" name="categoria">                                      
                                     <% Categoria.forEach(categoria => { %>
+                                    <%if(Productos.id_categoria == categoria.id){%>
+                                    <option value="<%= categoria.id %>"selected><%= categoria.nombre %></option>
+                                    <%} else {%>
                                     <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
-                                    <% }); %>
+                                    <% }}); %>
                                 </select>
                                 <% if (locals.errors && errors.categoria) { %>
                                     <div style= "color: red">
@@ -68,14 +70,13 @@
                                 <% } %>
                             </div>
                             <div class="control-formulario">
-                                <label>Descuento:</label>
-                                <select  name="descuento" class="custom-select <%= locals.errors && errors.descuento ? 'is-invalid' : null %>" id="descuento-editar">
-                                <option disabled value="#">Seleccione un descuento"</option>
-                                <option value="0" <%= Productos.descuento == 0 ? "selected" : null %>
-                                    >Sin descuento</option>
-                                <option value="15" <%= Productos.descuento == 15 ? "selected" : null %>>15%</option>
-                                <option value="30" <%= Productos.descuento == 30 ? "selected" : null %>>30%</option>
-                                </select>
+                                <label>Descuento</label>
+                                <input 
+                                id="descuento-editar" 
+                                type="number" 
+                                name="descuento" 
+                                class="descuento <%= locals.errors && errors.descuento ? 'is-invalid' : null %>"
+                                value="<%= Productos.descuento%>">
                                 <% if (locals.errors && errors.descuento) { %>
                                     <div style= "color: red">
                                         <%= errors.descuento.msg %>

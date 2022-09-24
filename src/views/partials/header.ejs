@@ -46,7 +46,7 @@
 
             <% } else { %>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/user/profile" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="/user/profile/<%= locals.userLogged.id %>" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Hi <%= locals.userLogged.nombre %>
                     </a>
                 </li>        

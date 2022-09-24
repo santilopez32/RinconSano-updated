@@ -289,6 +289,18 @@ section.banner img{
     padding: 5px 10px;
     border-radius: 5px;
   }
+  .vaciar-carrito{
+    background-color: rgb(81, 121, 107);
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 3px 3px;
+    border-radius: 5px;
+  }
+  .vaciar-carrito:hover{
+    background-color: rgb(78, 90, 92);
+    color: black;
+  }
   .boton-formulario:hover{
     background-color: rgb(130, 223, 240);
     color: black;
