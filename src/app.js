@@ -48,6 +48,12 @@ app.use('/api',usersApiRoutes);
 //app.use("/", mainRoutes)
 //app.use("/user", userRoutes)
 
+app.use((req, res, next) => {
+    res.status(404).render(path.resolve(__dirname, './views/not-found'));
+    next();
+});
+
+
 
 
 

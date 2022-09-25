@@ -662,6 +662,36 @@ section.banner img{
   padding: 3px 0px 3px 4px;
 
 }
+/*----------------------------NOT FOUND------------------------------------- */
+
+.en-construccion {
+  padding: 20vh 0;
+  text-align: center;
+  
+}
+.not-found {
+  background: url(../images/error-404.jpg) center no-repeat, url(../images/error-404.jpg) center no-repeat;
+  background-size: cover;
+}
+img{
+  max-width: 100%;
+}
+body {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  margin: auto;
+}
+main p {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 24px; 
+}
+
+
+/*------------------------------NOT FOUND----------------------------------- */
 
 
   /*------------------------------------------------Media---------------------------------------------------------*/

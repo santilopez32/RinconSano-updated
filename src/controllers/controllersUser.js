@@ -32,7 +32,7 @@ const controllersUser = {
 				}
 			})
 		}
-		})
+		})		
 		
 	},
     register: (req, res) => {
