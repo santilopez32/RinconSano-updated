@@ -35,14 +35,14 @@ function displayCart() {
         container.innerHTML += `            
         <div class="contenedorProductos">
                     <div class="productoX">
-                        <div class="productoImagen">
-                            
+                        <div class="productoImagen">                            
                             <figure ><img src="/images/${prodsCart[i].image}" alt="${prodsCart[i].name}" class="productImg"></figure>
                         </div>
                         <div class="productoInformación">
                             <i onClick="borrar(${prodsCart[i].id})" class="fa fa-trash"></i> 
-                            <p class="price">${prodsCart[i].price}</p>
-                            <p class="price">${prodsCart[i].cantidad}</p>
+                            <p class="price">Precio${prodsCart[i].price}</p>
+                            <br>
+                            <p class="price"> Cantidad ${prodsCart[i].cantidad}</p>
                             <h4 class="nombreProducto">${prodsCart[i].name}</h4>
                             <br>
                             <h2>Precio final: $ ${prodsCart[i].subTotal}</h2>

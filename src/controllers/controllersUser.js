@@ -18,12 +18,12 @@ const controllersUser = {
 			if(isOkThePassword){
 				delete usuario.password;
 				req.session.userLogged = usuario;
-
+				res.cookie("userEmail", req.body.email, { maxAge: 300 * 60 * 60})
 				if(req.body.recordame){
 					res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60})
 				}
-				return res.redirect("../")
-			}
+				res.redirect("../")
+			} else {
 			return res.render((path.resolve(__dirname, '../views/users/login')), {
 				errors: {
 					email: {
@@ -32,7 +32,16 @@ const controllersUser = {
 				}
 			})
 		}
-		})		
+		}
+		else {
+			return res.render((path.resolve(__dirname, '../views/users/login')), {
+			  errors: {
+				email: {
+				  msg: "Las credenciales son inválidas"
+				}
+			  }
+			})
+		  }})		
 		
 	},
     register: (req, res) => {
