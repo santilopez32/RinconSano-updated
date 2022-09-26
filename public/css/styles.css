@@ -77,11 +77,14 @@
   
   header form input[type='search']{
     border: none;
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(234,234,234);
     border-radius: 30px;
     outline: none;
     width: 100%;
     padding: 10px;
+  }
+  #search-icon{
+    background-color: rgb(234,234,234);
   }
   
   header form button{
@@ -130,8 +133,8 @@
 /*---------------------------------------------------Footer---------------------------------------------------*/
 
 footer{
-    background-color: rgb(191, 191, 191);
-    color: #666;
+    background-color: #E3EAF2;
+    color: black;
     padding: 20px 5%;
   }
   
@@ -144,7 +147,7 @@ footer{
   footer i{
     font-size: 2em;
     margin-bottom: 10px;
-    color: #1259c3;
+    color: black
   }
   
   footer div .footer-article-container{
@@ -565,6 +568,7 @@ section.banner img{
     display: flex;
     flex-direction: column;
     width: 50%;
+    align-items: center;
   }
 
     .contactFormulario{
@@ -662,6 +666,52 @@ section.banner img{
   padding: 3px 0px 3px 4px;
 
 }
+
+.contacto-datos{
+  text-align: center;
+}
+.control2{
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+/*----------------------------QUIENES SOMOS------------------------------------- */
+.quienes-somos{
+  width: 100%;
+  padding: 50px 0;
+  padding-bottom: 60px;
+  }
+.main-container-qs{
+  width: 100%;
+  padding: 30px 0;
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  position: relative;
+}
+.quienes-somosh3 h1{
+  text-align: center;
+  font-size: 30px;
+}
+.quienes-somosh3{
+  font-family: new times roman;
+  font-size: 28px;
+}
+.quienes-somosp{
+  font-family: new times roman;
+  font-size: 17px;
+  padding: 5px;
+}
+.quienes-somos{
+  background-image: url(/images/greyWallTextureBG.jpg) ;
+    background-size: cover;
+}
+
+
+
+
+/*----------------------------QUIENES SOMOS------------------------------------- */
 /*----------------------------NOT FOUND------------------------------------- */
 
 .en-construccion {

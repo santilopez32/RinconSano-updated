@@ -23,9 +23,9 @@
                     </div>
                     <div class="productoInformación">
                         <i class="fas fa-truck"></i>
-                        <p class="price"><%= productos.precio%></p>
-                        <p class="discount"><%= productos.descuento%></p>
-                        <h4 class="nombreProducto"><%= productos.nombre%></h4>
+                        <h2 class="nombreProducto"><%= productos.nombre%></h2>
+                        <p class="price">Precio $<%= productos.precio%></p>
+                        <p class="discount">Descuento <%= productos.descuento%>%</p>
                     </div>
                 </div>
             <% }); %>
