@@ -157,7 +157,7 @@ const controllersUser = {
 		    }
 		    db.Usuarios.update(Usuarios, {where:{id: req.params.id}})
 		    .then(Usuarios => {
-		    res.redirect('/user/profile')  
+		    res.redirect('/')  
 		    })      
     },
 	list: (req, res) => {
