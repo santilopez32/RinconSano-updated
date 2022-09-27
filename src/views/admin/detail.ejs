@@ -9,17 +9,18 @@
                     <h1>Detalle del producto administrado</h1>
                             <article class="col-12 col-md-6 mx-auto mt-5 producto">
                                 <figure class="imagenProducto">
-                                <img  src="/images/<%= producto.imagen%>" class="card-img-top w-100 d-block" alt="prod">
+                                <!-- <img  src="/images/<%= producto.imagen%>" class="card-img-top w-100 d-block" alt="prod"> -->
+                                <img  src="/images/<%= producto.imagen%>" id="imgVerProd" alt="prod">
                                 </figure> 
                                 <br>
                                 <label>Nombre:</label>
-                                <h5 class="card-title"><%= producto.nombre%></h5>
+                                <h3 class="card-title"><%= producto.nombre%></h3>
                                 <br>
                                 <label>Descuento:</label>
-                                <h5 class="card-title">Descuento de <%= producto.descuento%>%</h5>
+                                <h3 class="card-title">Descuento de <%= producto.descuento%>%</h3>
                                 <br>
                                 <label>Precio:</label>
-                                <h5 class="card-title">$ <%= producto.precio %></h5>
+                                <h3 class="card-title">$ <%= producto.precio %></h3>
                                 <br>
                                 <label>Descripción:</label>
                                 <h5 class="card-title"><%= producto.descripcion %></h5>

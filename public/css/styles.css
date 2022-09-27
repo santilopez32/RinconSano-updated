@@ -163,8 +163,11 @@ section.banner img{
     width: 100%;
     display: block;
     margin-top: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     opacity: 70%;
+    background-image: url(/images/greyWallTextureBG.jpg) ;
+    background-size: cover;
+    /* box-shadow: 0px 0px 30px rgb(0, 0, 0) */
     }
     
   /*----------------Fin-Section-Banner---------------*/
@@ -330,10 +333,19 @@ section.banner img{
   main.preguntas-frecuentes{
     text-align: center;
     background: rgb(170, 229, 130);
+  
   } 
   
   div.pregunta{
     text-align: left;
+    margin: 2% 10% 2% 10%;
+    border-bottom: solid rgb(82, 82, 82) 1px;
+  }
+
+  #h3-preguntas{
+    font-family: new times roman;
+    font-size: 28px;
+    margin-left: 20px;
   }
    
   /*---------------Main-ProductDetail--------------*/
@@ -577,11 +589,29 @@ section.banner img{
     }
 /*------------------------------------Vistas de administrador---------------------*/
 /*----------------------Edit---------------------*/
+
+.admin-form input{
+  font-size: 100%;
+  width: 25%;
+  height: 4%;
+}
+.admin-form select{
+  width: 25%;
+  height: 4%;
+}
+.admin-form label{
+  font-style: normal;
+  font-weight: bolder;
+  
+}
+
 .edit-img{
   height: 300px ;
   width: 300px;
 }
 .admin-form{
+  background-image: url(/images/greyWallTextureBG.jpg) ;
+  background-size: cover;
   text-align: center;
 }
 .addBlock{
@@ -684,13 +714,17 @@ section.banner img{
   padding-bottom: 60px;
   }
 .main-container-qs{
-  width: 100%;
+  /* width: 100%;
   padding: 30px 0;
   padding-bottom: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  position: relative;
+  position: relative; */
+  margin: 5% 5% 5% 5%;
+  border: solid rgb(74, 74, 74) 0.5px;
+  border-radius: 5px;
+  padding: 3%;
 }
 .quienes-somosh3 h1{
   text-align: center;
@@ -700,6 +734,13 @@ section.banner img{
   font-family: new times roman;
   font-size: 28px;
 }
+.qs-sec{
+  margin: 3%;
+  border-bottom: solid rgb(84, 84, 84) 1px;
+}
+
+
+
 .quienes-somosp{
   font-family: new times roman;
   font-size: 17px;
@@ -852,10 +893,15 @@ main p {
    /* --------------------------Css de toda la view de products.ejs-------------------------- */
 
   main h1{
-    margin: 40px;
+    margin: 0px;
+    padding: 6%;
     text-align: center;
   }
 
+  #mainProducts{
+    background-image: url(/images/greyWallTextureBG.jpg) ;
+    background-size: cover;
+  }
 
    .contenedorSecciones{
     display: flex;
@@ -991,3 +1037,10 @@ main p {
     font-size: 20px;
     margin: 10px;
   }
+
+  #imgVerProd{
+    width: 25%;
+    height: auto;
+  }
+
+  
