@@ -1,5 +1,5 @@
 function accesoAdmin(req, res, next) {
-	if (req.session.userLogged.id_rol !== 2) {
+	if (!req.session.userLogged || req.session.userLogged.id_rol!== 2) {
 		return res.redirect('/');
 	}
 	next();
