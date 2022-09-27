@@ -5,7 +5,7 @@
 	
 	
 <div class="card">
-	<img src="/images/avatar/<%=locals.userLogged.avatar%>" alt="Chocolate 80%" class="imagenPerfil">
+	<img src="/images/avatar/<%=Usuarios.avatar%>" alt="Chocolate 80%" class="imagenPerfil">
 	<h1><%= Usuarios.nombre%></h1>
 	
 	<p class="cardText">Nombre y Apellido: <%= Usuarios.nombre %></p>
@@ -19,7 +19,7 @@
 	
 	
 	
-	<a href="/user/editUser/<%=locals.userLogged.id %>"><p class="cardText"><button>Editar mi perfil</button></p></a>
+	<a href="/user/editUser/<%=Usuarios.id %>"><p class="cardText"><button>Editar mi perfil</button></p></a>
   </div>
 
 

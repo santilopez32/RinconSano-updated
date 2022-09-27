@@ -69,7 +69,7 @@ const controllersAdmin = {
             id_categoria: req.body.categoria,
             precio: req.body.precio,
             descuento: req.body.descuento,
-            imagen: req.body.imagen
+            imagen: req.file ? req.file.filename : req.body.oldImagen
         }
         db.Productos.update(Productos, {where:{id: req.params.id}})
         .then(Categorias => {

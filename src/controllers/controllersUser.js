@@ -153,7 +153,7 @@ const controllersUser = {
 		        nombre : req.body.nombre,
 		        user: req.body.user,		        
 		        domicilio: req.body.domicilio,
-		        avatar: req.body.avatar
+		        avatar: req.file ? req.file.filename : req.body.oldImagen
 		    }
 		    db.Usuarios.update(Usuarios, {where:{id: req.params.id}})
 		    .then(Usuarios => {

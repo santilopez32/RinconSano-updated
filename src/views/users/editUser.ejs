@@ -42,7 +42,8 @@
                                     <img  class="edit-img" src="/images/avatar/<%=Usuarios.avatar%>" alt="<%= Usuarios.nombre%>">
                                 </figure>
                                 <br>
-                                <label>Modificar imagen:</label>        
+                                <label>Modificar imagen:</label>
+                                <input  type="hidden"  name="oldImagen"  value="<%= Usuarios.avatar%>">        
                                 <input id="img-editar" type="file" name="avatar" >                            
                             </div>
                             <div class="form-group">
