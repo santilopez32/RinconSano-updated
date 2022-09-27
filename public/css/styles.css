@@ -275,6 +275,12 @@ section.banner img{
   
   /*----------------------------------------------Register-Html-------------------------------------------------*/
   /*-----------------Main-Register---------------*/
+  
+  #bodyRegister{
+    background-image: url(/images/greyWallTextureBG.jpg) ;
+    background-size: cover;
+  }
+
   .control-formulario{
     margin-bottom: 15px;
   }
@@ -563,6 +569,11 @@ section.banner img{
 
   /* ---------------Contact page---------------------- */
 
+  #main-contact{
+    background-image: url(/images/greyWallTextureBG.jpg) ;
+    background-size: cover;
+  }
+
   .contactBox{
     display: flex;
     justify-content: space-between;
@@ -594,10 +605,16 @@ section.banner img{
   font-size: 100%;
   width: 25%;
   height: 4%;
+  border: solid black 1px;
+  border-radius: 4px;
 }
 .admin-form select{
   width: 25%;
   height: 4%;
+  border: solid black 1px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: bolder;
 }
 .admin-form label{
   font-style: normal;
@@ -606,8 +623,8 @@ section.banner img{
 }
 
 .edit-img{
-  height: 300px ;
-  width: 300px;
+  height: auto ;
+  width: 25%;
 }
 .admin-form{
   background-image: url(/images/greyWallTextureBG.jpg) ;
@@ -710,8 +727,8 @@ section.banner img{
 /*----------------------------QUIENES SOMOS------------------------------------- */
 .quienes-somos{
   width: 100%;
-  padding: 50px 0;
-  padding-bottom: 60px;
+  padding: 0%;
+  padding-bottom: 2%;
   }
 .main-container-qs{
   /* width: 100%;
@@ -721,7 +738,7 @@ section.banner img{
   flex-wrap: wrap;
   justify-content: left;
   position: relative; */
-  margin: 5% 5% 5% 5%;
+  margin: 2% 5% 5% 5%;
   border: solid rgb(74, 74, 74) 0.5px;
   border-radius: 5px;
   padding: 3%;
@@ -1043,4 +1060,3 @@ main p {
     height: auto;
   }
 
-  
