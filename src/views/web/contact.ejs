@@ -1,8 +1,8 @@
 <html>
 <%- include('../partials/head') %>
-<body>
+<body id="bodyContact">
     <%- include('../partials/header') %>
-    <main >
+    <main id="main-contact">
         <div class="contactBox">
             <div class="contactTitle">
                 <h1 class = "quienes-somosh3">Contacto</h1>
@@ -27,7 +27,7 @@
                 <br>
                 <br>                
                 <h2>Déjanos un mensaje..</h2>
-                <form action="/" method="POST">                                        
+                <form action= "/" method="POST">                                        
                     <div class="contactFormulario">
                         <br>
                         <br>
@@ -59,6 +59,8 @@
                             <input class ="control2" type="text" name="mensaje" placeholder="Mensaje">
                         </div>
                         <br>
+                        <!-- <a href="/contact/trabajando"><input  type="submit" id="botonContact" value="Enviar"></a> -->
+                        <a href="/"><button id="botonContact">Enviar</button></a>
                         <br>
                     </div>
                 </form>
