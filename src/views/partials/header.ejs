@@ -15,10 +15,10 @@
     </div>
 
     <div class="burger-menu">
-        <i class="fa fa-bars burger"></i>
+        <i id="bmenu" class="fa fa-bars burger"></i>
     </div>
 
-    <nav>
+    <nav id="navbarmagic">
         <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="/product/products">Productos</a></li>
@@ -60,3 +60,21 @@
         
     </nav>
 </header>
+<script>
+    const hamburger = document.querySelector("#bmenu");
+    const navBar = document.querySelector("#navbarmagic")
+    
+    
+    hamburger.addEventListener("click", mobileMenu);
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+    
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navBar.classList.toggle("active");
+    }
+    
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+</script>
