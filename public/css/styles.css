@@ -890,7 +890,17 @@ main p {
 
 
 /*------------------------------NOT FOUND----------------------------------- */
+/*-------------CLASES PARA EL BURGUER BUTTON-------------*/
+.active{
+  display: flex;
+}
+header nav ul li{
+  
+  
+  
+}
 
+  /*-------------CLASES PARA EL BURGUER BUTTON-------------*/
 
   /*------------------------------------------------Media---------------------------------------------------------*/
   /*Se recomienda 0-480 smaller phones, 481-768 Tablets y big phones, 769-1279 Laptops and larger tablets, 1280 larger desktops and monitors */
