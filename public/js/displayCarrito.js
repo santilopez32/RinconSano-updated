@@ -33,7 +33,7 @@ function displayCart() {
     container.innerHTML = ``
     for (let i=0; i<prodsCart.length; i++) { 
         container.innerHTML += `            
-        <div class="contenedorProductos">
+        <div class="contenedorProductos">   
                     <div class="productoX">
                         <div class="productoImagen">                            
                             <figure ><img src="/images/${prodsCart[i].image}" alt="${prodsCart[i].name}" class="productImg"></figure>
@@ -41,13 +41,10 @@ function displayCart() {
                         <div class="productoInformación">
                             <i onClick="borrar(${prodsCart[i].id})" class="fa fa-trash"></i> 
                             <p class="price">Precio${prodsCart[i].price}</p>
-                            <br>
+
                             <p class="price"> Cantidad ${prodsCart[i].cantidad}</p>
                             <h4 class="nombreProducto">${prodsCart[i].name}</h4>
-                            <br>
                             <h2>Precio final: $ ${prodsCart[i].subTotal}</h2>
-                            <br>
-                            <br>
                             <button onClick="sumar(${prodsCart[i].id})" >Sumar</button> 
                             <button onClick="restar(${prodsCart[i].id})" >Restar</button> 
                         </div>
