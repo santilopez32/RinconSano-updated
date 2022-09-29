@@ -40,17 +40,27 @@ const productsAPIController = {
                 include : ['Categoria']
             })
             .then(producto=> {
+
+                producto.dataValues.linkToImage = `http://localhost:3000/images/${producto.dataValues.imagen}`;
+
 			let respuesta = {
                 meta: {
                     status: 200,
                     total: producto.length,                    
                     url: '/api/products/:id'
                 },
-                data: producto,
-                url: 'localhost:3000/public/images/' + producto.imagen
+                data: producto,                
             }
             res.json(respuesta);
         
+            })
+            .catch(e=>{
+                let response ={
+                    info:{
+                        status:404,
+                        url: "api/productos/" + req.params.id
+                    }
+                }
             })			 
 			},
             listCateg: (req, res) => {
