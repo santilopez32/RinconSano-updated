@@ -236,6 +236,7 @@ section.banner img{
   
   .discount{
   width: 70%;
+  font-weight: 700;
   }
   
   .description{
@@ -1004,6 +1005,9 @@ header nav ul li{
         width: 22%;
     }
     
+    .price{
+      font-weight: 900;
+    }
     .price,
     .discount{
         width: 50%;
@@ -1084,6 +1088,7 @@ header nav ul li{
     
   width: auto;
   height: 100%;
+  border: solid grey 1px;
   }
 
   .productoX{
@@ -1093,8 +1098,7 @@ header nav ul li{
     width: 100%;
     margin: 10px;
     padding: 10px;
-    /* border: solid;
-    border-color: #000; */
+    
   }
       .productoX:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -1115,8 +1119,10 @@ header nav ul li{
         display: block;
         width: 100%;
         height: auto;
-        
 
+      }
+      .price{
+        text-align: center;
       }
       .productoInformación {
         background-color: rgb(255, 255, 255);
@@ -1128,6 +1134,8 @@ header nav ul li{
         border-top: 1px solid #ebebeb;
         position: relative;
         padding: 20px;
+        border: solid grey 1px;
+        border-top: none;
         
       }
       main div div.contenedorProductos div.productoInformación i {
