@@ -46,7 +46,7 @@
   
   div.burger-menu i:hover{
     cursor: pointer;
-    background-color: #179227;
+    /* background-color: #179227; */
   }
   
   header nav{
@@ -894,7 +894,16 @@ main p {
 .active{
   display: flex;
 }
+header nav ul{
+  width: 100%;
+}
 header nav ul li{
+  margin: 0% 0% 5% 10%;
+  font-weight: 1000;
+  border-bottom: medium solid black 0.5px ;
+  text-decoration: underline
+  
+  
   
   
   
@@ -967,6 +976,7 @@ header nav ul li{
         background-repeat: no-repeat;
         background-position: right;
         transition:background-position .3s ease;
+        text-decoration: none
     }
     header nav ul li:hover{
       background-position: left;
@@ -1057,8 +1067,8 @@ header nav ul li{
     grid-template-columns: repeat(
       auto-fit,
       minmax(
-        220px,
-        1fr
+        270px,
+        0.25fr
       )
     );
     gap: 16px;
