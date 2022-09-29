@@ -8,7 +8,7 @@
     </section>
 <main>
    
-    <h1>Rincón de los Productos Destacados</h1>
+    <h1>Rincón de Productos en Oferta</h1>
     <!-- -----------------------------------------Mas vendidos--------------------------------------------- -->
 
     <div class="secciónX">
@@ -16,7 +16,7 @@
         <div class="contenedorProductos">
             
             <% Productos.forEach(productos => { %>
-
+                <% if (productos.descuento > 5){ %>
                 <div class="productoX">
                     <div class="productoImagen">
                         <a href="/product/Detail/<%= productos.id%>"><img src="/images/<%= productos.imagen %>" alt="Granola" class="productImg"></a>
@@ -28,6 +28,7 @@
                         <p class="discount"> <%= productos.descuento%>%</p>
                     </div>
                 </div>
+                <% } %>
             <% }); %>
         </div>    
     </div>
